@@ -1,0 +1,21 @@
+{# _templates/sidebar.html #}
+
+<div class="sphinxsidebarwrapper" style="padding-top: 0; margin-top: 0;">
+    <a href="{{ pathto(master_doc) }}">
+        <img src="{{ pathto('_static/logo.svg', 1) }}" alt="Logo" class="sidebar-logo" style="padding-top: 0; margin-top: 0;">
+    </a>
+    <p style="padding-top: 0; margin-top: 10;">Welcome to my website where you can find my portfolio, blog and other information about me!</p>
+    <h3>Contents</h3>
+    <ul>
+        <li><a href="{{ pathto('portfolio') }}">Portfolio</a></li>
+        <li><a href="{{ pathto('blog') }}">Blog</a></li>
+        <li><a href="{{ pathto('about') }}">About</a></li>
+        <li><a href="{{ pathto('my_CV') }}">My CV</a></li>
+    </ul>
+    <h3>Contact</h3>
+    <ul>
+        <li><a href="mailto:andreas@sellstone.se" target="_blank">andreas@sellstone.se</a></li>
+        <li><a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" target="_blank">LinkedIn</a></li>
+    </ul>
+    {{ sidebar }}
+</div>

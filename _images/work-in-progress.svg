@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="207.04" height="157.85" viewBox="0 0 207.04 157.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #434444;
+        font-family: ComicSansMS-Bold, 'Comic Sans MS';
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke: #434444;
+      }
+
+      .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(30.29 101.5)"><tspan x="0" y="0">WORK IN </tspan><tspan x="-6.31" y="36">PROGRESS</tspan></text>
+  <rect class="cls-2" x="2" y="59.8" width="203.04" height="96.05" rx="11.16" ry="11.16"/>
+  <path class="cls-3" d="m50.89,59.24L98.8,11.33l1.69,1.89c1.9,1.09,4.23,1.13,6.17.11l1.9-1.89,48.36,48.36"/>
+  <circle class="cls-2" cx="103.58" cy="8.04" r="6.04"/>
+</svg>

@@ -1,0 +1,19 @@
+.. _blog:
+
+Blog
+====
+
+This page is a work in progress. Here, I aim to write about a variety of topics that may not be related to my work.
+
+.. image:: /_static/work-in-progress.svg
+   :align: center
+   :width: 30%
+   :class: wrapped
+
+.. raw:: html
+
+   <style>
+   img.wrapped {
+       margin-top: 50px !important;
+   }
+   </style>

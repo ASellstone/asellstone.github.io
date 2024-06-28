@@ -1,0 +1,28 @@
+/* Custom styles for Sphinx documentation */
+
+/* Style for the sidebar logo */
+.sidebar-logo {
+    display: block;
+    margin: 0 auto; /* Center the logo */
+    padding: 0; /* Ensure no padding around the logo */
+}
+
+/* Remove padding and margin for the sidebar wrapper */
+.sphinxsidebarwrapper {
+    padding-top: 0 !important; /* Remove any padding at the top */
+    margin-top: 0 !important; /* Remove any margin at the top */
+}
+
+
+/* Additional styling to align sidebar content with the main content */
+.sphinxsidebarwrapper p, .sphinxsidebarwrapper h3, .sphinxsidebarwrapper ul {
+    margin-top: 1em; /* Add top margin to subsequent elements if needed */
+}
+
+/* Custom styles for wrapped images */
+
+.img.wrapped {
+    float: left;
+    width: auto; /* Ensure the image's width is auto */
+    pointer-events: none; /* Make the image non-clickable */
+}

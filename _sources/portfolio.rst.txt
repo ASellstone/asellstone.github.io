@@ -1,0 +1,29 @@
+.. _portfolio:
+
+Portfolio
+=========
+
+Completed projects
+------------------
+
+The following are finished projects:
+
+.. toctree::
+    :maxdepth: 1
+
+    infotainment_user-interface_design
+    second_year_masters_thesis.rst
+    first_year_masters_thesis.rst
+
+These include theses, course projects, work projects and personal projects.
+
+In progress
+-----------
+
+The following are projects that are in progress:
+
+- A book chapter called "Visualising the Process of Answering Clinical and Diagnostic Linguistic Tests", currently undergoing the publication process.
+
+- A text evaluation program that evaluates the text according to STE guidlines, complexity, and readability. This project is for a coding course I am currently taking.
+
+- This website!
