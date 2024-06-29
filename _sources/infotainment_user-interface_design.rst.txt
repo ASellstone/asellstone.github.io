@@ -40,7 +40,7 @@ As you can see in the above image of the model, we begin at the research process
 Three User-Tests
 ~~~~~~~~~~~~~~~~
 
-Two main insights were identified in the first user-test with the car salesperson. First, the salesperson noted the usability of the car’s interface, still employing physical buttons and a relatively simple touch-based interface. Second, according to the salesperson, people mostly have the Nissan Juke as a second car, where simplicity and accessibility is usually considered more important than with main cars. It should be easy to go into the car and use the interface, preferably without taking off one’s gloves during the winter.
+Two main insights were identified in the first user-test with the car salesperson. First, the salesperson noted the usability of the car’s interface, still employing physical buttons and a relatively simple touch-based interface. Second, according to the salesperson, people mostly have the Nissan Juke as a secondary vehicle, where simplicity and accessibility is usually considered more important than with main cars. It should be easy to go into the car and use the interface, preferably without taking off one’s gloves during the winter.
 
 After the interview and user-test with the salesperson at the car vendor, the team conducted two user-tests in other cars to get insights into what works and does not work for other infotainment systems.
 
