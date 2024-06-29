@@ -44,3 +44,8 @@
     max-width: 32%; /* Adjust the width as needed */
     height: auto;
 }
+
+.contents {
+    border: none !important;
+    padding: 0 !important;
+}
