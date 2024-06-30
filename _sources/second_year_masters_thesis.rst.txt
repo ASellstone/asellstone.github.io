@@ -3,7 +3,7 @@ Second year Master's thesis
 
 In my Master's program I had the option to write two theses: one at the end of the first year and another at the end of the second year. The thesis "Exploring Cognitive Processes in AI-Assisted Academic L2 Writing" was written at the end of my second year.
 
-In the thesis I investigated the cognitive processes involved when second language writers in English (i.e., people writing in a English as a foreign language) use AI tools to help them, as well as how they used it. Another research question involved if there is an identifiable relationship between data about writing processes collected with keystroke loggers (programs that registers each press of a keystroke along with a time stamp) and the frequency of writing suggestions made by the AI.
+In the thesis I investigated the cognitive processes involved when second language writers of English (i.e., people writing in a English as a foreign language) use AI tools to help them, as well as how they used it. Another research question involved if there is an identifiable relationship between data about writing processes collected with keystroke loggers (programs that registers each press of a keystroke along with a time stamp) and the frequency of writing suggestions made by the AI.
 
 .. raw:: html
 
