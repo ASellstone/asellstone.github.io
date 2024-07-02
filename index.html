@@ -16,77 +16,12 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Portfolio" href="portfolio.html" />
-
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
 
   
   
-
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function() {
-    console.log("Cookie consent script loaded");
-    window.cookieconsent.initialise({
-        "palette": {
-            "popup": {
-                "background": "#000"
-            },
-            "button": {
-                "background": "#f1d600"
-            }
-        },
-        "theme": "classic",
-        "content": {
-            "message": "This website uses cookies to ensure you get the best experience on our website.",
-            "dismiss": "Got it!",
-            "allow": "Allow cookies",
-            "deny": "Decline",
-            "link": "Learn more",
-            "href": "privacy_policy.html"  // Ensure this link is correct
-        },
-        "type": "opt-in",  // This enables explicit consent buttons
-        "onInitialise": function (status) {
-            console.log("Cookie consent status on initialize:", status);
-            if (this.hasConsented()) {
-                console.log("User has consented initially");
-                loadGoogleAnalytics();
-            }
-        },
-        "onStatusChange": function(status, chosenBefore) {
-            console.log("Cookie consent status changed:", status);
-            if (this.hasConsented()) {
-                console.log("User has consented on status change");
-                loadGoogleAnalytics();
-            }
-        },
-        "onRevokeChoice": function() {
-            console.log("User revoked consent");
-            location.reload();
-        }
-    });
-});
-
-function loadGoogleAnalytics() {
-    console.log("Loading Google Analytics script...");
-    var script = document.createElement("script");
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-B1HJSGW2DR";
-    script.async = true;
-    document.head.appendChild(script);
-
-    script.onload = function() {
-        console.log("Google Analytics script loaded");
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        window.gtag = gtag; // Ensure gtag function is accessible
-        gtag('js', new Date());
-        gtag('config', 'G-B1HJSGW2DR', { 'anonymize_ip': true });
-        console.log("Google Analytics initialized");
-    };
-}
-</script>
 
   </head><body>
   
