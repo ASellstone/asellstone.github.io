@@ -29,6 +29,7 @@
 <script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 <script>
 window.addEventListener("load", function() {
+    console.log("Cookie consent script loaded");
     window.cookieconsent.initialise({
         "palette": {
             "popup": {
@@ -49,28 +50,35 @@ window.addEventListener("load", function() {
         },
         "type": "opt-in",  // This enables explicit consent buttons
         "onInitialise": function (status) {
+            console.log("Cookie consent status on initialize:", status);
             if (this.hasConsented()) {
+                console.log("User has consented initially");
                 loadGoogleAnalytics();
             }
         },
         "onStatusChange": function(status, chosenBefore) {
+            console.log("Cookie consent status changed:", status);
             if (this.hasConsented()) {
+                console.log("User has consented on status change");
                 loadGoogleAnalytics();
             }
         },
         "onRevokeChoice": function() {
+            console.log("User revoked consent");
             location.reload();
         }
     });
 });
 
 function loadGoogleAnalytics() {
+    console.log("Loading Google Analytics script...");
     var script = document.createElement("script");
     script.src = "https://www.googletagmanager.com/gtag/js?id=G-B1HJSGW2DR";
     script.async = true;
     document.head.appendChild(script);
 
     script.onload = function() {
+        console.log("Google Analytics script loaded");
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
