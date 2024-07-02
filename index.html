@@ -16,12 +16,71 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Portfolio" href="portfolio.html" />
+
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
 
   
   
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B1HJSGW2DR"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B1HJSGW2DR', { 'anonymize_ip': true });
+</script>
+<script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function() {
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "#000"
+            },
+            "button": {
+                "background": "#f1d600"
+            }
+        },
+        "theme": "classic",
+        "content": {
+            "message": "This website uses cookies to ensure you get the best experience on our website.",
+            "dismiss": "Got it!",
+            "link": "Learn more",
+            "href": "/your-privacy-policy-url"
+        },
+        "onInitialise": function (status) {
+            if (this.hasConsented()) {
+                loadGoogleAnalytics();
+            }
+        },
+        "onStatusChange": function(status, chosenBefore) {
+            if (this.hasConsented()) {
+                loadGoogleAnalytics();
+            }
+        },
+        "onRevokeChoice": function() {
+            location.reload();
+        }
+    });
+});
+
+function loadGoogleAnalytics() {
+    var script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-B1HJSGW2DR";
+    script.async = true;
+    document.head.appendChild(script);
+
+    script.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-B1HJSGW2DR', { 'anonymize_ip': true });
+    };
+}
+</script>
 
   </head><body>
   
