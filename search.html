@@ -84,8 +84,10 @@ function loadGoogleAnalytics() {
         console.log("Google Analytics script loaded");
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag; // Ensure gtag function is accessible
         gtag('js', new Date());
         gtag('config', 'G-B1HJSGW2DR', { 'anonymize_ip': true });
+        console.log("Google Analytics initialized");
     };
 }
 </script>
