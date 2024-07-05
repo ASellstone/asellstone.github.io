@@ -8,7 +8,7 @@ Welcome to Andreas Sellstone's Website
 
 This is my personal website where you can find information about me and my work, including my :ref:`portfolio <portfolio>` and :ref:`blog <blog>`.
 
-Who am I? I am a cognitive scientist looking for work. I'm interested in the ways people interact with technology, particularly (but not exclusively) in how language is used in these interactions. There are a number of professions relating to cognition and technology that I am interested in pursuing, but as of right now I would especially like to pursue Technical Writing. However, I am almost equally interested in Human Factors Engineering, and UX-Design/Research.
+Who am I? I am a cognitive scientist looking for work. I'm interested in the ways people interact with technology, particularly (but not exclusively) in how language is used in these interactions. There are a number of professions relating to cognition and technology that I am interested in pursuing, but as of right now I would especially like to pursue Technical Writing. However, I am almost equally interested in Data Analysis, Human Factors Engineering, and UX-Design/Research.
 
 If you would like to know more about me you can go to the :ref:`about section <about>`.
 
