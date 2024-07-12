@@ -3,33 +3,36 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+======================================
 Welcome to Andreas Sellstone's Website
 ======================================
 
 This is my personal website where you can find information about me and my work, including my :ref:`portfolio <portfolio>` and :ref:`blog <blog>`.
 
-Who am I? I am a cognitive scientist looking for work. I'm interested in the ways people interact with technology, particularly (but not exclusively) in how language is used in these interactions. There are a number of professions relating to cognition and technology that I am interested in pursuing, but as of right now I would especially like to pursue Technical Writing. However, I am almost equally interested in Data Analysis, Human Factors Engineering, and UX-Design/Research.
+Who am I? I am a cognitive scientist looking for work. I'm interested in the ways people interact with technology, particularly (but not exclusively) in how language is used in these interactions. There are a number of professions relating to cognition and technology that I am interested in pursuing, but as of right now I would especially like to pursue Technical Writing. However, I am almost equally interested in Human Factors Engineering, UX-Design/Research, and Data Analysis.
 
 If you would like to know more about me you can go to the :ref:`about section <about>`.
 
 View my portfolio
------------------
+=================
 
-In my portfolio you can find projects (academic, professional, and personal) ranging from technical writing, coding, UX-design, and research in cognitive science. Although diverse, my projects find common ground in the application of cognitive science to the use and development of technology.
+In my portfolio you can find projects (academic, professional, and personal) ranging from technical writing, UX-design, and research in cognitive science. Although diverse, my projects find common ground in the application of cognitive science to the use and development of technology.
 
 .. toctree::
    :maxdepth: 3
+   :titlesonly:
    :caption: Here you can view my portfolio of different projects I have pursued:
    
    portfolio
 
 Read my blog
-------------
+============
 
 In my blog you will be able to (it is a work in progress) find writings on diverse subjects, ranging from film, cognitive science, philosophy, technology, and other things that I find interesting. I enjoy writing, and this is where I can write about things that might not be related to my professional work.
 
 .. toctree::
    :maxdepth: 2
+   :titlesonly:
    :caption: Here you will be able to (again, work in progress) find my blog posts where I write about various subjects that I find interesting:
 
    blog

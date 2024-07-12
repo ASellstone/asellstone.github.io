@@ -1,3 +1,5 @@
+.. _second_year_masters_thesis:
+
 Second year Master's thesis
 ===========================
 

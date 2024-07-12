@@ -1,7 +1,8 @@
 .. _about:
 
-About
-=====
+========
+About me
+========
 .. image:: /_static/profile.png
    :align: left
    :width: 25%
@@ -23,4 +24,4 @@ When using technology, we read a lot, and this text also needs to be written cle
 
 Not all of my interests revolve around what I have studied however. I am an avid reader, interested in science fiction and classic literature. I also love movies and art. Before deciding to study philosophy, linguistics or cognitive science, I wanted to be an animator (or a graphic designer). In my childhood I made many stop motion animation films using Lego. Some of these are `accessible online <https://www.youtube.com/@CableAnimStudios>`_ (keep in mind that i was between 12 and 13 years old when I made them). I later studied animation and graphic design in high school and wanted to study animation after graduation. But since I had developed an interest in philosophy in my free time, I decided to take a course in theoretical philosophy to see if I would like it as much in an academic setting – which I of course did.
 
-If you want to contact me you can do it at `via email <mailto:andreas@sellstone.se>`_, or my `LinkedIn profile <https://www.linkedin.com/in/andreas-sellstone-9465462b3>`_. 
+If you want to contact me you can do it at `via email <mailto:andreas@sellstone.se>`_ or my `LinkedIn profile <https://www.linkedin.com/in/andreas-sellstone-9465462b3>`_. 

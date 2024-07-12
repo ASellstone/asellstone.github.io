@@ -1,0 +1,55 @@
+.. _GGXLOG-how-to:
+
+======================================================
+How to use GenoGraphiX-LOG to write and analyze a text
+======================================================
+
+In this short guide I will go through how to write a text in the keystroke logging software GenoGraphiX-LOG, as well as how to start analyzing your texts. But before I start with the guide itself, I will begin with a short introduction of what kind of software GenoGraphiX-LOG is and why you might want to use it.
+
+What is GenoGraphiX-LOG?
+========================
+
+GenoGraphiX-LOG (abbreviated GGXLog) is a program that records the keys you press on your keyboard while writing—what is called *keystroke logging*. You might be familiar with what are sometimes called keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. This is *not* what GGXLog is used for, nor can it be used in that way.
+
+The keystroke logging software GGXLog is primarily used for writing research. It is the software I used to investigate :ref:`the writing processes of high school students <first_year_masters_thesis>` when taking a language test, as well as when I explored :ref:`how academics used AI-assistance <second_year_masters_thesis>` to write short academic texts.
+
+Why use a keystroke logger?
+---------------------------
+
+Beyond recording *what* key you press on the keyboard, it also records *when* you press the key. This gives you the pause length between each character, word, sentence, and paragraph of your text. The length of the pause as well as where the pause occurs can tell you a lot about writing processes:
+
+* Longer pauses between characters can indicate spelling difficulties (orthographic processing),
+
+* Longer pauses between words can indicate struggling to think of a word (lexical retrieval),
+
+* Longer pauses between sentences can indicate planning of the next sentence or evaluation of the previous sentence (higher-order processing),
+
+* Longer pauses between paragraphs can indicate organizing the overall text (also higher-order processing).
+
+These processes are *cognitive*—that is, they indicate some mental activity. For cognitive processes, we typically look for pauses above 2 seconds, what is called a *cognitive pause*. So a pause above 2 seconds within a word might be indicative of spelling difficulties. 
+
+.. note:: The 2-second threshold is backed up by research and generally accepted. However, what threshold should be used can differ depending on context and the writers themselves. When to use what threshold will not be discussed here.
+
+Additionally, cognitive processes are not the only type of writing process you can investigate with GGXLog. Pauses can say a lot of things, but deletions are also recorded since keystroke loggers record every pressed key (including backspace and selections with the mouse). We can therefore see changes in the texts, what are called revisions, making the text's evolution over time visible.
+
+Who should use a keystroke logger?
+----------------------------------
+
+There are many different reasons to write with a keystroke logger and, therefore, many different people that would find it useful.
+
+**Researchers** have used keystroke logging to study different peoples writing processes for some time now.
+
+**Teachers** can use keystroke logging to get a better view of student's writing abilities and their progress. Additionally, :ref:`I investigated <first_year_masters_thesis>` its use for teachers to gain a more nuanced perspective of their students' performances on tests.
+
+**Clinicians** can use keystroke logging to detect writing difficulties that occur because of certain neuropsychiatric disorders. `Recent studies <https://doi.org/10.1038/s41598-022-11865-7>`_ have even shown keystroke logging to be useful to detect early stages of dementia that are difficult to diagnose with traditional diagnostic measures.
+
+**Students** or **writers** of any type might want to know more about how they write texts themselves, what they struggle with, what they spend the most time doing when writing, how much their text evolves, or what their writing process looks like.
+
+How to use GenoGraphiX-LOG
+==========================
+
+How to write a text with GenoGraphiX-LOG
+----------------------------------------
+
+How to analyze a text with GenoGraphiX-LOG
+------------------------------------------

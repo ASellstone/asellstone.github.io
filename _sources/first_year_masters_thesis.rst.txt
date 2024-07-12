@@ -1,3 +1,5 @@
+.. _first_year_masters_thesis:
+
 First year Master's thesis
 ===========================
 

@@ -1,0 +1,21 @@
+==================
+UX-design projects
+==================
+
+Here you can find my completed UX-design projects, or—as it currently stands—my completed UX-design project, as well as the projects that are in the making.
+
+Completed projects
+==================
+
+.. toctree::
+    :maxdepth: 1
+    :caption: The following are completed projects:
+    
+    infotainment_user-interface_design
+
+In progress
+===========
+
+The following are projects that are in progress:
+
+* A redesign of the keystroke logging software GenoGraphiX-LOG's user interface.

@@ -1,0 +1,21 @@
+==========================
+Technical writing projects
+==========================
+
+Here you can find my completed technical writing projects, or—as it currently stands—my completed technical writing *project*, as well as the projects that are in the making.
+
+Completed projects
+==================
+
+.. toctree::
+    :maxdepth: 1
+    :caption: The following are completed projects:
+    
+    GGXLOG-how-to
+
+In progress
+===========
+
+The following projects are in progress:
+
+* This website! Created with Sphinx and written using restructuredtext.

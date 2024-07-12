@@ -3,10 +3,6 @@ Infotainment User-Interface Design
 
 This project was a collaborative assignment for the course 'Cognitive Design' at the Umeå Institute of Design (UID). The project was called 'Me and my car' and the goal was to design an infotainment system for a car that integrates cognitive ergonomic principles and research to make the use of the interface as safe as possible.
 
-.. contents:: Table of Contents
-   :depth: 2
-   :local:
-
 The Assignment
 --------------
 
@@ -93,7 +89,7 @@ Above is a picture taken during a user test with one of my teammate's home menu 
        <img src="_static/wireframe_destination.png">
    </div>
 
-Above you can see three wire frames of the integrated design created in Figma: first, the home menu; second, the navigation interface; third, the screen where you choose a destination in the navigation interface. The first wire frame was based on my prototype of the home menu with a integrated media widget from a teammates low-fidelity prototype; latter two wireframes were created by me and entirely based om my low-fidelity prototypes.
+Above you can see three wire frames of the integrated design created in Figma: first, the home menu; second, the navigation interface; third, the screen where you choose a destination in the navigation interface. The first wire frame was based on my prototype of the home menu with a integrated media widget from a teammates low-fidelity prototype; the latter two wireframes were created by me and entirely based om my low-fidelity prototypes.
 
 .. image:: /_static/flow-chart.png
     :align: center
