@@ -4,7 +4,7 @@
 How to use GenoGraphiX-LOG to write and analyze a text
 ======================================================
 
-In this short guide I will go through how to write a text in the keystroke logging software GenoGraphiX-LOG, as well as how to start analyzing your texts. But before I start with the guide itself, I will begin with a short introduction of what kind of software GenoGraphiX-LOG is and why you might want to use it.
+In this short guide I will go through how to write a text in the keystroke logging software GenoGraphiX-LOG, as well as how to start analyzing your texts. Before I start with the guide itself, I will begin with a short introduction of what kind of software GenoGraphiX-LOG is and why you might want to use it. If you want to go straight into how to use the program, then go straight to the section `How to use GenoGraphiX-LOG`_.
 
 What is GenoGraphiX-LOG?
 ========================
@@ -12,6 +12,15 @@ What is GenoGraphiX-LOG?
 GenoGraphiX-LOG (abbreviated GGXLog) is a program that records the keys you press on your keyboard while writing—what is called *keystroke logging*. You might be familiar with what are sometimes called keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. This is *not* what GGXLog is used for, nor can it be used in that way.
 
 The keystroke logging software GGXLog is primarily used for writing research. It is the software I used to investigate :ref:`the writing processes of high school students <first_year_masters_thesis>` when taking a language test, as well as when I explored :ref:`how academics used AI-assistance <second_year_masters_thesis>` to write short academic texts.
+
+GGXLog records each keystroke that is pressed when writing in the program, and then compiles and stores the data into files with a tab-separated value (.tsv) format. As an example, here is the log for "GGXLog records each keystroke" from the previous sentence in a spreadsheet:
+
+.. csv-table::
+   :file: table_output.csv
+   :header-rows: 1
+   :class: small-table
+
+The sheer amount of data that keystroke logging provides becomes clear in this example. However, because of the inaccessible format of the log, GGXLog also offers several features for analysis. Furthermore, the log can be loaded into statistical software.
 
 Why use a keystroke logger?
 ---------------------------
