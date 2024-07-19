@@ -35,7 +35,6 @@
         padding: 10px 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
     }
 
     .topnav .name {
@@ -43,8 +42,8 @@
         padding-left: 20px;
         font-size: 24px; /* Adjust this size as needed */
         font-weight: bold;
-        text-align: left;
-        flex: 1;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .topnav .name a:link,
@@ -57,9 +56,9 @@
 
     .topnav .links {
         display: flex;
-        justify-content: space-around;
-        flex: 3;
-        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .topnav .links a {
@@ -73,39 +72,6 @@
     .topnav .links a:hover {
         background-color: #ddd;
         color: black;
-    }
-
-    @media screen and (max-width: 768px) {
-        .topnav {
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        .topnav .name {
-            padding-left: 20px;
-            margin-bottom: 10px;
-            width: 100%;
-            text-align: left;
-        }
-
-        .topnav .links {
-            flex-direction: column;
-            width: 100%;
-            justify-content: space-around;
-        }
-
-        .topnav .links a {
-            width: 100%;
-            padding: 10px;
-            font-size: 18px;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .topnav .links a {
-            padding: 10px;
-            font-size: 16px;
-        }
     }
 
 </style>
