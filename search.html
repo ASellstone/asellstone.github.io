@@ -39,7 +39,6 @@
         overflow: hidden;
         padding: 10px 0;
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
     }
@@ -49,7 +48,8 @@
         padding-left: 20px;
         font-size: 24px; /* Adjust this size as needed */
         font-weight: bold;
-        text-align: left;
+        text-align: justify;
+        flex: 1;
     }
 
     .topnav .name a:link,
@@ -62,8 +62,8 @@
 
     .topnav .links {
         display: flex;
-        justify-content: center;
-        flex: 1;
+        justify-content: space-around;
+        flex: 3;
         flex-wrap: wrap;
     }
 
@@ -83,24 +83,23 @@
     @media screen and (max-width: 768px) {
         .topnav {
             flex-direction: column;
-            align-items: center;
+            align-items: stretch;
         }
 
         .topnav .name {
-            padding-left: 20px; /* Ensuring it's not too far left */
             margin-bottom: 10px;
             width: 100%;
-            text-align: left;
+            text-align: center;
         }
 
         .topnav .links {
-            flex-direction: row;
+            flex-direction: column;
             width: 100%;
             justify-content: space-around;
         }
 
         .topnav .links a {
-            width: auto;
+            width: 100%;
             padding: 10px;
             font-size: 18px;
         }
