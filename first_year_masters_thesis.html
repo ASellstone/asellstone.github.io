@@ -19,7 +19,7 @@
     <link rel="next" title="Technical writing" href="technical-writing.html" />
     <link rel="prev" title="Second year Master’s thesis" href="second_year_masters_thesis.html" />
 <!-- Include Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
    
@@ -37,6 +37,8 @@
         padding: 10px 0;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .topnav .name {
@@ -44,8 +46,8 @@
         padding-left: 20px;
         font-size: 24px; /* Adjust this size as needed */
         font-weight: bold;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center;
+        flex: 1;
     }
 
     .topnav .name a:link,
@@ -59,8 +61,7 @@
     .topnav .links {
         display: flex;
         justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
+        flex: 1;
     }
 
     .topnav .links a {
@@ -79,20 +80,20 @@
     @media screen and (max-width: 768px) {
         .topnav {
             flex-direction: column;
-            align-items: center;
         }
 
         .topnav .name {
+            padding-left: 0;
             margin-bottom: 10px;
         }
 
         .topnav .links {
             flex-direction: column;
-            width: 100%;
+            align-items: center;
         }
 
         .topnav .links a {
-            flex: 1;
+            width: 100%;
             padding: 10px;
             font-size: 18px;
         }
