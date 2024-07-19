@@ -9,7 +9,7 @@ In this short guide I will go through how to write a text in the keystroke loggi
 What is GenoGraphiX-LOG?
 ========================
 
-GenoGraphiX-LOG (abbreviated GGXLog) is a program that records the keys you press on your keyboard while writing—what is called *keystroke logging*. You might be familiar with what are sometimes called keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. This is *not* what GGXLog is used for, nor can it be used in that way.
+GenoGraphiX-LOG (abbreviated GGXLog) is a program that records the keys you press on your keyboard while writing—what is called *keystroke logging*. You might be familiar with what are sometimes called keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. This is *not* what GGXLog is used for nor can it be used in that way.
 
 The keystroke logging software GGXLog is primarily used for writing research. It is the software I used to investigate :ref:`the writing processes of high school students <first_year_masters_thesis>` when taking a language test, as well as when I explored :ref:`how academics used AI-assistance <second_year_masters_thesis>` to write short academic texts.
 
