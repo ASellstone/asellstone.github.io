@@ -34,9 +34,9 @@
         overflow: hidden;
         padding: 10px 0;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 
     .topnav .name {
@@ -45,7 +45,7 @@
         font-size: 24px; /* Adjust this size as needed */
         font-weight: bold;
         text-align: center;
-        flex: 1 100%;
+        flex: 1;
     }
 
     .topnav .name a:link,
@@ -59,7 +59,7 @@
     .topnav .links {
         display: flex;
         justify-content: center;
-        flex: 1 100%;
+        flex: 2;
         flex-wrap: wrap;
     }
 
@@ -69,7 +69,6 @@
         padding: 14px 16px;
         text-decoration: none;
         display: inline-block;
-        flex: 1;
     }
 
     .topnav .links a:hover {
@@ -81,11 +80,6 @@
         .topnav {
             flex-direction: column;
             align-items: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 999;
         }
 
         .topnav .name {
