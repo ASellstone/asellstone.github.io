@@ -49,13 +49,13 @@
 /* Hide the custom navbar on mobile screens */
 @media (max-width: 768px) {
     #navbar-main-custom {
-        display: none;
+        display: none !important;
     }
 }
 
 /* Show the custom navbar on desktop screens */
 @media (min-width: 769px) {
     #navbar-main-custom {
-        display: block;
+        display: block !important;
     }
 }
