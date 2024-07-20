@@ -3,14 +3,7 @@
 /* Hide the sidebar on mobile screens */
 @media (max-width: 768px) {
     .bd-sidebar {
-        display: none;
-    }
-}
-
-/* Show the sidebar on desktop screens */
-@media (min-width: 769px) {
-    .bd-sidebar {
-        display: block;
+        display: none !important;
     }
 }
 
