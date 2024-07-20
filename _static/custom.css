@@ -45,17 +45,3 @@
     max-width: 32%; /* Adjust the width as needed */
     height: auto;
 }
-
-/* Hide the custom navbar on mobile screens */
-@media (max-width: 768px) {
-    #navbar-main-custom {
-        display: none !important;
-    }
-}
-
-/* Show the custom navbar on desktop screens */
-@media (min-width: 769px) {
-    #navbar-main-custom {
-        display: block !important;
-    }
-}
