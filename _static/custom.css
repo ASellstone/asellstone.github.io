@@ -18,3 +18,30 @@
     margin: 0 !important; /* Remove any default margin */
     padding: 0 !important; /* Remove any default padding */
 }
+
+/* Custom styles for wrapped images */
+.img.wrapped {
+    float: left;
+    width: auto; /* Ensure the image's width is auto */
+    pointer-events: none; /* Make the image non-clickable */
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-row img {
+    max-width: 48%; /* Adjust the width as needed */
+    height: auto;
+}
+
+.image-row-two {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-row-two img {
+    max-width: 32%; /* Adjust the width as needed */
+    height: auto;
+}
