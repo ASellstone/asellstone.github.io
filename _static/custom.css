@@ -1,26 +1,5 @@
-/* Hide the main section navigation*/
-
-/* Hide the sidebar on mobile screens */
-@media (max-width: 768px) {
-    .bd-sidebar {
-        display: none !important;
-    }
-}
-
-/* Adjust the content to use full width */
-.bd-main {
-    margin-left: 0;
-}
-
-/* Ensure the "On This Page" is still visible */
-.bd-toc-item {
-    display: block;
-}
-
-/* _static/custom.css */
-.navbar-nav .nav-item {
-    margin: 0 !important; /* Remove any default margin */
-    padding: 0 !important; /* Remove any default padding */
+.bd-sidebar {
+    overflow: hidden;   /* Remove scrolling */
 }
 
 /* Custom styles for wrapped images */
