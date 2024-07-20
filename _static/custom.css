@@ -46,21 +46,16 @@
     height: auto;
 }
 
-/* Ensure the navbar is responsive on mobile */
+/* Hide the custom navbar on mobile screens */
 @media (max-width: 768px) {
-    .navbar-center {
-        display: none; /* Hide the center navbar on small screens */
+    #navbar-main-custom {
+        display: none;
     }
+}
 
-    .navbar-end {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .navbar-start {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+/* Show the custom navbar on desktop screens */
+@media (min-width: 769px) {
+    #navbar-main-custom {
+        display: block;
     }
 }
