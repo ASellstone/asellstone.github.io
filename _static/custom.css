@@ -1,7 +1,18 @@
-/* Hide the main section navigation
-.bd-sidebar {
-    display: none;
-} */
+/* Hide the main section navigation*/
+
+/* Hide the sidebar on mobile screens */
+@media (max-width: 768px) {
+    .bd-sidebar {
+        display: none;
+    }
+}
+
+/* Show the sidebar on desktop screens */
+@media (min-width: 769px) {
+    .bd-sidebar {
+        display: block;
+    }
+}
 
 /* Adjust the content to use full width */
 .bd-main {
