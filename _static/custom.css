@@ -1,107 +1,20 @@
-/* custom.css */
+/* Hide the main section navigation */
+.bd-sidebar {
+    display: none;
+}
 
-/* Styles only for desktop (min-width: 768px) */
-@media only screen and (min-width: 768px) {
-    /* Custom styles for Sphinx documentation */
+/* Adjust the content to use full width */
+.bd-main {
+    margin-left: 0;
+}
 
-    /* Style for the sidebar logo */
-    .sidebar-logo {
-        display: block;
-        margin: 0 auto; /* Center the logo */
-        padding: 0; /* Ensure no padding around the logo */
-    }
+/* Ensure the "On This Page" is still visible */
+.bd-toc-item {
+    display: block;
+}
 
-    /* Remove padding and margin for the sidebar wrapper */
-    .sphinxsidebarwrapper {
-        padding-top: 0 !important; /* Remove any padding at the top */
-        margin-top: 0 !important; /* Remove any margin at the top */
-    }
-
-    /* Additional styling to align sidebar content with the main content */
-    .sphinxsidebarwrapper p, .sphinxsidebarwrapper h3, .sphinxsidebarwrapper ul {
-        margin-top: 1em; /* Add top margin to subsequent elements if needed */
-    }
-
-    /* Custom styles for wrapped images */
-    .img.wrapped {
-        float: left;
-        width: auto; /* Ensure the image's width is auto */
-        pointer-events: none; /* Make the image non-clickable */
-    }
-
-    .image-row {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .image-row img {
-        max-width: 48%; /* Adjust the width as needed */
-        height: auto;
-    }
-
-    .image-row-two {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .image-row-two img {
-        max-width: 32%; /* Adjust the width as needed */
-        height: auto;
-    }
-
-    .contents {
-        border: none !important;
-        padding: 0 !important;
-    }
-
-    .body {
-        margin: 0 auto;
-        max-width: 800px; /* Adjust this width as needed */
-    }
-
-    .admonition.note {
-        font-size: 0.85em; /* Adjust the value as needed */
-    }
-
-    .admonition.note .admonition-title {
-        font-size: 1.2em; /* Adjust the value as needed */
-    }
-
-    .small-table {
-        font-size: 10px;
-        padding: 5px;
-    }
-
-    .small-table th,
-    .small-table td {
-        padding: 5px;
-    }
-
-    /* Make the sidebar sticky */
-    .sphinxsidebar {
-        position: -webkit-sticky; /* For Safari */
-        position: sticky;
-        top: 20px; /* Adjust this value to control the offset from the top */
-        height: calc(100vh - 20px); /* Adjust this value to control the sidebar height */
-        overflow-y: auto; /* Add scrollbar if content exceeds sidebar height */
-    }
-
-    .sphinxsidebarwrapper {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
-    }
-
-    /* Style for the "Table of Contents" title */
-    .toc-caption {
-        font-size: 1.5em; /* Larger font size */
-        font-weight: bold; /* Bold text */
-        margin-bottom: 10px; /* Space below the title */
-        color: #000000 !important;
-    }
-
-    .toctree-wrapper-compound {
-        background-color: #f1f1f1;
-        border-radius: 5px;
-        padding: 5px;
-    }
+/* _static/custom.css */
+.navbar-nav .nav-item {
+    margin: 0 !important; /* Remove any default margin */
+    padding: 0 !important; /* Remove any default padding */
 }

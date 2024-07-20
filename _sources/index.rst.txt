@@ -16,10 +16,11 @@ View my portfolio
 
 In my portfolio you can find projects (academic, professional, and personal) ranging from technical writing, UX-design, and research in cognitive science. Although diverse, my projects find common ground in the application of cognitive science to the use and development of technology.
 
+Here you can view my portfolio of different projects I have pursued:
+
 .. toctree::
    :maxdepth: 3
    :titlesonly:
-   :caption: Here you can view my portfolio of different projects I have pursued:
    
    portfolio
 
@@ -28,9 +29,10 @@ Read my blog
 
 In my blog you will be able to (it is a work in progress) find writings on diverse subjects, ranging from film, cognitive science, philosophy, technology, and other things that I find interesting. I enjoy writing, and this is where I can write about things that might not be related to my professional work.
 
+Here you will be able to (again, work in progress) find my blog posts where I write about various subjects that I find interesting:
+
 .. toctree::
    :maxdepth: 2
    :titlesonly:
-   :caption: Here you will be able to (again, work in progress) find my blog posts where I write about various subjects that I find interesting:
 
    blog
