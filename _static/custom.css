@@ -45,3 +45,22 @@
     max-width: 32%; /* Adjust the width as needed */
     height: auto;
 }
+
+/* Ensure the navbar is responsive on mobile */
+@media (max-width: 768px) {
+    .navbar-center {
+        display: none; /* Hide the center navbar on small screens */
+    }
+
+    .navbar-end {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .navbar-start {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
