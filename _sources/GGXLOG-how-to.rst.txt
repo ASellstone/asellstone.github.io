@@ -4,7 +4,7 @@
 How to use GenoGraphiX-LOG to write and analyze a text
 ======================================================
 
-In this short guide I will go through how to write a text in the keystroke logging software GenoGraphiX-LOG, as well as how to start analyzing your texts. Before I start with the guide itself, I will begin with a short introduction of what kind of software GenoGraphiX-LOG is and why you might want to use it. If you want to go straight into how to use the program, then go straight to the section `How to use GenoGraphiX-LOG`_.
+In this short guide I will go through how to write a text in the keystroke logging software GenoGraphiX-LOG, as well as how to start analyzing a writing session. Before I start with the guide itself, I will begin with a short introduction to what kind of software GenoGraphiX-LOG is and why you might want to use it. If you want to go straight into how to use the program, then go to the section `How to use GenoGraphiX-LOG`_.
 
 What is GenoGraphiX-LOG?
 ========================
@@ -57,8 +57,87 @@ There are many different reasons to write with a keystroke logger and, therefore
 How to use GenoGraphiX-LOG
 ==========================
 
+Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use the keystroke logging program to write a text and analyze the writing session.
+
+In the section "How to write a text with GenoGraphiX-LOG" I will cover the basics of the program, including how to create a project and start the writing session. There are multiple project types, but I will only cover what is called "Free-writing". In this project type the user has access to one window where they are free to write anything they want. Another type of project is "Translating", where the user is presented with two windows—one with a text that is to be translated, and another with a bank page where the translated text is to be written. There are different types of projects for different uses, but Free-writing is probably the most common type of project.
+
+Next, in the section "How to analyze a text with GenoGraphiX-LOG", I will briefly cover how to analyze the texts with some—not all—analysis tools that GGXLog has to offer, and how to extract your entire log and specific data in a software like Excel. I will give a brief introduction to what type of statistics can be viewed natively in GGXLog, but I will *not* give a detailed guide on how to interpret the data that GGXLog gives you.
+
 How to write a text with GenoGraphiX-LOG
 ----------------------------------------
+
+Step 1: Installing the program
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To write using GGXLog, you first need to have the program installed on your computer. The program can be downloaded at the website `ggxlog.net <https://www.ggxlog.net/>`_. Go to the "Downloads" section on the website and download the version for your operating system.
+
+.. image:: /_static/ggxlog_downloads_2.png
+   :align: center
+
+You will have to register to download the program by entering your name, email, country, as well as eventual university affiliation and research project. You do not have to give accurate information, you will be able to download the program immediately after registering anyway.
+
+.. image:: /_static/ggxlog_register.png
+   :align: center
+
+.. important:: Your antivirus software or system security might flag the software as potential malware. This is because GGXLog logs your keystrokes when you are using the program. In that case you will have to give GGXLog permission to run anyway.
+
+.. seealso:: If you need more guidance on how to install GGXLog, you can follow the installation instructions on the `user support section <https://www.ggxlog.net/usersupport.html>`_ on the GGXlog website.
+
+Step 2: Creating a new project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+When you have GGXLog installed, you will have to start a new project. To do this, open the program and navigate to the top bar and press "Project", and then "New".
+
+A window will appear with two subsections—one subsection called "Project Settings" and another subsection called "Informant Information".
+
+.. image:: /_static/ggxlog_project.png
+   :align: center
+   :scale: 50%
+
+The project settings section includes settings for your project, such as the previously mentioned project types, the expected session length if you want a real time graph, and where you want to save your project
+
+For a project where you write a text such as an essay, short story, or another similar text, you should select "Free-writing" as the project type. The "Session length" setting is only relevant if you want to display the real-time graph when you write. Select "Long text" unless you know that your writing session will last for less than 10 minutes. To choose where to save your project folder, press the brows button by the "File Save Location" setting.
+
+.. image:: /_static/ggxlog_project_settings.png
+   :align: center
+   :scale: 75%
+
+.. note:: The real-time graph is not recommended for new users. The graph is difficult to understand and might be distracting.
+
+The informant information section is for research purposes. In this section, the participant can provide general demographic information. It also contains an informed consent form for the participant.
+
+.. image:: /_static/ggxlog_informant_information.png
+   :align: center
+   :scale: 75%
+
+When you have are done setting up your project, press "Continue" at the bottom right of the window to create the project.
+
+Step 3: Start writing
+~~~~~~~~~~~~~~~~~~~~~
+
+Now you will be presented with the writing interface consisting of a few buttons—a record button, a greyed out stop and save button, and a close button—as well as the text editor where you will write your text below the buttons.
+
+.. image:: /_static/ggxlog_session.png
+   :align: center
+
+To begin the writing session press "Record". The text editor will unlock and turn white, which means that are able to start writing your text.
+
+.. image:: /_static/ggxlog_record.png
+   :align: center
+   :scale: 75%
+
+When you have started the writing session and are recording, what previously was the record button will become a pause button. Pressing the pause button will pause the recording and the text editor will be locked again.
+
+.. image:: /_static/ggxlog_pause.png
+   :align: center
+   :scale: 75%
+
+When you have finished your writing session press "Stop and Save" to stop the writing session and save your session. You will be asked to confirm your choice. When confirmed, the program will tell you where the project was saved, which will be the destination you chose when setting up the project.
+
+.. image:: /_static/ggxlog_save.png
+   :align: center
+   :scale: 75%
+
+Now you know how to create a project and write a text using GGXLog. Next we will look at how to analyze the keystroke log.
 
 How to analyze a text with GenoGraphiX-LOG
 ------------------------------------------

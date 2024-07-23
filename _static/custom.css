@@ -28,3 +28,8 @@
     max-width: 32%; /* Adjust the width as needed */
     height: auto;
 }
+
+/* Make images non clickable */
+img {
+    pointer-events: none !important;
+  }

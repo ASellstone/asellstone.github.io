@@ -4,19 +4,16 @@ Academic research
 
 Here you can find my completed academic research projects, as well as the projects that are in the making.
 
-Completed projects
-==================
+Completed
+=========
 
 .. toctree::
     :maxdepth: 1
-    :caption: Here are my completed projects:
 
     second_year_masters_thesis
     first_year_masters_thesis
 
 In progress
 ===========
-
-The following are projects that are in progress:
 
 * A book chapter called "Visualising the Process of Answering Clinical and Diagnostic Linguistic Tests", currently undergoing the publication process.

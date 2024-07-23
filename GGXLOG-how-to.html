@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=05ebea47" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=64983bf5" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -387,7 +387,7 @@ document.write(`
                   
   <section id="how-to-use-genographix-log-to-write-and-analyze-a-text">
 <span id="ggxlog-how-to"></span><h1>How to use GenoGraphiX-LOG to write and analyze a text<a class="headerlink" href="#how-to-use-genographix-log-to-write-and-analyze-a-text" title="Link to this heading">#</a></h1>
-<p>In this short guide I will go through how to write a text in the keystroke logging software GenoGraphiX-LOG, as well as how to start analyzing your texts. Before I start with the guide itself, I will begin with a short introduction of what kind of software GenoGraphiX-LOG is and why you might want to use it. If you want to go straight into how to use the program, then go straight to the section <a class="reference internal" href="#how-to-use-genographix-log">How to use GenoGraphiX-LOG</a>.</p>
+<p>In this short guide I will go through how to write a text in the keystroke logging software GenoGraphiX-LOG, as well as how to start analyzing a writing session. Before I start with the guide itself, I will begin with a short introduction to what kind of software GenoGraphiX-LOG is and why you might want to use it. If you want to go straight into how to use the program, then go to the section <a class="reference internal" href="#how-to-use-genographix-log">How to use GenoGraphiX-LOG</a>.</p>
 <section id="what-is-genographix-log">
 <h2>What is GenoGraphiX-LOG?<a class="headerlink" href="#what-is-genographix-log" title="Link to this heading">#</a></h2>
 <p>GenoGraphiX-LOG (abbreviated GGXLog) is a program that records the keys you press on your keyboard while writing—what is called <em>keystroke logging</em>. You might be familiar with what are sometimes called keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. This is <em>not</em> what GGXLog is used for nor can it be used in that way.</p>
@@ -1004,8 +1004,54 @@ document.write(`
 </section>
 <section id="how-to-use-genographix-log">
 <h2>How to use GenoGraphiX-LOG<a class="headerlink" href="#how-to-use-genographix-log" title="Link to this heading">#</a></h2>
+<p>Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use the keystroke logging program to write a text and analyze the writing session.</p>
+<p>In the section “How to write a text with GenoGraphiX-LOG” I will cover the basics of the program, including how to create a project and start the writing session. There are multiple project types, but I will only cover what is called “Free-writing”. In this project type the user has access to one window where they are free to write anything they want. Another type of project is “Translating”, where the user is presented with two windows—one with a text that is to be translated, and another with a bank page where the translated text is to be written. There are different types of projects for different uses, but Free-writing is probably the most common type of project.</p>
+<p>Next, in the section “How to analyze a text with GenoGraphiX-LOG”, I will briefly cover how to analyze the texts with some—not all—analysis tools that GGXLog has to offer, and how to extract your entire log and specific data in a software like Excel. I will give a brief introduction to what type of statistics can be viewed natively in GGXLog, but I will <em>not</em> give a detailed guide on how to interpret the data that GGXLog gives you.</p>
 <section id="how-to-write-a-text-with-genographix-log">
 <h3>How to write a text with GenoGraphiX-LOG<a class="headerlink" href="#how-to-write-a-text-with-genographix-log" title="Link to this heading">#</a></h3>
+<section id="step-1-installing-the-program">
+<h4>Step 1: Installing the program<a class="headerlink" href="#step-1-installing-the-program" title="Link to this heading">#</a></h4>
+<p>To write using GGXLog, you first need to have the program installed on your computer. The program can be downloaded at the website <a class="reference external" href="https://www.ggxlog.net/">ggxlog.net</a>. Go to the “Downloads” section on the website and download the version for your operating system.</p>
+<img alt="_images/ggxlog_downloads_2.png" class="align-center" src="_images/ggxlog_downloads_2.png" />
+<p>You will have to register to download the program by entering your name, email, country, as well as eventual university affiliation and research project. You do not have to give accurate information, you will be able to download the program immediately after registering anyway.</p>
+<img alt="_images/ggxlog_register.png" class="align-center" src="_images/ggxlog_register.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Your antivirus software or system security might flag the software as potential malware. This is because GGXLog logs your keystrokes when you are using the program. In that case you will have to give GGXLog permission to run anyway.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>If you need more guidance on how to install GGXLog, you can follow the installation instructions on the <a class="reference external" href="https://www.ggxlog.net/usersupport.html">user support section</a> on the GGXlog website.</p>
+</div>
+</section>
+<section id="step-2-creating-a-new-project">
+<h4>Step 2: Creating a new project<a class="headerlink" href="#step-2-creating-a-new-project" title="Link to this heading">#</a></h4>
+<p>When you have GGXLog installed, you will have to start a new project. To do this, open the program and navigate to the top bar and press “Project”, and then “New”.</p>
+<p>A window will appear with two subsections—one subsection called “Project Settings” and another subsection called “Informant Information”.</p>
+<a class="reference internal image-reference" href="_images/ggxlog_project.png"><img alt="_images/ggxlog_project.png" class="align-center" src="_images/ggxlog_project.png" style="width: 381.0px; height: 459.0px;" /></a>
+<p>The project settings section includes settings for your project, such as the previously mentioned project types, the expected session length if you want a real time graph, and where you want to save your project</p>
+<p>For a project where you write a text such as an essay, short story, or another similar text, you should select “Free-writing” as the project type. The “Session length” setting is only relevant if you want to display the real-time graph when you write. Select “Long text” unless you know that your writing session will last for less than 10 minutes. To choose where to save your project folder, press the brows button by the “File Save Location” setting.</p>
+<a class="reference internal image-reference" href="_images/ggxlog_project_settings.png"><img alt="_images/ggxlog_project_settings.png" class="align-center" src="_images/ggxlog_project_settings.png" style="width: 567.75px; height: 182.25px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The real-time graph is not recommended for new users. The graph is difficult to understand and might be distracting.</p>
+</div>
+<p>The informant information section is for research purposes. In this section, the participant can provide general demographic information. It also contains an informed consent form for the participant.</p>
+<a class="reference internal image-reference" href="_images/ggxlog_informant_information.png"><img alt="_images/ggxlog_informant_information.png" class="align-center" src="_images/ggxlog_informant_information.png" style="width: 566.25px; height: 480.0px;" /></a>
+<p>When you have are done setting up your project, press “Continue” at the bottom right of the window to create the project.</p>
+</section>
+<section id="step-3-start-writing">
+<h4>Step 3: Start writing<a class="headerlink" href="#step-3-start-writing" title="Link to this heading">#</a></h4>
+<p>Now you will be presented with the writing interface consisting of a few buttons—a record button, a greyed out stop and save button, and a close button—as well as the text editor where you will write your text below the buttons.</p>
+<img alt="_images/ggxlog_session.png" class="align-center" src="_images/ggxlog_session.png" />
+<p>To begin the writing session press “Record”. The text editor will unlock and turn white, which means that are able to start writing your text.</p>
+<a class="reference internal image-reference" href="_images/ggxlog_record.png"><img alt="_images/ggxlog_record.png" class="align-center" src="_images/ggxlog_record.png" style="width: 534.75px; height: 91.5px;" /></a>
+<p>When you have started the writing session and are recording, what previously was the record button will become a pause button. Pressing the pause button will pause the recording and the text editor will be locked again.</p>
+<a class="reference internal image-reference" href="_images/ggxlog_pause.png"><img alt="_images/ggxlog_pause.png" class="align-center" src="_images/ggxlog_pause.png" style="width: 537.0px; height: 93.75px;" /></a>
+<p>When you have finished your writing session press “Stop and Save” to stop the writing session and save your session. You will be asked to confirm your choice. When confirmed, the program will tell you where the project was saved, which will be the destination you chose when setting up the project.</p>
+<a class="reference internal image-reference" href="_images/ggxlog_save.png"><img alt="_images/ggxlog_save.png" class="align-center" src="_images/ggxlog_save.png" style="width: 537.0px; height: 90.0px;" /></a>
+<p>Now you know how to create a project and write a text using GGXLog. Next we will look at how to analyze the keystroke log.</p>
+</section>
 </section>
 <section id="how-to-analyze-a-text-with-genographix-log">
 <h3>How to analyze a text with GenoGraphiX-LOG<a class="headerlink" href="#how-to-analyze-a-text-with-genographix-log" title="Link to this heading">#</a></h3>
@@ -1041,7 +1087,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-genographix-log">How to use GenoGraphiX-LOG</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-write-a-text-with-genographix-log">How to write a text with GenoGraphiX-LOG</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-write-a-text-with-genographix-log">How to write a text with GenoGraphiX-LOG</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-installing-the-program">Step 1: Installing the program</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-creating-a-new-project">Step 2: Creating a new project</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-start-writing">Step 3: Start writing</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-analyze-a-text-with-genographix-log">How to analyze a text with GenoGraphiX-LOG</a></li>
 </ul>
 </li>
@@ -1081,7 +1132,7 @@ document.write(`
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.5.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
