@@ -15,4 +15,4 @@ Completed
 In progress
 ===========
 
-* A redesign of the keystroke logging software GenoGraphiX-LOG's user interface.
+A redesign of the keystroke logging software GenoGraphiX-LOG's user interface.
