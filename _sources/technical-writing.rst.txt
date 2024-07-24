@@ -2,7 +2,7 @@
 Technical writing
 =================
 
-Here you can find my completed technical writing projects, or—as it currently stands—my completed technical writing *project*, as well as the projects that are in the making.
+Here you can find my completed technical writing projects, as well as the projects that are in the making.
 
 Completed
 =========
