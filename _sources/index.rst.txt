@@ -5,16 +5,16 @@
 Welcome to Andreas Sellstone's Website
 ======================================
 
-This is my personal website where you can find information about me and my work, including my :ref:`portfolio <portfolio>` and :ref:`blog <blog>`.
+This is my personal website where you can find information about me and my work.
 
-Who am I? I am a cognitive scientist looking for work. I'm interested in the ways people interact with technology, particularly (but not exclusively) in how language is used in these interactions. There are a number of professions relating to cognition and technology that I am interested in pursuing, but as of right now I would especially like to pursue Technical Writing. However, I am almost equally interested in Human Factors Engineering, UX-Design/Research, and Data Analysis.
+I am a cognitive scientist seeking new professional opportunities. My primary interest lies in exploring how people interact with technology, particularly focusing on how different cognitive processes are involved, and how behavioral insights can be leveraged to develop more effective and user centered technology. While most of my academic projects have focused on language use in these interactions, my research interests extend beyond this area. Check out my :ref:`portfolio <portfolio>` to view the projects I have worked on.
 
 If you would like to know more about me you can go to the :ref:`about section <about>`.
 
 View my portfolio
 =================
 
-In my portfolio you can find projects (academic, professional, and personal) ranging from technical writing, UX-design, and research in cognitive science. Although diverse, my projects find common ground in the application of cognitive science to the use and development of technology.
+In my portfolio you can find projects (academic, professional, and personal) ranging from technical writing, UX-design, and research. Although diverse, my projects find common ground in the application of cognitive science to the use and development of technology.
 
 Here you can view my portfolio of different projects I have pursued:
 
