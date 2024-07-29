@@ -61,7 +61,7 @@ There are many different reasons to write with a keystroke logger and, therefore
 How to start writing
 ====================
 
-Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use the keystroke logging program to write. I will go through the basics of the program, including how to create a project and start the writing session.
+Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use the keystroke logging program to write a text and prepare the analysis of the writing session.
 
 There are multiple project types, but I will only cover what is called "Free-writing". In this project type the user has access to one window where they are free to write anything they want. An example of another type of project is "Translating", where the user is presented with two windows—one with a text that is to be translated, and another with a bank page where the translated text is to be written. There are different types of projects for different uses, but Free-writing is probably the most common type of project.
 
