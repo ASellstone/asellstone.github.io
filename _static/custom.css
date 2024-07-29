@@ -33,3 +33,7 @@
 img {
     pointer-events: none !important;
   }
+
+.extra-space {
+    margin-bottom: 20px;
+}

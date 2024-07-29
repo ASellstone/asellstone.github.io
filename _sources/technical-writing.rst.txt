@@ -7,12 +7,12 @@ Here you can find my completed technical writing projects, as well as the projec
 Completed
 =========
 
-This website, which I created with Sphinx, written using restructuredtext.
-
-In progress
-===========
-
 .. toctree::
     :maxdepth: 1
     
     GGXLOG-how-to
+
+In progress
+===========
+
+This website, which I created with Sphinx, written using restructuredtext.

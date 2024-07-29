@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>How to use GenoGraphiX-LOG to write and analyze a text &#8212; Andreas Sellstone</title>
+    <title>How to write a text with GenoGraphiX-LOG &#8212; Andreas Sellstone</title>
   
   
   
@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=64983bf5" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=a62e2384" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -318,7 +318,7 @@ document.write(`
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="technical-writing.html">Technical writing</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">How to use GenoGraphiX-LOG to write and analyze a text</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">How to write a text with GenoGraphiX-LOG</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="UX-design.html">UX-design</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -368,7 +368,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="technical-writing.html" class="nav-link">Technical writing</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">How to use...</li>
+    <li class="breadcrumb-item active" aria-current="page">How to...</li>
   </ul>
 </nav>
 </div>
@@ -385,12 +385,41 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="how-to-use-genographix-log-to-write-and-analyze-a-text">
-<span id="ggxlog-how-to"></span><h1>How to use GenoGraphiX-LOG to write and analyze a text<a class="headerlink" href="#how-to-use-genographix-log-to-write-and-analyze-a-text" title="Link to this heading">#</a></h1>
-<p>In this short guide I will go through how to write a text in the keystroke logging software GenoGraphiX-LOG, as well as how to start analyzing a writing session. Before I start with the guide itself, I will begin with a short introduction to what kind of software GenoGraphiX-LOG is and why you might want to use it. If you want to go straight into how to use the program, then go to the section <a class="reference internal" href="#how-to-use-genographix-log">How to use GenoGraphiX-LOG</a>.</p>
+  <section id="how-to-write-a-text-with-genographix-log">
+<span id="ggxlog-how-to"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">How to write a text with GenoGraphiX-LOG</a><a class="headerlink" href="#how-to-write-a-text-with-genographix-log" title="Link to this heading">#</a></h1>
+<p>In this short guide I will teach you how to write a text in the keystroke logging software GenoGraphiX-LOG. I will also give a short primer on how to prepare for the analysis of your writing session at the end of the guide.</p>
+<p>Before I start with the guide itself, I will begin with a short introduction to what kind of software GenoGraphiX-LOG is and why you might want to use it. Go to the section <a class="reference internal" href="#how-to-start-writing">How to start writing</a> if you want to go straight into how to use the program.</p>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#how-to-write-a-text-with-genographix-log" id="id1">How to write a text with GenoGraphiX-LOG</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-is-genographix-log" id="id2">What is GenoGraphiX-LOG?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#why-use-a-keystroke-logger" id="id3">Why use a keystroke logger?</a></p></li>
+<li><p><a class="reference internal" href="#who-should-use-a-keystroke-logger" id="id4">Who should use a keystroke logger?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-to-start-writing" id="id5">How to start writing</a></p>
+<ul>
+<li><p><a class="reference internal" href="#step-1-installing-the-program" id="id6">Step 1: Installing the program</a></p></li>
+<li><p><a class="reference internal" href="#step-2-creating-a-new-project" id="id7">Step 2: Creating a new project</a></p></li>
+<li><p><a class="reference internal" href="#step-3-start-writing" id="id8">Step 3: Start writing</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#analyzing-a-writing-session" id="id9">Analyzing a writing session</a></p>
+<ul>
+<li><p><a class="reference internal" href="#native-analytical-features" id="id10">Native analytical features</a></p></li>
+<li><p><a class="reference internal" href="#uploading-logging-data-into-statistical-software" id="id11">Uploading logging data into statistical software</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
 <section id="what-is-genographix-log">
-<h2>What is GenoGraphiX-LOG?<a class="headerlink" href="#what-is-genographix-log" title="Link to this heading">#</a></h2>
-<p>GenoGraphiX-LOG (abbreviated GGXLog) is a program that records the keys you press on your keyboard while writing—what is called <em>keystroke logging</em>. You might be familiar with what are sometimes called keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. This is <em>not</em> what GGXLog is used for nor can it be used in that way.</p>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">What is GenoGraphiX-LOG?</a><a class="headerlink" href="#what-is-genographix-log" title="Link to this heading">#</a></h2>
+<p>GenoGraphiX-LOG (abbreviated GGXLog) is a program that records the keys you press on your keyboard while writing—what is called <em>keystroke logging</em>. You might be familiar with keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. This is <em>not</em> what GGXLog is used for nor can it be used in that way.</p>
 <p>The keystroke logging software GGXLog is primarily used for writing research. It is the software I used to investigate <a class="reference internal" href="first_year_masters_thesis.html#first-year-masters-thesis"><span class="std std-ref">the writing processes of high school students</span></a> when taking a language test, as well as when I explored <a class="reference internal" href="second_year_masters_thesis.html#second-year-masters-thesis"><span class="std std-ref">how academics used AI-assistance</span></a> to write short academic texts.</p>
 <p>GGXLog records each keystroke that is pressed when writing in the program, and then compiles and stores the data into files with a tab-separated value (.tsv) format. As an example, here is the log for “GGXLog records each keystroke” from the previous sentence in a spreadsheet:</p>
 <div class="pst-scrollable-table-container"><table class="small-table table">
@@ -976,9 +1005,9 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>The sheer amount of data that keystroke logging provides becomes clear in this example. However, because of the inaccessible format of the log, GGXLog also offers several features for analysis. Furthermore, the log can be loaded into statistical software.</p>
+<p>The sheer amount of data that keystroke logging provides from writing a very short sentence becomes clear in this example. However, GGXLog also offers several features for analysis because of the inaccessible format of the log. Furthermore, the log can also be loaded into statistical software.</p>
 <section id="why-use-a-keystroke-logger">
-<h3>Why use a keystroke logger?<a class="headerlink" href="#why-use-a-keystroke-logger" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Why use a keystroke logger?</a><a class="headerlink" href="#why-use-a-keystroke-logger" title="Link to this heading">#</a></h3>
 <p>Beyond recording <em>what</em> key you press on the keyboard, it also records <em>when</em> you press the key. This gives you the pause length between each character, word, sentence, and paragraph of your text. The length of the pause as well as where the pause occurs can tell you a lot about writing processes:</p>
 <ul class="simple">
 <li><p>Longer pauses between characters can indicate spelling difficulties (orthographic processing),</p></li>
@@ -994,7 +1023,7 @@ document.write(`
 <p>Additionally, cognitive processes are not the only type of writing process you can investigate with GGXLog. Pauses can say a lot of things, but deletions are also recorded since keystroke loggers record every pressed key (including backspace and selections with the mouse). We can therefore see changes in the texts, what are called revisions, making the text’s evolution over time visible.</p>
 </section>
 <section id="who-should-use-a-keystroke-logger">
-<h3>Who should use a keystroke logger?<a class="headerlink" href="#who-should-use-a-keystroke-logger" title="Link to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Who should use a keystroke logger?</a><a class="headerlink" href="#who-should-use-a-keystroke-logger" title="Link to this heading">#</a></h3>
 <p>There are many different reasons to write with a keystroke logger and, therefore, many different people that would find it useful.</p>
 <p><strong>Researchers</strong> have used keystroke logging to study different peoples writing processes for some time now.</p>
 <p><strong>Teachers</strong> can use keystroke logging to get a better view of student’s writing abilities and their progress. Additionally, <a class="reference internal" href="first_year_masters_thesis.html#first-year-masters-thesis"><span class="std std-ref">I investigated</span></a> its use for teachers to gain a more nuanced perspective of their students’ performances on tests.</p>
@@ -1002,19 +1031,17 @@ document.write(`
 <p><strong>Students</strong> or <strong>writers</strong> of any type might want to know more about how they write texts themselves, what they struggle with, what they spend the most time doing when writing, how much their text evolves, or what their writing process looks like.</p>
 </section>
 </section>
-<section id="how-to-use-genographix-log">
-<h2>How to use GenoGraphiX-LOG<a class="headerlink" href="#how-to-use-genographix-log" title="Link to this heading">#</a></h2>
+<section id="how-to-start-writing">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">How to start writing</a><a class="headerlink" href="#how-to-start-writing" title="Link to this heading">#</a></h2>
 <p>Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use the keystroke logging program to write a text and analyze the writing session.</p>
 <p>In the section “How to write a text with GenoGraphiX-LOG” I will cover the basics of the program, including how to create a project and start the writing session. There are multiple project types, but I will only cover what is called “Free-writing”. In this project type the user has access to one window where they are free to write anything they want. Another type of project is “Translating”, where the user is presented with two windows—one with a text that is to be translated, and another with a bank page where the translated text is to be written. There are different types of projects for different uses, but Free-writing is probably the most common type of project.</p>
 <p>Next, in the section “How to analyze a text with GenoGraphiX-LOG”, I will briefly cover how to analyze the texts with some—not all—analysis tools that GGXLog has to offer, and how to extract your entire log and specific data in a software like Excel. I will give a brief introduction to what type of statistics can be viewed natively in GGXLog, but I will <em>not</em> give a detailed guide on how to interpret the data that GGXLog gives you.</p>
-<section id="how-to-write-a-text-with-genographix-log">
-<h3>How to write a text with GenoGraphiX-LOG<a class="headerlink" href="#how-to-write-a-text-with-genographix-log" title="Link to this heading">#</a></h3>
 <section id="step-1-installing-the-program">
-<h4>Step 1: Installing the program<a class="headerlink" href="#step-1-installing-the-program" title="Link to this heading">#</a></h4>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Step 1: Installing the program</a><a class="headerlink" href="#step-1-installing-the-program" title="Link to this heading">#</a></h3>
 <p>To write using GGXLog, you first need to have the program installed on your computer. The program can be downloaded at the website <a class="reference external" href="https://www.ggxlog.net/">ggxlog.net</a>. Go to the “Downloads” section on the website and download the version for your operating system.</p>
-<img alt="_images/ggxlog_downloads_2.png" class="align-center" src="_images/ggxlog_downloads_2.png" />
+<img alt="_images/ggxlog_downloads_2.png" class="extra-space align-center" src="_images/ggxlog_downloads_2.png" />
 <p>You will have to register to download the program by entering your name, email, country, as well as eventual university affiliation and research project. You do not have to give accurate information, you will be able to download the program immediately after registering anyway.</p>
-<img alt="_images/ggxlog_register.png" class="align-center" src="_images/ggxlog_register.png" />
+<img alt="_images/ggxlog_register.png" class="extra-space align-center" src="_images/ggxlog_register.png" />
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Your antivirus software or system security might flag the software as potential malware. This is because GGXLog logs your keystrokes when you are using the program. In that case you will have to give GGXLog permission to run anyway.</p>
@@ -1025,36 +1052,72 @@ document.write(`
 </div>
 </section>
 <section id="step-2-creating-a-new-project">
-<h4>Step 2: Creating a new project<a class="headerlink" href="#step-2-creating-a-new-project" title="Link to this heading">#</a></h4>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Step 2: Creating a new project</a><a class="headerlink" href="#step-2-creating-a-new-project" title="Link to this heading">#</a></h3>
 <p>When you have GGXLog installed, you will have to start a new project. To do this, open the program and navigate to the top bar and press “Project”, and then “New”.</p>
 <p>A window will appear with two subsections—one subsection called “Project Settings” and another subsection called “Informant Information”.</p>
-<a class="reference internal image-reference" href="_images/ggxlog_project.png"><img alt="_images/ggxlog_project.png" class="align-center" src="_images/ggxlog_project.png" style="width: 381.0px; height: 459.0px;" /></a>
+<a class="extra-space reference internal image-reference" href="_images/ggxlog_project.png"><img alt="_images/ggxlog_project.png" class="extra-space align-center" src="_images/ggxlog_project.png" style="width: 381.0px; height: 459.0px;" /></a>
 <p>The project settings section includes settings for your project, such as the previously mentioned project types, the expected session length if you want a real time graph, and where you want to save your project</p>
 <p>For a project where you write a text such as an essay, short story, or another similar text, you should select “Free-writing” as the project type. The “Session length” setting is only relevant if you want to display the real-time graph when you write. Select “Long text” unless you know that your writing session will last for less than 10 minutes. To choose where to save your project folder, press the brows button by the “File Save Location” setting.</p>
-<a class="reference internal image-reference" href="_images/ggxlog_project_settings.png"><img alt="_images/ggxlog_project_settings.png" class="align-center" src="_images/ggxlog_project_settings.png" style="width: 567.75px; height: 182.25px;" /></a>
+<a class="extra-space reference internal image-reference" href="_images/ggxlog_project_settings.png"><img alt="_images/ggxlog_project_settings.png" class="extra-space align-center" src="_images/ggxlog_project_settings.png" style="width: 567.75px; height: 182.25px;" /></a>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The real-time graph is not recommended for new users. The graph is difficult to understand and might be distracting.</p>
 </div>
 <p>The informant information section is for research purposes. In this section, the participant can provide general demographic information. It also contains an informed consent form for the participant.</p>
-<a class="reference internal image-reference" href="_images/ggxlog_informant_information.png"><img alt="_images/ggxlog_informant_information.png" class="align-center" src="_images/ggxlog_informant_information.png" style="width: 566.25px; height: 480.0px;" /></a>
-<p>When you have are done setting up your project, press “Continue” at the bottom right of the window to create the project.</p>
+<a class="extra-space reference internal image-reference" href="_images/ggxlog_informant_information.png"><img alt="_images/ggxlog_informant_information.png" class="extra-space align-center" src="_images/ggxlog_informant_information.png" style="width: 566.25px; height: 480.0px;" /></a>
+<p>When you are done setting up your project, press “Continue” at the bottom right of the window to create the project.</p>
 </section>
 <section id="step-3-start-writing">
-<h4>Step 3: Start writing<a class="headerlink" href="#step-3-start-writing" title="Link to this heading">#</a></h4>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Step 3: Start writing</a><a class="headerlink" href="#step-3-start-writing" title="Link to this heading">#</a></h3>
 <p>Now you will be presented with the writing interface consisting of a few buttons—a record button, a greyed out stop and save button, and a close button—as well as the text editor where you will write your text below the buttons.</p>
-<img alt="_images/ggxlog_session.png" class="align-center" src="_images/ggxlog_session.png" />
+<img alt="_images/ggxlog_session.png" class="extra-space align-center" src="_images/ggxlog_session.png" />
 <p>To begin the writing session press “Record”. The text editor will unlock and turn white, which means that are able to start writing your text.</p>
-<a class="reference internal image-reference" href="_images/ggxlog_record.png"><img alt="_images/ggxlog_record.png" class="align-center" src="_images/ggxlog_record.png" style="width: 534.75px; height: 91.5px;" /></a>
+<a class="extra-space reference internal image-reference" href="_images/ggxlog_record.png"><img alt="_images/ggxlog_record.png" class="extra-space align-center" src="_images/ggxlog_record.png" style="width: 534.75px; height: 91.5px;" /></a>
 <p>When you have started the writing session and are recording, what previously was the record button will become a pause button. Pressing the pause button will pause the recording and the text editor will be locked again.</p>
-<a class="reference internal image-reference" href="_images/ggxlog_pause.png"><img alt="_images/ggxlog_pause.png" class="align-center" src="_images/ggxlog_pause.png" style="width: 537.0px; height: 93.75px;" /></a>
+<a class="extra-space reference internal image-reference" href="_images/ggxlog_pause.png"><img alt="_images/ggxlog_pause.png" class="extra-space align-center" src="_images/ggxlog_pause.png" style="width: 537.0px; height: 93.75px;" /></a>
 <p>When you have finished your writing session press “Stop and Save” to stop the writing session and save your session. You will be asked to confirm your choice. When confirmed, the program will tell you where the project was saved, which will be the destination you chose when setting up the project.</p>
-<a class="reference internal image-reference" href="_images/ggxlog_save.png"><img alt="_images/ggxlog_save.png" class="align-center" src="_images/ggxlog_save.png" style="width: 537.0px; height: 90.0px;" /></a>
+<a class="extra-space reference internal image-reference" href="_images/ggxlog_save.png"><img alt="_images/ggxlog_save.png" class="extra-space align-center" src="_images/ggxlog_save.png" style="width: 537.0px; height: 90.0px;" /></a>
 <p>Now you know how to create a project and write a text using GGXLog. Next we will look at how to analyze the keystroke log.</p>
 </section>
 </section>
-<section id="how-to-analyze-a-text-with-genographix-log">
-<h3>How to analyze a text with GenoGraphiX-LOG<a class="headerlink" href="#how-to-analyze-a-text-with-genographix-log" title="Link to this heading">#</a></h3>
+<section id="analyzing-a-writing-session">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Analyzing a writing session</a><a class="headerlink" href="#analyzing-a-writing-session" title="Link to this heading">#</a></h2>
+<p>When you are done with your writing session and have saved it, you need to open it in GGXLog to analyze the log. To do this, click “Project”, then “Open” and navigate to where you saved your project.</p>
+<p>Open the project folder, which probably has a name consisting of a string of numbers, then select the file called “Session_log.log” and press “Open” or double click the file.</p>
+<p>Now you will see that a tab called “Session Replay” has opened in GGXLog. In this tab, you can watch your writing session in real time, and speed it up or down, as well as navigate through the recording.</p>
+<img alt="_images/session_replay_80.gif" class="extra-space align-center" src="_images/session_replay_80.gif" />
+<p>The session replay feature can be useful, but does not provide deeper insights than what you can get from screen recordings of writing sessions. To analyze keystroke logging data we need to utilize the tools that GGXLog provides, or upload the logged data to statistical software.</p>
+<section id="native-analytical-features">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Native analytical features</a><a class="headerlink" href="#native-analytical-features" title="Link to this heading">#</a></h3>
+<p>Further analytical features can be found within the “View” dropdown window in the top navigation bar. Here you can find several analytical tools that GGXLog supports.</p>
+<a class="extra-space reference internal image-reference" href="_images/ggxlog_view.png"><img alt="_images/ggxlog_view.png" class="extra-space align-center" src="_images/ggxlog_view.png" style="width: 613.5px; height: 171.0px;" /></a>
+<p>How to use these tools will not be covered here, but will be addressed in another guide.</p>
+</section>
+<section id="uploading-logging-data-into-statistical-software">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Uploading logging data into statistical software</a><a class="headerlink" href="#uploading-logging-data-into-statistical-software" title="Link to this heading">#</a></h3>
+<p>Maybe you want to conduct an analysis that is not supported by GGXLog. In that case you can upload the log file to statistical software. One way to do this is to write a script that extracts log file data into a spreadsheet.</p>
+<p>The following is an example of a python script that converts a log file into a csv spreadsheet:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">input_file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;path\to\your\log\file&#39;</span>  <span class="c1"># This is your GGXLog log file</span>
+<span class="n">output_file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;path\to\where\you\want\to\save\your\converted\log&#39;</span>  <span class="c1"># This will be the output CSV file</span>
+
+<span class="c1"># Open the TSV file and read its contents</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tsv_file</span><span class="p">:</span>
+   <span class="n">tsv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">tsv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+
+   <span class="c1"># Open the CSV file and write the contents from the TSV file</span>
+   <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
+      <span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+      <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tsv_reader</span><span class="p">:</span>
+            <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Conversion from TSV to CSV completed. The output file is </span><span class="si">{</span><span class="n">output_file_path</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can then open the spreadsheet in your preferred statistical software.</p>
 </section>
 </section>
 </section>
@@ -1086,14 +1149,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#who-should-use-a-keystroke-logger">Who should use a keystroke logger?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-genographix-log">How to use GenoGraphiX-LOG</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-write-a-text-with-genographix-log">How to write a text with GenoGraphiX-LOG</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-installing-the-program">Step 1: Installing the program</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-creating-a-new-project">Step 2: Creating a new project</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-start-writing">Step 3: Start writing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-start-writing">How to start writing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-installing-the-program">Step 1: Installing the program</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-creating-a-new-project">Step 2: Creating a new project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-start-writing">Step 3: Start writing</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-analyze-a-text-with-genographix-log">How to analyze a text with GenoGraphiX-LOG</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-a-writing-session">Analyzing a writing session</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#native-analytical-features">Native analytical features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-logging-data-into-statistical-software">Uploading logging data into statistical software</a></li>
 </ul>
 </li>
 </ul>
