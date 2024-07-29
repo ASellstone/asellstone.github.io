@@ -61,11 +61,9 @@ There are many different reasons to write with a keystroke logger and, therefore
 How to start writing
 ====================
 
-Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use the keystroke logging program to write a text and analyze the writing session.
+Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use the keystroke logging program to write a text and analyze the writing session. I will go through the basics of the program, including how to create a project and start the writing session.
 
-In the section "How to write a text with GenoGraphiX-LOG" I will cover the basics of the program, including how to create a project and start the writing session. There are multiple project types, but I will only cover what is called "Free-writing". In this project type the user has access to one window where they are free to write anything they want. Another type of project is "Translating", where the user is presented with two windows—one with a text that is to be translated, and another with a bank page where the translated text is to be written. There are different types of projects for different uses, but Free-writing is probably the most common type of project.
-
-Next, in the section "How to analyze a text with GenoGraphiX-LOG", I will briefly cover how to analyze the texts with some—not all—analysis tools that GGXLog has to offer, and how to extract your entire log and specific data in a software like Excel. I will give a brief introduction to what type of statistics can be viewed natively in GGXLog, but I will *not* give a detailed guide on how to interpret the data that GGXLog gives you.
+There are multiple project types, but I will only cover what is called "Free-writing". In this project type the user has access to one window where they are free to write anything they want. An example of another type of project is "Translating", where the user is presented with two windows—one with a text that is to be translated, and another with a bank page where the translated text is to be written. There are different types of projects for different uses, but Free-writing is probably the most common type of project.
 
 Step 1: Installing the program
 ------------------------------
