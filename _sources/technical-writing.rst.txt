@@ -2,17 +2,16 @@
 Technical writing
 =================
 
-Here you can find my completed technical writing projects, as well as the projects that are in the making.
-
-Completed
-=========
-
 .. toctree::
-    :maxdepth: 1
+    :hidden:
     
     GGXLOG-how-to
 
-In progress
-===========
+.. raw:: html
 
-This website, which I created with Sphinx, written using restructuredtext.
+   <div class="rectangular-button-container">
+       <a href="GGXLOG-how-to.html" class="rectangular-button">
+           <div class="title">How to write a text with GenoGraphiX-LOG</div>
+           <div class="description">A short introductory guide on how to use GenoGraphiX-LOG for writing and analyzing text.</div>
+       </a>
+   </div>

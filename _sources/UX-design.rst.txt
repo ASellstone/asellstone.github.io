@@ -2,17 +2,18 @@
 UX-design
 =========
 
-Here you can find my completed UX-design projects, as well as the projects that are in the making.
-
-Completed
-==================
-
 .. toctree::
-    :maxdepth: 1
-    
+    :hidden:
+
     infotainment_user-interface_design
 
-In progress
-===========
+.. raw:: html
 
-A redesign of the keystroke logging software GenoGraphiX-LOG's user interface.
+   <div class="custom-button-container">
+      <a href="infotainment_user-interface_design.html" class="custom-button">
+            <div class="content-wrapper">
+               <div class="button-text">Me and My Car: Infotainment UI-design</div>
+               <img src="_static/hifi-home.png" alt="Project 1" class="thumbnail">
+               <div class="description">This case study presents a collaborative project where my team designed an infotainment system for the Nissan Juke, focusing on cognitive ergonomics to enhance safety. User feedback and cognitive principles were crucial in developing an intuitive system that balances visual attention and cognitive load, ensuring a safer driving experience.</div>
+            </div>
+      </a>

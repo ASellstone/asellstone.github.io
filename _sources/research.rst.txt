@@ -2,18 +2,21 @@
 Academic research
 =================
 
-Here you can find my completed academic research projects, as well as the projects that are in the making.
-
-Completed
-=========
-
 .. toctree::
-    :maxdepth: 1
-
+    :hidden:
+    
     second_year_masters_thesis
     first_year_masters_thesis
 
-In progress
-===========
+.. raw:: html
 
-* A book chapter called "Visualising the Process of Answering Clinical and Diagnostic Linguistic Tests", currently undergoing the publication process.
+   <div class="rectangular-button-container">
+       <a href="second_year_masters_thesis.html" class="rectangular-button">
+           <div class="title">Second year Master's thesis</div>
+           <div class="description">I investigated the how second language English writers use AI tools to help them write.</div>
+       </a>
+       <a href="first_year_masters_thesis.html" class="rectangular-button">
+           <div class="title">First year Master's thesis</div>
+           <div class="description">I investigated the application of keystroke logging in classrooms when students are taking tests to identify difficulties.</div>
+       </a>
+   </div>

@@ -1,29 +1,23 @@
-.. AndreasSellstoneSite documentation master file, created by
-   sphinx-quickstart on Wed Jun 26 13:08:25 2024.
-
-==================
-Hello, I'm Andreas
-==================
-
-I am a cognitive scientist seeking new professional opportunities. My primary interest lies in exploring how people interact with technology, particularly focusing on how different cognitive processes are involved, and how behavioral insights can be leveraged to develop more effective and user centered technology. While most of my academic projects have focused on language use in these interactions, my research interests extend beyond this area. Keep scrolling to view my projects!
-
-:ref:`> read more <about>`
-
-.. toctree::
-   :hidden:
-
-   projects
-   blog
-   about
-
 .. raw:: html
 
-   <div style="margin-top: 120px;"></div>
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+       document.body.classList.add('no-section-nav');
+   });
+   </script>
 
+========
 Projects
 ========
 
 Here you can find projects ranging from UX-design, technical writing, and my academic research. Although diverse, my projects find common ground in the application of cognitive science to the use and development of technology.
+
+.. toctree::
+   :hidden:
+
+   UX-design
+   technical-writing
+   research
 
 .. raw:: html
 
@@ -82,21 +76,3 @@ Research and publications
 .. raw:: html
 
    <div style="margin-top: 120px;"></div>
-
-Blog
-====
-
-Here you will be able to (work in progress) find my blog posts where I write about various subjects that I find interesting.
-
-.. image:: /_static/work-in-progress.svg
-   :align: center
-   :width: 30%
-   :class: wrapped
-
-.. raw:: html
-
-   <style>
-   img.wrapped {
-       margin-top: 50px !important;
-   }
-   </style>

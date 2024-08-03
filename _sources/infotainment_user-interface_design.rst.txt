@@ -21,20 +21,12 @@ An infotainment system is a system that combines information and entertainment. 
 
 My team chose to focus on 1, 2, and 4.
 
-.. image:: /_static/Nissan_Juke.jpg
-   :align: center
-
-The different teams were also allocated a different car. My team was supposed to design an interface for the Nissan Juke (which you can see in the above image).
+The different teams were also allocated a different car. My team was supposed to design an interface for the Nissan Juke.
 
 Initial Research
 ================
 
-In this project we followed the double diamond model of the design process, popularized in 2005 by the British Design Council.
-
-.. image:: /_static/double_diamond.png
-   :align: center
-
-As you can see in the above image of the model, we begin at the research process to create a wide understanding of the challenge, the context, and the user. Therefore, our process started with an interview and a user test of the Nissan Juke at a car vendor with a salesperson. This let us get insight into how the car's current infotainment system worked, what the salesperson sees as the selling points of the car, as well as the car's market.
+In accordance with the diamond model of the design process, we begin at the research process to create a wide understanding of the challenge, the context, and the user. Therefore, our process started with an interview and a user test of the Nissan Juke at a car vendor with a salesperson. This let us get insight into how the car's current infotainment system worked, what the salesperson sees as the selling points of the car, as well as the car's market.
 
 Three User Tests
 ----------------
