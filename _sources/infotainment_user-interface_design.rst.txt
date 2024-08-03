@@ -4,6 +4,8 @@ Infotainment User-Interface Design
 
 This project was a collaborative assignment for the course 'Cognitive Design' at the Umeå Institute of Design (UID). The project was called 'Me and my car' and the goal was to design an infotainment system for a car that integrates cognitive ergonomic principles and research to make the use of the interface as safe as possible.
 
+.. contents::
+
 The Assignment
 ==============
 
