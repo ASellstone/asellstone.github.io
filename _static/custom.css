@@ -128,16 +128,6 @@ img {
   opacity: 1; /* Show the description on hover */
 }
 
-/* Media queries for responsive design */
-@media (max-width: 768px) {
-  .custom-button {
-    width: 100%; /* Full width on small screens */
-    height: auto; /* Maintain aspect ratio */
-  }
-  .custom-button .content-wrapper {
-    padding-top: 100%; /* Maintain aspect ratio */
-  }
-}
 
 /* Styles for rectangular buttons */
 .rectangular-button-container {
