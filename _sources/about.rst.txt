@@ -1,5 +1,13 @@
 .. _about:
 
+.. raw:: html
+
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+       document.body.classList.add('no-section-nav');
+   });
+   </script>
+
 ========
 About me
 ========

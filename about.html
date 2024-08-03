@@ -347,8 +347,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="about-me">
-<span id="about"></span><h1>About me<a class="headerlink" href="#about-me" title="Link to this heading">#</a></h1>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('no-section-nav');
+});
+</script><section id="about-me">
+<h1>About me<a class="headerlink" href="#about-me" title="Link to this heading">#</a></h1>
 <a class="wrapped reference internal image-reference" href="_images/profile.png"><img alt="_images/profile.png" class="wrapped align-left" src="_images/profile.png" style="width: 25%;" />
 </a>
 <style>
