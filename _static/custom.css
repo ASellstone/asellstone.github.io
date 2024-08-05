@@ -1,14 +1,24 @@
 /* Hide section navigation */
-.no-section-nav .bd-sidebar-primary {
-    display: none;
+/* Hide the sidebar only on desktop */
+@media (min-width: 769px) {
+  .no-section-nav .bd-sidebar {
+      display: none; /* Hide the sidebar on desktop */
+  }
+
+  .no-section-nav .bd-main {
+      margin-left: 0; /* Adjust main content margin on desktop */
+  }
 }
 
-.no-section-nav .bd-main {
-    margin-left: 0; /* Adjust main content margin */
-}
+/* Ensure the sidebar is visible on mobile */
+@media (max-width: 768px) {
+  .no-section-nav .bd-sidebar {
+      display: block; /* Show sidebar on mobile */
+  }
 
-.bd-sidebar {
-    overflow: hidden;   /* Remove scrolling */
+  .no-section-nav .bd-main {
+      margin-left: 0; /* Ensure no margin on mobile */
+  }
 }
 
 /* Custom styles for wrapped images */
