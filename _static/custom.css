@@ -3,12 +3,16 @@
 @media (min-width: 769px) {
   .no-section-nav .bd-sidebar {
       display: none; /* Hide the sidebar on desktop */
-      overflow: hidden; /* Remove scrolling */
   }
 
   .no-section-nav .bd-main {
       margin-left: 0; /* Adjust main content margin on desktop */
   }
+}
+
+/* Remove scroll on the section navigation */
+.bd-sidebar {
+  overflow: hidden; /* Remove scrolling */
 }
 
 /* Custom styles for wrapped images */
