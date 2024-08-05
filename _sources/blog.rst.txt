@@ -1,5 +1,13 @@
 .. _blog:
 
+.. raw:: html
+
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+       document.body.classList.add('no-section-nav');
+   });
+   </script>
+
 Blog
 ====
 

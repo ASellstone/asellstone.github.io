@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=1d3a178d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=27e734c0" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -348,8 +348,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="blog">
-<span id="id1"></span><h1>Blog<a class="headerlink" href="#blog" title="Link to this heading">#</a></h1>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('no-section-nav');
+});
+</script><section id="id1">
+<h1>Blog<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>This page is a work in progress. Here, I aim to write about a variety of topics that may not be related to my work.</p>
 <a class="wrapped reference internal image-reference" href="_images/work-in-progress.svg"><img alt="_images/work-in-progress.svg" class="wrapped align-center" src="_images/work-in-progress.svg" width="30%" /></a>
 <style>
