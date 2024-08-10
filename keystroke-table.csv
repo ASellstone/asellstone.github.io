@@ -1,0 +1,36 @@
+Index,Device,Input,Start,Clock,End,Clock,Event Duration,Pause Duration,Pause Location,Caret Position,Anchor Position,x,y,Gene
+0,<MOUSE>,<PRIMARY>,0,0:00:00,80,0:00:00,80,673,initial,0,0,122,44,navigate
+1,<KEYBOARD>,SHIFT,1675,0:00:01,2271,0:00:02,596,1595,unknown,0,0,0,0,unknown
+2,<KEYBOARD>,G,1844,0:00:01,1909,0:00:01,65,169,sentence beginning,0,0,0,0,append
+3,<KEYBOARD>,G,2010,0:00:02,2074,0:00:02,64,101,within word,1,1,0,0,append
+4,<KEYBOARD>,SHIFT,3176,0:00:03,3457,0:00:03,281,1102,unknown,2,2,0,0,unknown
+5,<KEYBOARD>,X,3345,0:00:03,3448,0:00:03,103,169,between words,2,2,0,0,append
+6,<KEYBOARD>,l,3572,0:00:03,3660,0:00:03,88,124,within word,3,3,0,0,append
+7,<KEYBOARD>,BACK_SPACE,3954,0:00:03,4037,0:00:04,83,294,delete,3,3,0,0,delete
+8,<KEYBOARD>,SHIFT,4131,0:00:04,4289,0:00:04,158,94,unknown,3,3,0,0,unknown
+9,<KEYBOARD>,L,4218,0:00:04,4301,0:00:04,83,87,between words,3,3,0,0,append
+10,<KEYBOARD>,o,4407,0:00:04,4466,0:00:04,59,106,within word,4,4,0,0,append
+11,<KEYBOARD>,g,4508,0:00:04,4577,0:00:04,69,42,within word,5,5,0,0,append
+12,<KEYBOARD>,SPACE,5303,0:00:05,5404,0:00:05,101,726,between words,6,6,0,0,append
+13,<KEYBOARD>,r,5478,0:00:05,5585,0:00:05,107,74,between words,7,7,0,0,append
+14,<KEYBOARD>,e,5543,0:00:05,5631,0:00:05,88,65,within word,8,8,0,0,append
+15,<KEYBOARD>,c,5733,0:00:05,5842,0:00:05,109,102,within word,9,9,0,0,append
+16,<KEYBOARD>,o,5848,0:00:05,5925,0:00:05,77,6,within word,10,10,0,0,append
+17,<KEYBOARD>,r,5964,0:00:05,6031,0:00:06,67,39,within word,11,11,0,0,append
+18,<KEYBOARD>,d,6127,0:00:06,6287,0:00:06,160,96,within word,12,12,0,0,append
+19,<KEYBOARD>,s,6206,0:00:06,6311,0:00:06,105,79,within word,13,13,0,0,append
+20,<KEYBOARD>,SPACE,6293,0:00:06,6383,0:00:06,90,87,between words,14,14,0,0,append
+21,<KEYBOARD>,e,6400,0:00:06,6506,0:00:06,106,17,between words,15,15,0,0,append
+22,<KEYBOARD>,a,6485,0:00:06,6569,0:00:06,84,85,within word,16,16,0,0,append
+23,<KEYBOARD>,c,6638,0:00:06,6736,0:00:06,98,69,within word,17,17,0,0,append
+24,<KEYBOARD>,h,6742,0:00:06,6822,0:00:06,80,6,within word,18,18,0,0,append
+25,<KEYBOARD>,SPACE,6889,0:00:06,6960,0:00:06,71,67,between words,19,19,0,0,append
+26,<KEYBOARD>,k,7049,0:00:07,7151,0:00:07,102,89,between words,20,20,0,0,append
+27,<KEYBOARD>,e,7157,0:00:07,7224,0:00:07,67,6,within word,21,21,0,0,append
+28,<KEYBOARD>,y,7567,0:00:07,7631,0:00:07,64,343,within word,22,22,0,0,append
+29,<KEYBOARD>,s,7671,0:00:07,7742,0:00:07,71,40,within word,23,23,0,0,append
+30,<KEYBOARD>,t,7826,0:00:07,7907,0:00:07,81,84,within word,24,24,0,0,append
+31,<KEYBOARD>,r,8000,0:00:08,8090,0:00:08,90,93,within word,25,25,0,0,append
+32,<KEYBOARD>,o,8103,0:00:08,8217,0:00:08,114,13,within word,26,26,0,0,append
+33,<KEYBOARD>,k,8188,0:00:08,8290,0:00:08,102,85,within word,27,27,0,0,append
+34,<KEYBOARD>,e,8322,0:00:08,8435,0:00:08,113,32,within word,28,28,0,0,append

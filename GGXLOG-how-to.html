@@ -1,1203 +1,174 @@
-
 <!DOCTYPE html>
-
-
-<html lang="en" data-content_root="./" data-theme="light">
-
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>How to write a text with GenoGraphiX-LOG &#8212; Andreas Sellstone</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=aa983bc0" />
-  
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
-
-    <script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'GGXLOG-how-to';</script>
-    <link rel="author" title="About these documents" href="about.html" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Academic research" href="research.html" />
-    <link rel="prev" title="Technical writing" href="technical-writing.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
-
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
-  
-  
-  <div class="col-lg-3 navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-    
-  
-
-<a class="navbar-brand logo" href="index.html">
-  
-  
-  
-  
-  
-  
-    <p class="title logo__title">Andreas Sellstone</p>
-  
-</a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="projects.html">Projects</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="blog.html">Blog</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="about.html">About</a>
-    </li>
-  </ul>
-</nav></div>
-      
-    </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-        </div>
-      
-      
-        <div class="navbar-item"><ul class="navbar-icon-links"
-    aria-label="Icon Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">LinkedIn</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="mailto:your-email@example.com" title="Email" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Email</span></a>
-        </li>
-</ul></div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="projects.html">Projects</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="blog.html">Blog</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="about.html">About</a>
-    </li>
-  </ul>
-</nav></div>
-          
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item"><ul class="navbar-icon-links"
-    aria-label="Icon Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">LinkedIn</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="mailto:your-email@example.com" title="Email" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Email</span></a>
-        </li>
-</ul></div>
-        
-      </div>
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="UX-design.html">UX-design</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="infotainment_user-interface_design.html">Infotainment User-Interface Design</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="technical-writing.html">Technical writing</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">How to write a text with GenoGraphiX-LOG</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="research.html">Academic research</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="second_year_masters_thesis.html">Second year Master’s thesis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="first_year_masters_thesis.html">First year Master’s thesis</a></li>
-</ul>
-</details></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main" role="main">
-        
-        
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
-
-
-
-<nav aria-label="Breadcrumb" class="d-print-none">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    
-    <li class="breadcrumb-item"><a href="projects.html" class="nav-link">Projects</a></li>
-    
-    
-    <li class="breadcrumb-item"><a href="technical-writing.html" class="nav-link">Technical writing</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">How to...</li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
-              
-              
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
-  <section id="how-to-write-a-text-with-genographix-log">
-<span id="ggxlog-how-to"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">How to write a text with GenoGraphiX-LOG</a><a class="headerlink" href="#how-to-write-a-text-with-genographix-log" title="Link to this heading">#</a></h1>
-<p>In this short guide I will teach you how to write a text in the keystroke logging software GenoGraphiX-LOG. I will also give a short primer on how to prepare for the analysis of your writing session at the end of the guide.</p>
-<p>Before I start with the guide itself, I will begin with a short introduction to what kind of software GenoGraphiX-LOG is and why you might want to use it. Go to the section <a class="reference internal" href="#how-to-start-writing">How to start writing</a> if you want to go straight into how to use the program.</p>
-<nav class="contents" id="contents">
-<p class="topic-title">Contents</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#how-to-write-a-text-with-genographix-log" id="id1">How to write a text with GenoGraphiX-LOG</a></p>
-<ul>
-<li><p><a class="reference internal" href="#what-is-genographix-log" id="id2">What is GenoGraphiX-LOG?</a></p>
-<ul>
-<li><p><a class="reference internal" href="#why-use-a-keystroke-logger" id="id3">Why use a keystroke logger?</a></p></li>
-<li><p><a class="reference internal" href="#who-should-use-a-keystroke-logger" id="id4">Who should use a keystroke logger?</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#how-to-start-writing" id="id5">How to start writing</a></p>
-<ul>
-<li><p><a class="reference internal" href="#step-1-installing-the-program" id="id6">Step 1: Installing the program</a></p></li>
-<li><p><a class="reference internal" href="#step-2-creating-a-new-project" id="id7">Step 2: Creating a new project</a></p></li>
-<li><p><a class="reference internal" href="#step-3-start-writing" id="id8">Step 3: Start writing</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#analyzing-a-writing-session" id="id9">Analyzing a writing session</a></p>
-<ul>
-<li><p><a class="reference internal" href="#native-analytical-features" id="id10">Native analytical features</a></p></li>
-<li><p><a class="reference internal" href="#uploading-logging-data-into-statistical-software" id="id11">Uploading logging data into statistical software</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</nav>
-<section id="what-is-genographix-log">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">What is GenoGraphiX-LOG?</a><a class="headerlink" href="#what-is-genographix-log" title="Link to this heading">#</a></h2>
-<p>GenoGraphiX-LOG (abbreviated GGXLog) is a program that records the keys you press on your keyboard while writing—what is called <em>keystroke logging</em>. You might be familiar with keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. This is <em>not</em> what GGXLog is used for nor can it be used in that way.</p>
-<p>The keystroke logging software GGXLog is primarily used for writing research. It is the software I used to investigate <a class="reference internal" href="first_year_masters_thesis.html#first-year-masters-thesis"><span class="std std-ref">the writing processes of high school students</span></a> when taking a language test, as well as when I explored <a class="reference internal" href="second_year_masters_thesis.html#second-year-masters-thesis"><span class="std std-ref">how academics used AI-assistance</span></a> to write short academic texts.</p>
-<p>GGXLog records each keystroke that is pressed when writing in the program, and then compiles and stores the data into files with a tab-separated value (.tsv) format. As an example, here is the log for “GGXLog records each keystroke” from the previous sentence in a spreadsheet:</p>
-<div class="pst-scrollable-table-container"><table class="small-table table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Index</p></th>
-<th class="head"><p>Device</p></th>
-<th class="head"><p>Input</p></th>
-<th class="head"><p>Start</p></th>
-<th class="head"><p>Clock</p></th>
-<th class="head"><p>End</p></th>
-<th class="head"><p>Clock</p></th>
-<th class="head"><p>Event Duration</p></th>
-<th class="head"><p>Pause Duration</p></th>
-<th class="head"><p>Pause Location</p></th>
-<th class="head"><p>Caret Position</p></th>
-<th class="head"><p>Anchor Position</p></th>
-<th class="head"><p>x</p></th>
-<th class="head"><p>y</p></th>
-<th class="head"><p>Gene</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>&lt;MOUSE&gt;</p></td>
-<td><p>&lt;PRIMARY&gt;</p></td>
-<td><p>0</p></td>
-<td><p>0:00:00</p></td>
-<td><p>80</p></td>
-<td><p>0:00:00</p></td>
-<td><p>80</p></td>
-<td><p>673</p></td>
-<td><p>initial</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>122</p></td>
-<td><p>44</p></td>
-<td><p>navigate</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>SHIFT</p></td>
-<td><p>1675</p></td>
-<td><p>0:00:01</p></td>
-<td><p>2271</p></td>
-<td><p>0:00:02</p></td>
-<td><p>596</p></td>
-<td><p>1595</p></td>
-<td><p>unknown</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>unknown</p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>G</p></td>
-<td><p>1844</p></td>
-<td><p>0:00:01</p></td>
-<td><p>1909</p></td>
-<td><p>0:00:01</p></td>
-<td><p>65</p></td>
-<td><p>169</p></td>
-<td><p>sentence beginning</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>3</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>G</p></td>
-<td><p>2010</p></td>
-<td><p>0:00:02</p></td>
-<td><p>2074</p></td>
-<td><p>0:00:02</p></td>
-<td><p>64</p></td>
-<td><p>101</p></td>
-<td><p>within word</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>4</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>SHIFT</p></td>
-<td><p>3176</p></td>
-<td><p>0:00:03</p></td>
-<td><p>3457</p></td>
-<td><p>0:00:03</p></td>
-<td><p>281</p></td>
-<td><p>1102</p></td>
-<td><p>unknown</p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>unknown</p></td>
-</tr>
-<tr class="row-odd"><td><p>5</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>X</p></td>
-<td><p>3345</p></td>
-<td><p>0:00:03</p></td>
-<td><p>3448</p></td>
-<td><p>0:00:03</p></td>
-<td><p>103</p></td>
-<td><p>169</p></td>
-<td><p>between words</p></td>
-<td><p>2</p></td>
-<td><p>2</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>6</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>l</p></td>
-<td><p>3572</p></td>
-<td><p>0:00:03</p></td>
-<td><p>3660</p></td>
-<td><p>0:00:03</p></td>
-<td><p>88</p></td>
-<td><p>124</p></td>
-<td><p>within word</p></td>
-<td><p>3</p></td>
-<td><p>3</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>7</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>BACK_SPACE</p></td>
-<td><p>3954</p></td>
-<td><p>0:00:03</p></td>
-<td><p>4037</p></td>
-<td><p>0:00:04</p></td>
-<td><p>83</p></td>
-<td><p>294</p></td>
-<td><p>delete</p></td>
-<td><p>3</p></td>
-<td><p>3</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>delete</p></td>
-</tr>
-<tr class="row-even"><td><p>8</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>SHIFT</p></td>
-<td><p>4131</p></td>
-<td><p>0:00:04</p></td>
-<td><p>4289</p></td>
-<td><p>0:00:04</p></td>
-<td><p>158</p></td>
-<td><p>94</p></td>
-<td><p>unknown</p></td>
-<td><p>3</p></td>
-<td><p>3</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>unknown</p></td>
-</tr>
-<tr class="row-odd"><td><p>9</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>L</p></td>
-<td><p>4218</p></td>
-<td><p>0:00:04</p></td>
-<td><p>4301</p></td>
-<td><p>0:00:04</p></td>
-<td><p>83</p></td>
-<td><p>87</p></td>
-<td><p>between words</p></td>
-<td><p>3</p></td>
-<td><p>3</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>10</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>o</p></td>
-<td><p>4407</p></td>
-<td><p>0:00:04</p></td>
-<td><p>4466</p></td>
-<td><p>0:00:04</p></td>
-<td><p>59</p></td>
-<td><p>106</p></td>
-<td><p>within word</p></td>
-<td><p>4</p></td>
-<td><p>4</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>11</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>g</p></td>
-<td><p>4508</p></td>
-<td><p>0:00:04</p></td>
-<td><p>4577</p></td>
-<td><p>0:00:04</p></td>
-<td><p>69</p></td>
-<td><p>42</p></td>
-<td><p>within word</p></td>
-<td><p>5</p></td>
-<td><p>5</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>12</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>SPACE</p></td>
-<td><p>5303</p></td>
-<td><p>0:00:05</p></td>
-<td><p>5404</p></td>
-<td><p>0:00:05</p></td>
-<td><p>101</p></td>
-<td><p>726</p></td>
-<td><p>between words</p></td>
-<td><p>6</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>13</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>r</p></td>
-<td><p>5478</p></td>
-<td><p>0:00:05</p></td>
-<td><p>5585</p></td>
-<td><p>0:00:05</p></td>
-<td><p>107</p></td>
-<td><p>74</p></td>
-<td><p>between words</p></td>
-<td><p>7</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>14</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>e</p></td>
-<td><p>5543</p></td>
-<td><p>0:00:05</p></td>
-<td><p>5631</p></td>
-<td><p>0:00:05</p></td>
-<td><p>88</p></td>
-<td><p>65</p></td>
-<td><p>within word</p></td>
-<td><p>8</p></td>
-<td><p>8</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>15</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>c</p></td>
-<td><p>5733</p></td>
-<td><p>0:00:05</p></td>
-<td><p>5842</p></td>
-<td><p>0:00:05</p></td>
-<td><p>109</p></td>
-<td><p>102</p></td>
-<td><p>within word</p></td>
-<td><p>9</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>16</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>o</p></td>
-<td><p>5848</p></td>
-<td><p>0:00:05</p></td>
-<td><p>5925</p></td>
-<td><p>0:00:05</p></td>
-<td><p>77</p></td>
-<td><p>6</p></td>
-<td><p>within word</p></td>
-<td><p>10</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>17</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>r</p></td>
-<td><p>5964</p></td>
-<td><p>0:00:05</p></td>
-<td><p>6031</p></td>
-<td><p>0:00:06</p></td>
-<td><p>67</p></td>
-<td><p>39</p></td>
-<td><p>within word</p></td>
-<td><p>11</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>18</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>d</p></td>
-<td><p>6127</p></td>
-<td><p>0:00:06</p></td>
-<td><p>6287</p></td>
-<td><p>0:00:06</p></td>
-<td><p>160</p></td>
-<td><p>96</p></td>
-<td><p>within word</p></td>
-<td><p>12</p></td>
-<td><p>12</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>19</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>s</p></td>
-<td><p>6206</p></td>
-<td><p>0:00:06</p></td>
-<td><p>6311</p></td>
-<td><p>0:00:06</p></td>
-<td><p>105</p></td>
-<td><p>79</p></td>
-<td><p>within word</p></td>
-<td><p>13</p></td>
-<td><p>13</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>20</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>SPACE</p></td>
-<td><p>6293</p></td>
-<td><p>0:00:06</p></td>
-<td><p>6383</p></td>
-<td><p>0:00:06</p></td>
-<td><p>90</p></td>
-<td><p>87</p></td>
-<td><p>between words</p></td>
-<td><p>14</p></td>
-<td><p>14</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>21</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>e</p></td>
-<td><p>6400</p></td>
-<td><p>0:00:06</p></td>
-<td><p>6506</p></td>
-<td><p>0:00:06</p></td>
-<td><p>106</p></td>
-<td><p>17</p></td>
-<td><p>between words</p></td>
-<td><p>15</p></td>
-<td><p>15</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>22</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>a</p></td>
-<td><p>6485</p></td>
-<td><p>0:00:06</p></td>
-<td><p>6569</p></td>
-<td><p>0:00:06</p></td>
-<td><p>84</p></td>
-<td><p>85</p></td>
-<td><p>within word</p></td>
-<td><p>16</p></td>
-<td><p>16</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>23</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>c</p></td>
-<td><p>6638</p></td>
-<td><p>0:00:06</p></td>
-<td><p>6736</p></td>
-<td><p>0:00:06</p></td>
-<td><p>98</p></td>
-<td><p>69</p></td>
-<td><p>within word</p></td>
-<td><p>17</p></td>
-<td><p>17</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>24</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>h</p></td>
-<td><p>6742</p></td>
-<td><p>0:00:06</p></td>
-<td><p>6822</p></td>
-<td><p>0:00:06</p></td>
-<td><p>80</p></td>
-<td><p>6</p></td>
-<td><p>within word</p></td>
-<td><p>18</p></td>
-<td><p>18</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>25</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>SPACE</p></td>
-<td><p>6889</p></td>
-<td><p>0:00:06</p></td>
-<td><p>6960</p></td>
-<td><p>0:00:06</p></td>
-<td><p>71</p></td>
-<td><p>67</p></td>
-<td><p>between words</p></td>
-<td><p>19</p></td>
-<td><p>19</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>26</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>k</p></td>
-<td><p>7049</p></td>
-<td><p>0:00:07</p></td>
-<td><p>7151</p></td>
-<td><p>0:00:07</p></td>
-<td><p>102</p></td>
-<td><p>89</p></td>
-<td><p>between words</p></td>
-<td><p>20</p></td>
-<td><p>20</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>27</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>e</p></td>
-<td><p>7157</p></td>
-<td><p>0:00:07</p></td>
-<td><p>7224</p></td>
-<td><p>0:00:07</p></td>
-<td><p>67</p></td>
-<td><p>6</p></td>
-<td><p>within word</p></td>
-<td><p>21</p></td>
-<td><p>21</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>28</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>y</p></td>
-<td><p>7567</p></td>
-<td><p>0:00:07</p></td>
-<td><p>7631</p></td>
-<td><p>0:00:07</p></td>
-<td><p>64</p></td>
-<td><p>343</p></td>
-<td><p>within word</p></td>
-<td><p>22</p></td>
-<td><p>22</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>29</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>s</p></td>
-<td><p>7671</p></td>
-<td><p>0:00:07</p></td>
-<td><p>7742</p></td>
-<td><p>0:00:07</p></td>
-<td><p>71</p></td>
-<td><p>40</p></td>
-<td><p>within word</p></td>
-<td><p>23</p></td>
-<td><p>23</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>30</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>t</p></td>
-<td><p>7826</p></td>
-<td><p>0:00:07</p></td>
-<td><p>7907</p></td>
-<td><p>0:00:07</p></td>
-<td><p>81</p></td>
-<td><p>84</p></td>
-<td><p>within word</p></td>
-<td><p>24</p></td>
-<td><p>24</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>31</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>r</p></td>
-<td><p>8000</p></td>
-<td><p>0:00:08</p></td>
-<td><p>8090</p></td>
-<td><p>0:00:08</p></td>
-<td><p>90</p></td>
-<td><p>93</p></td>
-<td><p>within word</p></td>
-<td><p>25</p></td>
-<td><p>25</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>32</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>o</p></td>
-<td><p>8103</p></td>
-<td><p>0:00:08</p></td>
-<td><p>8217</p></td>
-<td><p>0:00:08</p></td>
-<td><p>114</p></td>
-<td><p>13</p></td>
-<td><p>within word</p></td>
-<td><p>26</p></td>
-<td><p>26</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-odd"><td><p>33</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>k</p></td>
-<td><p>8188</p></td>
-<td><p>0:00:08</p></td>
-<td><p>8290</p></td>
-<td><p>0:00:08</p></td>
-<td><p>102</p></td>
-<td><p>85</p></td>
-<td><p>within word</p></td>
-<td><p>27</p></td>
-<td><p>27</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-<tr class="row-even"><td><p>34</p></td>
-<td><p>&lt;KEYBOARD&gt;</p></td>
-<td><p>e</p></td>
-<td><p>8322</p></td>
-<td><p>0:00:08</p></td>
-<td><p>8435</p></td>
-<td><p>0:00:08</p></td>
-<td><p>113</p></td>
-<td><p>32</p></td>
-<td><p>within word</p></td>
-<td><p>28</p></td>
-<td><p>28</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>append</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The sheer amount of data that keystroke logging provides from writing a very short sentence becomes clear in this example. However, GGXLog also offers several features for analysis because of the inaccessible format of the log. Furthermore, the log can also be loaded into statistical software.</p>
-<section id="why-use-a-keystroke-logger">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink">Why use a keystroke logger?</a><a class="headerlink" href="#why-use-a-keystroke-logger" title="Link to this heading">#</a></h3>
-<p>Beyond recording <em>what</em> key you press on the keyboard, it also records <em>when</em> you press the key. This gives you the pause length between each character, word, sentence, and paragraph of your text. The length of the pause as well as where the pause occurs can tell you a lot about writing processes:</p>
-<ul class="simple">
-<li><p>Longer pauses between characters can indicate spelling difficulties (orthographic processing),</p></li>
-<li><p>Longer pauses between words can indicate struggling to think of a word (lexical retrieval),</p></li>
-<li><p>Longer pauses between sentences can indicate planning of the next sentence or evaluation of the previous sentence (higher-order processing),</p></li>
-<li><p>Longer pauses between paragraphs can indicate organizing the overall text (also higher-order processing).</p></li>
-</ul>
-<p>These processes are <em>cognitive</em>—that is, they indicate some mental activity. For cognitive processes, we typically look for pauses above 2 seconds, what is called a <em>cognitive pause</em>. So a pause above 2 seconds within a word might be indicative of spelling difficulties.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The 2-second threshold is backed up by research and generally accepted. However, what threshold should be used can differ depending on context and the writers themselves. When to use what threshold will not be discussed here.</p>
-</div>
-<p>Additionally, cognitive processes are not the only type of writing process you can investigate with GGXLog. Pauses can say a lot of things, but deletions are also recorded since keystroke loggers record every pressed key (including backspace and selections with the mouse). We can therefore see changes in the texts, what are called revisions, making the text’s evolution over time visible.</p>
-</section>
-<section id="who-should-use-a-keystroke-logger">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Who should use a keystroke logger?</a><a class="headerlink" href="#who-should-use-a-keystroke-logger" title="Link to this heading">#</a></h3>
-<p>There are many different reasons to write with a keystroke logger and, therefore, many different people that would find it useful.</p>
-<p><strong>Researchers</strong> have used keystroke logging to study different peoples writing processes for some time now.</p>
-<p><strong>Teachers</strong> can use keystroke logging to get a better view of student’s writing abilities and their progress. Additionally, <a class="reference internal" href="first_year_masters_thesis.html#first-year-masters-thesis"><span class="std std-ref">I investigated</span></a> its use for teachers to gain a more nuanced perspective of their students’ performances on tests.</p>
-<p><strong>Clinicians</strong> can use keystroke logging to detect writing difficulties that occur because of certain neuropsychiatric disorders. <a class="reference external" href="https://doi.org/10.1038/s41598-022-11865-7">Recent studies</a> have even shown keystroke logging to be useful to detect early stages of dementia that are difficult to diagnose with traditional diagnostic measures.</p>
-<p><strong>Students</strong> or <strong>writers</strong> of any type might want to know more about how they write texts themselves, what they struggle with, what they spend the most time doing when writing, how much their text evolves, or what their writing process looks like.</p>
-</section>
-</section>
-<section id="how-to-start-writing">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">How to start writing</a><a class="headerlink" href="#how-to-start-writing" title="Link to this heading">#</a></h2>
-<p>Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use the keystroke logging program to write a text and prepare the analysis of the writing session.</p>
-<section id="step-1-installing-the-program">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Step 1: Installing the program</a><a class="headerlink" href="#step-1-installing-the-program" title="Link to this heading">#</a></h3>
-<p>To write using GGXLog, you first need to have the program installed on your computer. The program can be downloaded at the website <a class="reference external" href="https://www.ggxlog.net/">ggxlog.net</a>. Go to the “Downloads” section on the website and download the version for your operating system.</p>
-<img alt="_images/ggxlog_downloads_2.png" class="extra-space align-center" src="_images/ggxlog_downloads_2.png" />
-<p>You will have to register to download the program by entering your name, email, country, as well as eventual university affiliation and research project. You do not have to give accurate information, you will be able to download the program immediately after registering anyway.</p>
-<img alt="_images/ggxlog_register.png" class="extra-space align-center" src="_images/ggxlog_register.png" />
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Your antivirus software or system security might flag the software as potential malware. This is because GGXLog logs your keystrokes when you are using the program. In that case you will have to give GGXLog permission to run anyway.</p>
-</div>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>If you need more guidance on how to install GGXLog, you can follow the installation instructions on the <a class="reference external" href="https://www.ggxlog.net/usersupport.html">user support section</a> on the GGXlog website.</p>
-</div>
-</section>
-<section id="step-2-creating-a-new-project">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Step 2: Creating a new project</a><a class="headerlink" href="#step-2-creating-a-new-project" title="Link to this heading">#</a></h3>
-<p>When you have GGXLog installed, you will have to start a new project. To do this, open the program and navigate to the top bar and press “Project”, and then “New”.</p>
-<p>A window will appear with two subsections—one subsection called “Project Settings” and another subsection called “Informant Information”.</p>
-<a class="extra-space reference internal image-reference" href="_images/ggxlog_project.png"><img alt="_images/ggxlog_project.png" class="extra-space align-center" src="_images/ggxlog_project.png" style="width: 381.0px; height: 459.0px;" /></a>
-<p>The project settings section includes settings for your project, such as the previously mentioned project types, the expected session length if you want a real time graph, and where you want to save your project</p>
-<p>For a project where you write a text such as an essay, short story, or another similar text, you should select “Free-writing” as the project type. The “Session length” setting is only relevant if you want to display the real-time graph when you write. Select “Long text” unless you know that your writing session will last for less than 10 minutes. To choose where to save your project folder, press the brows button by the “File Save Location” setting.</p>
-<a class="extra-space reference internal image-reference" href="_images/ggxlog_project_settings.png"><img alt="_images/ggxlog_project_settings.png" class="extra-space align-center" src="_images/ggxlog_project_settings.png" style="width: 567.75px; height: 182.25px;" /></a>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The real-time graph is not recommended for new users. The graph is difficult to understand and might be distracting.</p>
-</div>
-<p>The informant information section is for research purposes. In this section, the participant can provide general demographic information. It also contains an informed consent form for the participant.</p>
-<a class="extra-space reference internal image-reference" href="_images/ggxlog_informant_information.png"><img alt="_images/ggxlog_informant_information.png" class="extra-space align-center" src="_images/ggxlog_informant_information.png" style="width: 566.25px; height: 480.0px;" /></a>
-<p>When you are done setting up your project, press “Continue” at the bottom right of the window to create the project.</p>
-</section>
-<section id="step-3-start-writing">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Step 3: Start writing</a><a class="headerlink" href="#step-3-start-writing" title="Link to this heading">#</a></h3>
-<p>Now you will be presented with the writing interface consisting of a few buttons—a record button, a greyed out stop and save button, and a close button—as well as the text editor where you will write your text below the buttons.</p>
-<img alt="_images/ggxlog_session.png" class="extra-space align-center" src="_images/ggxlog_session.png" />
-<p>To begin the writing session press “Record”. The text editor will unlock and turn white, which means that are able to start writing your text.</p>
-<a class="extra-space reference internal image-reference" href="_images/ggxlog_record.png"><img alt="_images/ggxlog_record.png" class="extra-space align-center" src="_images/ggxlog_record.png" style="width: 534.75px; height: 91.5px;" /></a>
-<p>When you have started the writing session and are recording, what previously was the record button will become a pause button. Pressing the pause button will pause the recording and the text editor will be locked again.</p>
-<a class="extra-space reference internal image-reference" href="_images/ggxlog_pause.png"><img alt="_images/ggxlog_pause.png" class="extra-space align-center" src="_images/ggxlog_pause.png" style="width: 537.0px; height: 93.75px;" /></a>
-<p>When you have finished your writing session press “Stop and Save” to stop the writing session and save your session. You will be asked to confirm your choice. When confirmed, the program will tell you where the project was saved, which will be the destination you chose when setting up the project.</p>
-<a class="extra-space reference internal image-reference" href="_images/ggxlog_save.png"><img alt="_images/ggxlog_save.png" class="extra-space align-center" src="_images/ggxlog_save.png" style="width: 537.0px; height: 90.0px;" /></a>
-<p>Now you know how to create a project and write a text using GGXLog. Next we will look at how to analyze the keystroke log.</p>
-</section>
-</section>
-<section id="analyzing-a-writing-session">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Analyzing a writing session</a><a class="headerlink" href="#analyzing-a-writing-session" title="Link to this heading">#</a></h2>
-<p>When you are done with your writing session and have saved it, you need to open it in GGXLog to analyze the log. To do this, click “Project”, then “Open” and navigate to where you saved your project.</p>
-<p>Open the project folder, which probably has a name consisting of a string of numbers, then select the file called “Session_log.log” and press “Open” or double click the file.</p>
-<p>Now you will see that a tab called “Session Replay” has opened in GGXLog. In this tab, you can watch your writing session in real time, and speed it up or down, as well as navigate through the recording.</p>
-<img alt="_images/session_replay_80.gif" class="extra-space align-center" src="_images/session_replay_80.gif" />
-<p>The session replay feature can be useful, but does not provide deeper insights than what you can get from screen recordings of writing sessions. To analyze keystroke logging data we need to utilize the tools that GGXLog provides, or upload the logged data to statistical software.</p>
-<section id="native-analytical-features">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">Native analytical features</a><a class="headerlink" href="#native-analytical-features" title="Link to this heading">#</a></h3>
-<p>Further analytical features can be found within the “View” dropdown window in the top navigation bar. Here you can find several analytical tools that GGXLog supports.</p>
-<a class="extra-space reference internal image-reference" href="_images/ggxlog_view.png"><img alt="_images/ggxlog_view.png" class="extra-space align-center" src="_images/ggxlog_view.png" style="width: 613.5px; height: 171.0px;" /></a>
-<p>How to use these tools will not be covered here, but will be addressed in another guide.</p>
-</section>
-<section id="uploading-logging-data-into-statistical-software">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Uploading logging data into statistical software</a><a class="headerlink" href="#uploading-logging-data-into-statistical-software" title="Link to this heading">#</a></h3>
-<p>Maybe you want to conduct an analysis that is not supported by GGXLog. In that case you can upload the log file to statistical software. One way to do this is to write a script that extracts log file data into a spreadsheet.</p>
-<p>The following is an example of a python script that converts a log file into a csv spreadsheet:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">input_file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;path\to\your\log\file&#39;</span>  <span class="c1"># This is your GGXLog log file</span>
-<span class="n">output_file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;path\to\where\you\want\to\save\your\converted\log&#39;</span>  <span class="c1"># This will be the output CSV file</span>
-
-<span class="c1"># Open the TSV file and read its contents</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tsv_file</span><span class="p">:</span>
-   <span class="n">tsv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">tsv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-
-   <span class="c1"># Open the CSV file and write the contents from the TSV file</span>
-   <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_file_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
-      <span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-
-      <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tsv_reader</span><span class="p">:</span>
-            <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Conversion from TSV to CSV completed. The output file is </span><span class="si">{</span><span class="n">output_file_path</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>You can then open the spreadsheet in your preferred statistical software.</p>
-</section>
-</section>
-</section>
-
-
-                </article>
-              
-              
-              
-              
-              
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to write a text with GenoGraphiX-LOG</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="navbar-brand">
+                <a href="index.html" class="brand-name">Andreas Sellstone</a>
             </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link current">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+        <div class="nav-icons">
+            <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </nav>
+    <nav id="toc" class="toc">
+        <h2>On This Page</h2>
+        <ul>
+            <li><a href="#title">How to write a text with GenoGraphiX-LOG</a></li>
+            <li>
+                <a href="#what-is-genographix-log">What is GenoGraphiX-LOG?</a>
+                <ul>
+                    <li><a href="#why-use-a-keystroke-logger">Why use a keystroke logger?</a></li>
+                    <li><a href="#who-should-use-a-keystroke-logger">Who should use a keystroke logger?</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#how-to-start-writing">How to start writing</a>
+                <ul>
+                    <li><a href="#step-1">Step 1: Installing the program</a></li>
+                    <li><a href="#step-2">Step 2: Creating a new project</a></li>
+                    <li><a href="#step-3">Step 3: Start writing</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#analyzing-a-writing-session">Analyzing a writing session</a>
+                <ul>
+                    <li><a href="#native-analytical-features">Native analytical features</a></li>
+                    <li><a href="#uploading">Uploading logging data into statistical software</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="project-wrapper" style="margin-left: -30px;">
+            <nav class="breadcrumb" style="margin-left: 330px;">
+                <ul>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="GGXLOG-how-to.html">How to write a text with GenoGraphiX-LOG</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+              <h1 id="title" style="margin-top: -100px;">How to write a text with GenoGraphiX-LOG</h1>
+              <p>In this short guide I will teach you how to write a text in the keystroke logging software GenoGraphiX-LOG. I will also give a short primer on how to prepare for the analysis of your writing session at the end of the guide.</p>
+              <p>Before I start with the guide itself, I will begin with a short introduction to what kind of software GenoGraphiX-LOG is and why you might want to use it. Go to the section <a href="#how-to-start-writing">How to start writing</a> if you want to go straight into how to use the program.</p>
+              <h2 id="what-is-genographix-log">What is GenoGraphiX-LOG?</h2>
+              <p>GenoGraphiX-LOG (abbreviated GGXLog) is a program that records the keys you press on your keyboard while writing—what is called <i>keystroke logging</i>. You might be familiar with keyloggers as malicious software used to steal confidential information. A hacker might use a covertly installed keylogger on a victims computer to steal their login information. This is not what GGXLog is used for nor can it be used in that way.</p>
+              <p>The keystroke logging software GGXLog is primarily used for writing research. It is the software I used to investigate <a href="first-year-thesis.html">the writing processes of high school students</a> when taking a language test, as well as when I explored <a href="second-year-thesis.html">how academics used AI-assistance</a> to write short academic texts.</p>
+              <p>GGXLog records each keystroke that is pressed when writing in the program, and then compiles and stores the data into files with a tab-separated value (.tsv) format. As an example, here is the log for “GGXLog records each keystroke” from the previous sentence in a spreadsheet:</p>
+              <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRxdL9GovdjT_m0AWD1o1dkfFXpRivCcLLloI3sV1Oc_2KAewIDDyhcfX5JzHGDWIjm0362J0vKPaA3/pubhtml?widget=true&amp;headers=false" width="100%" height="800px"></iframe>
+              <p>The sheer amount of data that keystroke logging provides from writing a very short sentence becomes clear in this example. However, GGXLog also offers several features for analysis because of the inaccessible format of the log. Furthermore, the log can also be loaded into statistical software.</p>
+              <h3 id="why-use-a-keystroke-logger">Why use a keystroke logger?</h2>
+              <p>Beyond recording <i>what</i> key you press on the keyboard, it also records when you press the key. This gives you the pause length between each character, word, sentence, and paragraph of your text. The length of the pause as well as where the pause occurs can tell you a lot about writing processes:</p>
+              <ul>
+                <li>Longer pauses between characters can indicate spelling difficulties (orthographic processing).</li>
+                <li>Longer pauses between words can indicate struggling to think of a word (lexical retrieval).</li>
+                <li>Longer pauses between sentences can indicate planning of the next sentence or evaluation of the previous sentence (higher-order processing).</li>
+                <li>Longer pauses between paragraphs can indicate organizing the overall text (also higher-order processing).</li>
+              </ul>
+              <p>These processes are <i>cognitive</i>—that is, they indicate some mental activity. For cognitive processes, we typically look for pauses above 2 seconds, what is called a <i>cognitive pause</i>. So a pause above 2 seconds within a word might be indicative of spelling difficulties.</p>
+              <div class="note">
+                <strong>Note:</strong> The 2-second threshold is backed up by research and generally accepted. However, what threshold should be used can differ depending on context and the writers themselves. When to use what threshold will not be discussed here.
+              </div>
+              <p>Additionally, cognitive processes are not the only type of writing process you can investigate with GGXLog. Pauses can say a lot of things, but deletions are also recorded since keystroke loggers record every pressed key (including backspace and selections with the mouse). We can therefore see changes in the texts, what are called revisions, making the text’s evolution over time visible.</p>
+              <h3 id="who-should-use-a-keystroke-logger">Who should use a keystroke logger?</h2>
+              <p>There are many different reasons to write with a keystroke logger and, therefore, many different people that would find it useful.</p>
+              <P><b>Researchers</b> have used keystroke logging to study different peoples writing processes for some time now.</P>
+              <p><b>Teachers</b> can use keystroke logging to get a better view of student’s writing abilities and their progress. Additionally, <a href="first-year-thesis.html">I investigated</a> its use for teachers to gain a more nuanced perspective of their students’ performances on tests.</p>
+              <p><b>Clinicians</b> can use keystroke logging to detect writing difficulties that occur because of certain neuropsychiatric disorders. <a href="https://doi.org/10.1038/s41598-022-11865-7">Recent studies</a> have even shown keystroke logging to be useful to detect early stages of dementia that are difficult to diagnose with traditional diagnostic measures.</p>
+              <p><b>Students</b> or <b>writers</b> of any type might want to know more about how they write texts themselves, what they struggle with, what they spend the most time doing when writing, how much their text evolves, or what their writing process looks like.</p>
+              <h2 id="how-to-start-writing">How to start writing</h2>
+              <p>Now you know what a keystroke logger is and who might want to use it and what one would use it for. In this section I will cover how to use the keystroke logging program to write a text and prepare the analysis of the writing session.</p>
+              <h3 id="step-1">Step 1: Installing the program</h3>
+              <p>To write using GGXLog, you first need to have the program installed on your computer. The program can be downloaded at the website ggxlog.net. Go to the “Downloads” section on the website and download the version for your operating system.</p>
+              <img src="images/ggxlog_downloads_2.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <p>You will have to register to download the program by entering your name, email, country, as well as eventual university affiliation and research project. You do not have to give accurate information, you will be able to download the program immediately after registering anyway.</p>
+              <img src="images/ggxlog_register.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <div class="important">
+                <strong>Important:</strong> Your antivirus software or system security might flag the software as potential malware. This is because GGXLog logs your keystrokes when you are using the program. In that case you will have to give GGXLog permission to run anyway.
+              </div>
+              <div class="see-also">
+                <strong>See also:</strong> If you need more guidance on how to install GGXLog, you can follow the installation instructions on the <a href="https://www.ggxlog.net/usersupport.html">user support section</a> on the GGXlog website.
+              </div>
+              <h3 id="step-2">Step 2: Creating a new project</h3>
+              <p>When you have GGXLog installed, you will have to start a new project. To do this, open the program and navigate to the top bar and press “Project”, and then “New”.</p>
+              <p>A window will appear with two subsections—one subsection called “Project Settings” and another subsection called “Informant Information”.</p>
+              <img src="images/ggxlog_project.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+              <p>The project settings section includes settings for your project, such as the previously mentioned project types, the expected session length if you want a real time graph, and where you want to save your project</p>
+              <p>For a project where you write a text such as an essay, short story, or another similar text, you should select “Free-writing” as the project type. The “Session length” setting is only relevant if you want to display the real-time graph when you write. Select “Long text” unless you know that your writing session will last for less than 10 minutes. To choose where to save your project folder, press the brows button by the “File Save Location” setting.</p>
+              <img src="images/ggxlog_project_settings.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+              <div class="note">
+                <strong>Note:</strong> The real-time graph is not recommended for new users. The graph is difficult to understand and might be distracting.
+              </div>
+              <p>The informant information section is for research purposes. In this section, the participant can provide general demographic information. It also contains an informed consent form for the participant.</p>
+              <img src="images/ggxlog_informant_information.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+              <p>When you are done setting up your project, press “Continue” at the bottom right of the window to create the project.</p>
+              <h3 id="step-3">Step 3: Start writing</h3>
+              <p>Now you will be presented with the writing interface consisting of a few buttons—a record button, a greyed out stop and save button, and a close button—as well as the text editor where you will write your text below the buttons.</p>
+              <img src="images/ggxlog_session.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              <p>To begin the writing session press “Record”. The text editor will unlock and turn white, which means that are able to start writing your text.</p>
+              <img src="images/ggxlog_record.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+              <p>When you have started the writing session and are recording, what previously was the record button will become a pause button. Pressing the pause button will pause the recording and the text editor will be locked again.</p>
+              <img src="images/ggxlog_pause.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+              <p>When you have finished your writing session press “Stop and Save” to stop the writing session and save your session. You will be asked to confirm your choice. When confirmed, the program will tell you where the project was saved, which will be the destination you chose when setting up the project.</p>
+              <img src="images/ggxlog_save.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+              <p>Now you know how to create a project and write a text using GGXLog. Next we will look at how to analyze the keystroke log.</p>
+              <h2 id="analyzing-a-writing-session">Analyzing a writing session</h2>
+              <p>When you are done with your writing session and have saved it, you need to open it in GGXLog to analyze the log. To do this, click “Project”, then “Open” and navigate to where you saved your project.</p>
+              <p>Open the project folder, which probably has a name consisting of a string of numbers, then select the file called “Session_log.log” and press “Open” or double click the file.</p>
+              <p>Now you will see that a tab called “Session Replay” has opened in GGXLog. In this tab, you can watch your writing session in real time, and speed it up or down, as well as navigate through the recording.</p>
+              <img src="images/session_replay_80.gif" alt="Description of the GIF" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              <p>The session replay feature can be useful, but does not provide deeper insights than what you can get from screen recordings of writing sessions. To analyze keystroke logging data we need to utilize the tools that GGXLog provides, or upload the logged data to statistical software.</p>
+              <h3 id="native-analytical-features">Native analytical features</h3>
+              <p>Further analytical features can be found within the “View” dropdown window in the top navigation bar. Here you can find several analytical tools that GGXLog supports.</p>
+              <img src="images/ggxlog_view.png" alt="Description of the image" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <p>How to use these tools will not be covered here, but will be addressed in another guide.</p>
+              <h3 id="uploading">Uploading logging data into statistical software</h3>
+              <p>Maybe you want to conduct an analysis that is not supported by GGXLog. In that case you can upload the log file to statistical software. One way to do this is to write a script that extracts log file data into a spreadsheet.</p>
+              <p>The following is an example of a python script that converts a log file into a csv spreadsheet:</p>
+              <pre style="margin-left: -90px;"><code>
+                import csv
+                import pandas as pd
 
+                input_file_path = r'path\to\your\log\file'  # This is your GGXLog log file
+                output_file_path = r'path\to\where\you\want\to\save\your\converted\log'  # This will be the output CSV file
 
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-genographix-log">What is GenoGraphiX-LOG?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-a-keystroke-logger">Why use a keystroke logger?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#who-should-use-a-keystroke-logger">Who should use a keystroke logger?</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-start-writing">How to start writing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-installing-the-program">Step 1: Installing the program</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-creating-a-new-project">Step 2: Creating a new project</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-start-writing">Step 3: Start writing</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyzing-a-writing-session">Analyzing a writing session</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#native-analytical-features">Native analytical features</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-logging-data-into-statistical-software">Uploading logging data into statistical software</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
+                with open(input_file_path, 'r', newline='', encoding='utf-8') as tsv_file:
+                  tsv_reader = csv.reader(tsv_file, delimiter='\t')
 
-  <div class="sidebar-secondary-item">
+                  with open(output_file_path, 'w', newline='', encoding='utf-8') as csv_file:
+                      csv_writer = csv.writer(csv_file, delimiter=',')
 
-  <div class="tocsection sourcelink">
-    <a href="_sources/GGXLOG-how-to.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+                      for row in tsv_reader:
+                            csv_writer.writerow(row)
 
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-          </footer>
-        
-      </main>
-    </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
-
-  <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
-      
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
-    </div>
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
-</p></div>
-      
-    </div>
-  
-</div>
-
-  </footer>
-  </body>
+                print(f"Conversion from TSV to CSV completed. The output file is {output_file_path}.")
+              </code></pre>
+              <p>You can then open the spreadsheet in your preferred statistical software.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Andreas Sellstone. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="return-to-top" class="return-to-top">Return to top</button>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/csv-to-table.js"></script> <!-- Link to the script that handles CSV parsing -->
+</body>
 </html>

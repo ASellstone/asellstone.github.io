@@ -1,0 +1,538 @@
+/* General styles and imports */
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap');
+
+body {
+    background-color: #F3F7EC;
+    color: #5f615a;
+    font-family: 'Hanuman', serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header {
+    background-color: #F3F7EC;
+    color: white;
+    padding: 15px 0;
+    text-align: left;
+}
+
+.about-color {
+    color: #006989;
+}
+
+.projects-color {
+    color: #6AA273;
+}
+
+.blog-color {
+    color: #CA7569;
+}
+
+.container {
+    width: 55%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 80px; /* Increase space above the header */
+    padding: 50px;
+}
+
+main p {
+    margin-bottom: 20px; /* Add space below paragraphs */
+}
+
+footer {
+    background-color: #F3F7EC;
+    color: #868980;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 50px; /* Add space below sections */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 80px; /* Increase space above the header */
+}
+
+h2 {
+    margin-top: 40px; /* Add space above h2 headers */
+    margin-bottom: 20px; /* Add space below h2 headers */
+}
+
+h3 {
+    margin-top: 30px; /* Add space above h3 headers */
+    margin-bottom: 15px; /* Add space below h3 headers */
+}
+
+
+/* General styles for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #868980;
+  padding: 10px 10px 0px 20px;
+  position: sticky;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  margin-right: 130px; /* Add some space between the brand and the links */
+}
+
+.brand-name {
+  color: #F3F7EC;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 10px; /* Add some space between the icons */
+}
+
+.navbar .nav-link {
+  color: #F3F7EC;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar .nav-link i {
+  color: #F3F7EC; /* Ensure the icons have the same color as the links */
+}
+
+.navbar .nav-link:hover {
+  background-color: #5f615a;
+  border-radius: 5px 5px 0px 0px;
+  color: #F3F7EC; /* Ensure the text color remains visible on hover */
+}
+
+.navbar .nav-link.current {
+  background-color: #F3F7EC;
+  border-radius: 5px 5px 0px 0px;
+  color: #868980;
+  height: 100%; /* Ensure it takes up the full height of the navbar */
+}
+
+.navbar .nav-link.current i {
+  color: #868980;
+}
+
+/* Initially hide the mobile-specific elements */
+.menu-button,
+.side-menu {
+  display: none;
+}
+
+/* Show the desktop navigation by default */
+.nav-left .nav-links,
+.nav-icons {
+  display: flex;
+}
+
+
+/* Separate hover effect for icons */
+.nav-icons .nav-link {
+    padding: 10px; /* Adjust padding for icons */
+}
+
+.nav-icons .nav-link:hover {
+    background-color: #5f615a; /* Different background color on hover */
+    border-radius: 50%; /* Make the hover effect circular */
+    color: #fff; /* Change text color on hover */
+}
+
+.nav-icons .nav-link:hover i {
+    color: #fff; /* Ensure the icon color changes on hover */
+}
+
+/* Buttons */
+
+/* Styles for rectangular buttons */
+.rectangular-button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px;
+  padding: 10px;
+}
+
+.rectangular-button {
+  display: block;
+  box-sizing: border-box;
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  background-color: #fff; /* Optional: change the background color */
+}
+
+.rectangular-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.rectangular-button .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #5f615a;
+}
+
+.rectangular-button .description {
+  font-size: 14px;
+  color: #5f615a;
+}
+
+/* Buttons to projects for portfolio */
+.custom-button-container {
+  display: flex;
+  justify-content: space-between; /* Distributes space between buttons */
+  flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+  gap: 10px; /* Adds space between buttons */
+  padding: 10px; /* Adds padding around the container */
+}
+
+.custom-button {
+  position: relative;
+  display: block;
+  width: 380px; /* Ensure two buttons per row with space between */
+  height: 300px; /* Fixed height to ensure square shape */
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden; /* Hide overflow to ensure content doesn't spill out */
+  margin-bottom: 20px; /* Space between buttons */
+  background-color: #FFFFFF; /* Ensure background is white */
+}
+
+.custom-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button .content-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-button .button-text {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+  z-index: 1; /* Ensure text is above the image */
+  font-size: 16px;
+  font-weight: bold;
+  color: #5f615a;
+  box-sizing: border-box;
+}
+
+.custom-button img.thumbnail {
+  height: 200px;
+  margin-top: 30px;
+  margin-left: 160px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+.custom-button .description {
+  position: absolute;
+  top: 30px; /* Push below the title */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 40px); /* Adjust height to fit below the title */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+  color: #5f615a;
+  font-size: 14px;
+  padding: 10px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+}
+
+.custom-button:hover img.thumbnail {
+  opacity: 0; /* Hide the image on hover */
+}
+
+.custom-button:hover .description {
+  opacity: 1; /* Show the description on hover */
+}
+
+/* Return to Top Button Styles */
+.return-to-top {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust position to be exactly center horizontally */
+  display: none; /* Hidden by default */
+  background-color: #868980; /* Change to your preferred color */
+  color: #F3F7EC;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.return-to-top:hover {
+  background-color: #5f615a; /* Darker shade on hover */
+}
+
+/* Profile picture styling */
+.profile-picture {
+  float: left;
+  width: 190px; /* Adjust the size as needed */
+  height: 190px; /* Adjust the size as needed */
+  margin-right: 20px; /* Space between image and text */
+  border-radius: 50%; /* Make the image round */
+  object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+/* Content Wrapper Styling */
+.project-wrapper {
+  background-color: #FFFFFF; /* White background for the content */
+  padding: 50px 0; /* Adjust the padding as needed */
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for some depth */
+  margin-top: 50px; /* Adjust this value to control the space at the top */
+}
+
+.project-wrapper p,
+.project-wrapper li,
+.project-wrapper span,
+.project-wrapper blockquote {
+  color: #2f2f2f !important; /* Set text color to black for all non-header elements within content-wrapper */
+}
+
+/* Note box */
+.note {
+  border-left: 4px solid #2d67a4; /* Blue color for the left border */
+  background-color: #f2f2f2; /* Light gray background */
+  padding: 10px 15px; /* Space inside the box */
+  margin: 20px 0; /* Space outside the box */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.note strong {
+  color: #2d67a4; /* Match the color of the border for the "Note:" text */
+}
+
+
+/* Important box */
+.important {
+  border-left: 4px solid #b68331; /* Blue color for the left border */
+  background-color: #f2f2f2; /* Light gray background */
+  padding: 10px 15px; /* Space inside the box */
+  margin: 20px 0; /* Space outside the box */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.important strong {
+  color: #b68331; /* Match the color of the border for the "Note:" text */
+}
+
+
+/* Important box */
+.see-also {
+  border-left: 4px solid #379340; /* Blue color for the left border */
+  background-color: #f2f2f2; /* Light gray background */
+  padding: 10px 15px; /* Space inside the box */
+  margin: 20px 0; /* Space outside the box */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.see-also strong {
+  color: #379340; /* Match the color of the border for the "Note:" text */
+}
+
+
+/* Static TOC */
+.table-of-contents {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-of-contents h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.table-of-contents ul li {
+  margin-bottom: 5px;
+}
+
+.table-of-contents ul li a {
+  text-decoration: none;
+  color: #006989;
+}
+
+.table-of-contents ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Scrolling TOC */
+.toc {
+  position: fixed;
+  top: 130px;
+  right: 30px; /* Position the TOC on the right side */
+  width: 220px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 90vh; /* Allow scrolling if TOC is too tall */
+  overflow-y: auto; /* Enable scrolling for tall TOC */
+}
+
+.toc h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin-bottom: 5px;
+}
+
+.toc li ul {
+  padding-left: 20px; /* Indent for nested lists */
+  list-style-type: disc; /* Change bullet type for nested lists */
+}
+
+.toc a {
+  text-decoration: none;
+  color: #006989;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.toc a.active {
+  font-weight: bold;
+  color: #00465b; /* You can change this color to your preferred one */
+  text-decoration: underline;
+}
+
+
+/* breadcrumb navigation */
+.breadcrumb {
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb ul li {
+  margin-right: 10px;
+  color: #555;
+}
+
+.breadcrumb ul li a {
+  text-decoration: none;
+  color: #006989;
+}
+
+.breadcrumb ul li a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb ul li:after {
+  content: '>';
+  margin-left: 10px;
+  color: #ccc;
+}
+
+.breadcrumb ul li:last-child:after {
+  content: ''; /* Remove the arrow after the last item */
+}
+
+.breadcrumb ul li:last-child {
+  color: #555; /* Highlight the current page */
+  font-weight: bold;
+}
+
+
+/* Custom styles for images */
+.img.wrapped {
+  float: left;
+  width: auto; /* Ensure the image's width is auto */
+  pointer-events: none; /* Make the image non-clickable */
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-row img {
+  max-width: 48%; /* Adjust the width as needed */
+  height: auto;
+}
+
+.image-row-two {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-row-two img {
+  max-width: 32%; /* Adjust the width as needed */
+  height: auto;
+}

@@ -1,9 +1,0 @@
-.. _my_CV:
-
-My CV
-=====
-
-.. raw:: html
-
-   <iframe src="_static/CV_Eng_Andreas_Sellstone.pdf" width="100%" height="600px">
-   </iframe>
