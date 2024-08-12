@@ -114,8 +114,8 @@ header {
   }
 
   /* Style the active link (or home/logo) */
-  .active {
-    background-color: #5f615a;
+  .topnav a.active {
+    background-color: #F3F7EC;
     color: #868980;
   }
 
