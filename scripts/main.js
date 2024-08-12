@@ -1,3 +1,58 @@
+// Function to toggle the visibility of the mobile TOC
+function toggleMobileToc() {
+    var toc = document.getElementById("mobile-toc");
+    toc.classList.toggle("show");
+}
+
+// Function to update the active link in the TOC based on scroll position
+function updateActiveTocLink() {
+    var sections = document.querySelectorAll('main h1, main h2, main h3');
+    var tocLinks = document.querySelectorAll('#mobile-toc a');
+
+    let currentSectionId = '';
+
+    sections.forEach(function(section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+            currentSectionId = section.getAttribute('id');
+        }
+    });
+
+    tocLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSectionId) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Event listener for when the DOM content is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Add event listeners to TOC links to close the TOC when a link is clicked
+    var tocLinks = document.querySelectorAll("#mobile-toc a");
+
+    tocLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+            // Close the TOC window after clicking a link
+            toggleMobileToc();
+
+            // Scroll to the section smoothly
+            var targetId = this.getAttribute('href').substring(1);
+            var targetSection = document.getElementById(targetId);
+            targetSection.scrollIntoView({ behavior: "smooth" });
+
+            // Update the active TOC link immediately
+            updateActiveTocLink();
+        });
+    });
+
+    // Update active TOC link on scroll
+    window.addEventListener('scroll', updateActiveTocLink);
+
+    // Initialize the active TOC link on page load
+    updateActiveTocLink();
+});
+
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function myFunction() {
     var x = document.getElementById("myLinks");
@@ -7,7 +62,6 @@ function myFunction() {
         x.className = "show";
     }
 }
-
 
 // Typing animation
 document.addEventListener("DOMContentLoaded", function() {
@@ -40,10 +94,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-// Return to top
+// Return to top and topnav visibility on scroll
 document.addEventListener("DOMContentLoaded", function() {
     const returnToTopButton = document.getElementById('return-to-top');
+    const topnav = document.querySelector('.topnav');
     let lastScrollTop = 0;
     let scrollTimeout;
 
@@ -52,133 +106,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+        // Show or hide the topnav based on scroll direction
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            topnav.style.top = '-100px'; // Hide the topnav
+        } else {
+            // Scrolling up
+            topnav.style.top = '0'; // Show the topnav
+        }
+
+        // Show the button when scrolling up
         if (scrollTop < lastScrollTop) {
-            // Show the button when scrolling up
             returnToTopButton.style.display = 'block';
             returnToTopButton.style.opacity = '1';
         } else {
             // Hide the button when scrolling down
             returnToTopButton.style.opacity = '0';
-            setTimeout(() => {
-                if (returnToTopButton.style.opacity === '0') {
-                    returnToTopButton.style.display = 'none';
-                }
-            }, 300); // Wait for the opacity transition to finish before hiding completely
+            scrollTimeout = setTimeout(() => {
+                returnToTopButton.style.display = 'none';
+            }, 500); // Delay to fade out the button
         }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-
-        // Set a timeout to hide the button after 1 second of no scrolling
-        scrollTimeout = setTimeout(() => {
-            returnToTopButton.style.opacity = '0';
-            setTimeout(() => {
-                if (returnToTopButton.style.opacity === '0') {
-                    returnToTopButton.style.display = 'none';
-                }
-            }, 300); // Wait for the opacity transition to finish before hiding completely
-        }, 1000); // 1 second delay
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Ensure lastScrollTop is not negative
     });
 
-    // Scroll to top when button is clicked
     returnToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-});
-
-
-// Scrolling TOC
-document.addEventListener("DOMContentLoaded", function () {
-    const tocLinks = document.querySelectorAll(".toc a");
-    const sections = document.querySelectorAll("main h1, main h2, main h3");
-
-    function updateActiveSection() {
-        let currentSection = "";
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-
-            if (sectionTop < window.innerHeight / 2 && sectionTop > 0) {
-                currentSection = section.getAttribute("id");
-            }
-        });
-
-        tocLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").substring(1) === currentSection) {
-                link.classList.add("active");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", updateActiveSection);
-    updateActiveSection(); // Initialize the function on page load
-});
-
-
-// Mobile popup
-window.onload = function() {
-    // Detect mobile devices using a simple screen width check
-    if (window.innerWidth <= 768) {
-        document.getElementById('mobile-popup').style.display = 'block';
-    }
-}
-
-function closePopup() {
-    document.getElementById('mobile-popup').style.display = 'none';
-}
-
-// Desktop toc popup
-document.getElementById("openTocBtn").addEventListener("click", function() {
-    document.getElementById("toc").classList.remove("toc-hidden");
-    document.getElementById("openTocBtn").style.display = "none";
-    document.getElementById("closeTocBtn").style.display = "block";
-});
-
-document.getElementById("closeTocBtn").addEventListener("click", function() {
-    document.getElementById("toc").classList.add("toc-hidden");
-    document.getElementById("closeTocBtn").style.display = "none";
-    document.getElementById("openTocBtn").style.display = "block";
-});
-
-
-// Mobile toc popup
-function toggleMobileToc() {
-    var toc = document.getElementById("mobile-toc");
-    if (toc.classList.contains("show")) {
-        toc.classList.remove("show");
-    } else {
-        toc.classList.add("show");
-    }
-}
-
-// Add event listeners to TOC links to close the TOC when a link is clicked
-document.addEventListener("DOMContentLoaded", function() {
-    var tocLinks = document.querySelectorAll("#mobile-toc a");
-
-    tocLinks.forEach(function(link) {
-        link.addEventListener("click", function() {
-            // Close the TOC window after clicking a link
-            toggleMobileToc();
-        });
-    });
-});
-
-
-let lastScrollTop = 0;
-const navbar = document.querySelector('.topnav'); // or '.navbar' depending on the menu you want to hide
-
-window.addEventListener('scroll', function() {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-  if (scrollTop > lastScrollTop) {
-    // Scrolling down
-    navbar.style.top = '-100px'; // Hide the navbar (you can adjust the value based on your navbar height)
-  } else {
-    // Scrolling up
-    navbar.style.top = '0';
-  }
-  
-  lastScrollTop = scrollTop;
 });

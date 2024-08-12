@@ -204,6 +204,11 @@ header {
     opacity: 1;
   }
 
+  #mobile-toc a.active {
+    color: #868981; /* Ensure the text color stays the same */
+    background-color: #F3F7EC;
+  }
+
   .mobile-toc .mobile-toc-content {
     background-color: #F3F7EC;
     padding: 20px;
