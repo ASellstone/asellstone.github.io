@@ -153,6 +153,18 @@ function toggleMobileToc() {
     }
 }
 
+// Add event listeners to TOC links to close the TOC when a link is clicked
+document.addEventListener("DOMContentLoaded", function() {
+    var tocLinks = document.querySelectorAll("#mobile-toc a");
+
+    tocLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+            // Close the TOC window after clicking a link
+            toggleMobileToc();
+        });
+    });
+});
+
 
 let lastScrollTop = 0;
 const navbar = document.querySelector('.topnav'); // or '.navbar' depending on the menu you want to hide
