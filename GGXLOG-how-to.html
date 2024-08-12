@@ -12,20 +12,43 @@
 <body>
     <!-- Top Navigation Menu -->
     <div class="topnav">
-    <a href="index.html" class="brand-name">Andreas Sellstone</a>
-    <!-- Navigation links (hidden by default) -->
-    <div id="myLinks">
-        <a href="index.html">Home</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About</a>
-        <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
+        <a href="javascript:void(0);" class="mobile-toc-icon" onclick="toggleMobileToc()">
+            <i class="fa-solid fa-list"></i>
+        </a>
+        <a href="index.html" class="brand-name">Andreas Sellstone</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <nav id="mobile-toc" class="mobile-toc">
+            <h2 style="margin-left: 15px; color: #F3F7EC">On This Page</h2>
+            <a href="#title">How to write a text with GenoGraphiX-LOG</a>
+                <a href="#what-is-genographix-log">What is GenoGraphiX-LOG?</a>
+                <ul>
+                    <a href="#why-use-a-keystroke-logger">Why use a keystroke logger?</a>
+                    <a href="#who-should-use-a-keystroke-logger">Who should use a keystroke logger?</a>
+                </ul>
+                <a href="#how-to-start-writing">How to start writing</a>
+                <ul>
+                    <a href="#step-1">Step 1: Installing the program</a>
+                    <a href="#step-2">Step 2: Creating a new project</a>
+                    <a href="#step-3">Step 3: Start writing</a>
+                </ul>
+                <a href="#analyzing-a-writing-session">Analyzing a writing session</a>
+                <ul>
+                    <a href="#native-analytical-features">Native analytical features</a>
+                    <a href="#uploading">Uploading logging data into statistical software</a>
+                </ul>
+        </nav>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
     <nav class="navbar">
         <div class="nav-left">
@@ -72,8 +95,8 @@
             </li>
         </ul>
     </nav>
-    <button class="toc-toggle open-btn" id="openTocBtn"><i class="fa-solid fa-angle-left"></i></button>
-    <button class="toc-toggle close-btn" id="closeTocBtn"><i class="fa-solid fa-angle-right"></i></button>
+    <button class="toc-toggle open-btn" id="openTocBtn"><i class="fa-solid fa-list"></i></button>
+    <button class="toc-toggle close-btn" id="closeTocBtn"><i class="fa-solid fa-xmark"></i></button>
     <main>
         <div class="project-wrapper">
             <nav class="breadcrumb">

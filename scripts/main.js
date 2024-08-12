@@ -1,10 +1,10 @@
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function myFunction() {
     var x = document.getElementById("myLinks");
-    if (x.classList.contains("show")) {
-        x.classList.remove("show");
+    if (x.className === "show") {
+        x.className = "";
     } else {
-        x.classList.add("show");
+        x.className = "show";
     }
 }
 
@@ -129,7 +129,7 @@ function closePopup() {
     document.getElementById('mobile-popup').style.display = 'none';
 }
 
-
+// Desktop toc popup
 document.getElementById("openTocBtn").addEventListener("click", function() {
     document.getElementById("toc").classList.remove("toc-hidden");
     document.getElementById("openTocBtn").style.display = "none";
@@ -140,4 +140,33 @@ document.getElementById("closeTocBtn").addEventListener("click", function() {
     document.getElementById("toc").classList.add("toc-hidden");
     document.getElementById("closeTocBtn").style.display = "none";
     document.getElementById("openTocBtn").style.display = "block";
+});
+
+
+// Mobile toc popup
+function toggleMobileToc() {
+    var toc = document.getElementById("mobile-toc");
+    if (toc.classList.contains("show")) {
+        toc.classList.remove("show");
+    } else {
+        toc.classList.add("show");
+    }
+}
+
+
+let lastScrollTop = 0;
+const navbar = document.querySelector('.topnav'); // or '.navbar' depending on the menu you want to hide
+
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down
+    navbar.style.top = '-100px'; // Hide the navbar (you can adjust the value based on your navbar height)
+  } else {
+    // Scrolling up
+    navbar.style.top = '0';
+  }
+  
+  lastScrollTop = scrollTop;
 });

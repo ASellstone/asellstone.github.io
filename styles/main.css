@@ -37,13 +37,28 @@ header {
   color: #CA7569;
 }
 
+.topnav .toc-icon {
+    font-size: 24px;
+    margin-left: 10px;
+    color: #F3F7EC;
+    cursor: pointer;
+}
+
 /* Mobile Menu: Show only on screens smaller than 768px */
 @media only screen and (max-width: 854px) {
   .topnav {
     display: block; /* Show mobile menu */
     overflow: hidden;
     background-color: #868980;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the topnav is above other elements */
+    transition: top 0.3s;
+  }
+
+  body {
+    margin-top: 118px; /* Adjust this value based on the height of your topnav */
   }
   
   .navbar {
@@ -81,7 +96,6 @@ header {
     display: block;
     font-weight: bold;
     text-align: center;
-    margin-right: 40px;
   }
 
   /* Style the hamburger menu */
@@ -150,43 +164,69 @@ header {
     display: none;
   }
 
-  .toc h2 {
-    font-size: 1.5em;
-    margin-top: 0;
+  .toc-toggle {
+    display: none;
   }
 
-  .toc ul {
-    list-style-type: none;
-    padding-left: 0;
+  .toc-toggle {
+    display: none;
   }
 
-  .toc li {
-    margin-bottom: 5px;
+  .mobile-toc {
+    display: block; /* Show mobile menu */
+    overflow: hidden;
+    background-color: #868980;
+    position: relative;
   }
 
-  .toc li ul {
-    padding-left: 20px; /* Indent for nested lists */
-    list-style-type: disc; /* Change bullet type for nested lists */
+  #mobile-toc {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
   }
 
-  .toc a {
-    text-decoration: none;
-    color: #006989;
+  #mobile-toc.show {
+    max-height: 500px; /* Adjust based on your content */
+    opacity: 1;
   }
 
-  .toc a:hover {
-    text-decoration: underline;
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  #mobile-toc {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
   }
 
-  ul {
-    list-style-type: circle;
+  #mobile-toc.show {
+    max-height: 1000px; /* Adjust based on your content */
+    opacity: 1;
   }
 
-  .toc a.active {
-    font-weight: bold;
-    color: #00465b; /* You can change this color to your preferred one */
-    text-decoration: underline;
+  .mobile-toc .mobile-toc-content {
+    background-color: #F3F7EC;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
   }
+
+  .topnav a.mobile-toc-icon {
+    background: #868980;
+    margin-top: 5px;
+    font-size: 24px; /* Adjust the font-size to make the icon larger */
+    position: absolute;
+    left: 10px;
+    top: 0;
+    color: #F3F7EC; /* Ensure the icon is visible */
+  }
+  
+  .topnav a.icon i {
+    color: #F3F7EC; /* Set the color of the icon */
+  }
+  
 
 
   /* breadcrumb navigation */
