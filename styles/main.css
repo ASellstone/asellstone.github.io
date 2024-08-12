@@ -301,8 +301,7 @@ header {
   .custom-button img.thumbnail {
     position: absolute; /* Position the image absolutely within the button */
     top: 50%; /* Center the image vertically */
-    transform: translateY(-30%); /* Adjust the image to align in the middle of the Y-axis */
-    right: -20px; /* Set the desired position on the X-axis */
+    transform: translate(-50%, -50%); /* Center the image exactly */
     height: 50%; /* Adjust the height as needed relative to the button size */
     width: auto; /* Maintain the aspect ratio */
     object-fit: cover;
@@ -692,12 +691,14 @@ header {
   }
 
   .custom-button img.thumbnail {
-    height: 200px;
-    margin-top: 30px;
-    margin-left: 160px;
+    position: absolute; /* Position the image absolutely within the button */
+    top: 50%; /* Center the image vertically */
+    transform: translate(-50%, -50%); /* Center the image exactly */
+    height: 60%; /* Adjust the height as needed relative to the button size */
+    width: auto; /* Maintain the aspect ratio */
     object-fit: cover;
     transition: opacity 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .custom-button .description {
