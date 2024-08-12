@@ -38,7 +38,7 @@ header {
 }
 
 /* Mobile Menu: Show only on screens smaller than 768px */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 854px) {
   .topnav {
     display: block; /* Show mobile menu */
     overflow: hidden;
@@ -386,7 +386,7 @@ header {
 
 
 /* Desktop Menu: Show only on screens larger than 768px */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 855px) {
   .topnav {
     display: none; /* Hide mobile menu */
   }
