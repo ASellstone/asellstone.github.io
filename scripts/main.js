@@ -1,3 +1,14 @@
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.classList.contains("show")) {
+        x.classList.remove("show");
+    } else {
+        x.classList.add("show");
+    }
+}
+
+
 // Typing animation
 document.addEventListener("DOMContentLoaded", function() {
     const headerElement = document.getElementById("header-typing");
@@ -18,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Typing effect for header
+    headerElement.innerHTML = "";
     typeText(headerElement, "Hello, I'm Andreas.", 50, () => {
         // Pause for 1 second before starting the paragraph text
         setTimeout(() => {
@@ -103,3 +115,16 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", updateActiveSection);
     updateActiveSection(); // Initialize the function on page load
 });
+
+
+// Mobile popup
+window.onload = function() {
+    // Detect mobile devices using a simple screen width check
+    if (window.innerWidth <= 768) {
+        document.getElementById('mobile-popup').style.display = 'block';
+    }
+}
+
+function closePopup() {
+    document.getElementById('mobile-popup').style.display = 'none';
+}

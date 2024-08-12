@@ -1,291 +1,795 @@
 /* General styles and imports */
 @import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap');
 
+/* Base styles to hide both menus initially */
+.topnav {
+  display: none; /* Mobile menu */
+}
+
+.navbar {
+  display: none; /* Desktop menu */
+}
+
 body {
-    background-color: #F3F7EC;
-    color: #5f615a;
-    font-family: 'Hanuman', serif;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+  background-color: #F3F7EC;
+  color: #5f615a;
+  font-family: 'Hanuman', serif;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 header {
-    background-color: #F3F7EC;
-    color: white;
-    padding: 15px 0;
-    text-align: left;
+  background-color: #F3F7EC;
+  color: white;
+  padding: 15px 0;
+  text-align: left;
 }
 
 .about-color {
-    color: #006989;
+  color: #006989;
 }
 
 .projects-color {
-    color: #6AA273;
+  color: #6AA273;
 }
 
 .blog-color {
-    color: #CA7569;
+  color: #CA7569;
 }
 
-.container {
+/* Mobile Menu: Show only on screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .topnav {
+    display: block; /* Show mobile menu */
+    overflow: hidden;
+    background-color: #868980;
+    position: relative;
+  }
+  
+  .navbar {
+    display: none; /* Hide desktop menu */
+  }
+
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  }
+
+  /* When the menu is visible */
+  .topnav #myLinks.show {
+      max-height: 500px; /* Adjust this value as needed */
+      opacity: 1;
+  }
+
+  /* Style navigation menu links */
+  .topnav a {
+    color: #F3F7EC;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .brand-name  {
+    color: #F3F7EC;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 24px !important;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 40px;
+  }
+
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: #868980;
+    margin-top: 5px;
+    font-size: 24px; /* Adjust the font-size to make the icon larger */
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: #F3F7EC; /* Ensure the icon is visible */
+  }
+
+  .topnav a.icon i {
+    color: #F3F7EC; /* Set the color of the icon */
+  }
+
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #5f615a;
+    color: #868980;
+  }
+
+  /* content style */
+  .container {
+    padding: 20px; /* Apply 15px padding to all sides on mobile */
+    margin-top: 50px; /* Maintain the margin-top */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    width: 100%; /* Ensure container doesn't exceed screen width */
+  }
+
+  main p {
+      margin-bottom: 20px; /* Add space below paragraphs */
+  }
+
+  footer {
+      background-color: #F3F7EC;
+      color: #868980;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+  }
+
+  h1 {
+      margin-top: 60px; /* Increase space above the header */
+  }
+
+  .h1-project {
+    margin-top: -20px;
+  }
+
+  h2 {
+      margin-top: 40px; /* Add space above h2 headers */
+      margin-bottom: 20px; /* Add space below h2 headers */
+  }
+
+  h3 {
+      margin-top: 30px; /* Add space above h3 headers */
+      margin-bottom: 15px; /* Add space below h3 headers */
+  }
+
+
+  /* Scrolling TOC */
+  .toc {
+    display: none;
+  }
+
+  .toc h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  .toc ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .toc li {
+    margin-bottom: 5px;
+  }
+
+  .toc li ul {
+    padding-left: 20px; /* Indent for nested lists */
+    list-style-type: disc; /* Change bullet type for nested lists */
+  }
+
+  .toc a {
+    text-decoration: none;
+    color: #006989;
+  }
+
+  .toc a:hover {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: circle;
+  }
+
+  .toc a.active {
+    font-weight: bold;
+    color: #00465b; /* You can change this color to your preferred one */
+    text-decoration: underline;
+  }
+
+
+  /* breadcrumb navigation */
+  .breadcrumb {
+    background-color: #FFFFFF;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumb ul li {
+    margin-right: 10px;
+    color: #555;
+  }
+
+  .breadcrumb ul li a {
+    text-decoration: none;
+    color: #006989;
+  }
+
+  .breadcrumb ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb ul li:after {
+    content: '>';
+    margin-left: 10px;
+    color: #ccc;
+  }
+
+  .breadcrumb ul li:last-child:after {
+    content: ''; /* Remove the arrow after the last item */
+  }
+
+  .breadcrumb ul li:last-child {
+    color: #555; /* Highlight the current page */
+    font-weight: bold;
+  }
+
+  /* Content Wrapper Styling */
+  .project-wrapper {
+    background-color: #FFFFFF; /* White background for the content */
+    padding: 50px 0; /* Adjust the padding as needed */
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for some depth */
+    margin-top: 50px; /* Adjust this value to control the space at the top */
+  }
+
+  .project-wrapper p,
+  .project-wrapper li,
+  .project-wrapper span,
+  .project-wrapper blockquote {
+    color: #2f2f2f !important; /* Set text color to black for all non-header elements within content-wrapper */
+  }
+
+  .custom-button {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden; /* Hide overflow to ensure content doesn't spill out */
+    margin-bottom: 20px; /* Space between buttons */
+    background-color: #FFFFFF; /* Ensure background is white */
+  }
+
+  /* Square buttons */
+  .custom-button-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space between buttons */
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+    gap: 10px; /* Adds space between buttons */
+    padding: 10px; /* Adds padding around the container */
+  }
+
+  .custom-button {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden; /* Hide overflow to ensure content doesn't spill out */
+    margin-bottom: 20px; /* Space between buttons */
+    background-color: #FFFFFF; /* Ensure background is white */
+  }
+
+  .custom-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-button .content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .custom-button .button-text {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    font-size: 14px;
+    font-weight: bold;
+    color: #5f615a;
+    box-sizing: border-box;
+  }
+
+  .custom-button img.thumbnail {
+    height: 200px;
+    margin-left: 160px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  }
+
+  .custom-button .description {
+    position: absolute;
+    top: 30px; /* Push below the title */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 40px); /* Adjust height to fit below the title */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+    color: #5f615a;
+    font-size: 14px;
+    padding: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .custom-button:hover img.thumbnail {
+    opacity: 0; /* Hide the image on hover */
+  }
+
+  .custom-button:hover .description {
+    opacity: 1; /* Show the description on hover */
+  }
+
+
+  .rectangular-button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .rectangular-button {
+    display: block;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    background-color: #fff; /* Optional: change the background color */
+  }
+
+  .rectangular-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .rectangular-button .title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #5f615a;
+  }
+
+  .rectangular-button .description {
+    font-size: 14px;
+    color: #5f615a;
+  }
+
+}
+
+
+/* Desktop Menu: Show only on screens larger than 768px */
+@media only screen and (min-width: 769px) {
+  .topnav {
+    display: none; /* Hide mobile menu */
+  }
+
+  .navbar {
+    display: flex; /* Show desktop menu */
+  }
+
+  /* General styles for the navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #868980;
+    padding: 10px 10px 0px 20px;
+    position: sticky;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    margin-right: 130px; /* Add some space between the brand and the links */
+  }
+
+  .brand-name {
+    color: #F3F7EC;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-icons {
+    display: flex;
+    gap: 10px; /* Add some space between the icons */
+  }
+
+  .navbar .nav-link {
+    color: #F3F7EC;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navbar .nav-link i {
+    color: #F3F7EC; /* Ensure the icons have the same color as the links */
+  }
+
+  .navbar .nav-link:hover {
+    background-color: #5f615a;
+    border-radius: 5px 5px 0px 0px;
+    color: #F3F7EC; /* Ensure the text color remains visible on hover */
+  }
+
+  .navbar .nav-link.current {
+    background-color: #F3F7EC;
+    border-radius: 5px 5px 0px 0px;
+    color: #868980;
+    height: 100%; /* Ensure it takes up the full height of the navbar */
+  }
+
+  .navbar .nav-link.current i {
+    color: #868980;
+  }
+
+  /* Initially hide the mobile-specific elements */
+  .menu-button,
+  .side-menu {
+    display: none;
+  }
+
+  /* Show the desktop navigation by default */
+  .nav-left .nav-links,
+  .nav-icons {
+    display: flex;
+  }
+
+
+  /* Separate hover effect for icons */
+  .nav-icons .nav-link {
+      padding: 10px; /* Adjust padding for icons */
+  }
+
+  .nav-icons .nav-link:hover {
+      background-color: #5f615a; /* Different background color on hover */
+      border-radius: 50%; /* Make the hover effect circular */
+      color: #fff; /* Change text color on hover */
+  }
+
+  .nav-icons .nav-link:hover i {
+      color: #fff; /* Ensure the icon color changes on hover */
+  }
+
+  .container {
     width: 55%;
     max-width: 1200px;
     margin: auto;
     margin-top: 80px; /* Increase space above the header */
     padding: 50px;
-}
+  }
 
-main p {
-    margin-bottom: 20px; /* Add space below paragraphs */
-}
+  main p {
+      margin-bottom: 20px; /* Add space below paragraphs */
+  }
 
-footer {
-    background-color: #F3F7EC;
-    color: #868980;
+  footer {
+      background-color: #F3F7EC;
+      color: #868980;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+  }
+
+  section {
+      margin-bottom: 50px; /* Add space below sections */
+  }
+
+  h1 {
+      font-size: 2.5em;
+      margin-top: 80px; /* Increase space above the header */
+  }
+
+  .h1-project {
+    margin-top: -40px;
+  }
+
+  h2 {
+      margin-top: 40px; /* Add space above h2 headers */
+      margin-bottom: 20px; /* Add space below h2 headers */
+  }
+
+  h3 {
+      margin-top: 30px; /* Add space above h3 headers */
+      margin-bottom: 15px; /* Add space below h3 headers */
+  }
+
+  /* Scrolling TOC */
+  .toc {
+    position: fixed;
+    top: 130px;
+    right: 30px; /* Position the TOC on the right side */
+    width: 220px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 90vh; /* Allow scrolling if TOC is too tall */
+    overflow-y: auto; /* Enable scrolling for tall TOC */
+  }
+
+  .toc h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+
+  .toc ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .toc li {
+    margin-bottom: 5px;
+  }
+
+  .toc li ul {
+    padding-left: 20px; /* Indent for nested lists */
+    list-style-type: disc; /* Change bullet type for nested lists */
+  }
+
+  .toc a {
+    text-decoration: none;
+    color: #006989;
+  }
+
+  .toc a:hover {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: circle;
+  }
+
+  .toc a.active {
+    font-weight: bold;
+    color: #00465b; /* You can change this color to your preferred one */
+    text-decoration: underline;
+  }
+
+
+  /* breadcrumb navigation */
+  .breadcrumb {
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 330px;
+  }
+
+  .breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumb ul li {
+    margin-right: 10px;
+    color: #555;
+  }
+
+  .breadcrumb ul li a {
+    text-decoration: none;
+    color: #006989;
+  }
+
+  .breadcrumb ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb ul li:after {
+    content: '>';
+    margin-left: 10px;
+    color: #ccc;
+  }
+
+  .breadcrumb ul li:last-child:after {
+    content: ''; /* Remove the arrow after the last item */
+  }
+
+  .breadcrumb ul li:last-child {
+    color: #555; /* Highlight the current page */
+    font-weight: bold;
+  }
+
+  /* Content Wrapper Styling */
+  .project-wrapper {
+    background-color: #FFFFFF; /* White background for the content */
+    padding: 50px 0; /* Adjust the padding as needed */
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for some depth */
+    margin-top: 50px; /* Adjust this value to control the space at the top */
+    margin-left: -30px;
+  }
+
+  .project-wrapper p,
+  .project-wrapper li,
+  .project-wrapper span,
+  .project-wrapper blockquote {
+    color: #2f2f2f !important; /* Set text color to black for all non-header elements within content-wrapper */
+  }
+
+
+  .custom-button {
+    position: relative;
+    display: block;
+    width: 380px; /* Ensure two buttons per row with space between */
+    height: 300px; /* Fixed height to ensure square shape */
+    box-sizing: border-box;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden; /* Hide overflow to ensure content doesn't spill out */
+    margin-bottom: 20px; /* Space between buttons */
+    background-color: #FFFFFF; /* Ensure background is white */
+  }
 
-section {
-    margin-bottom: 50px; /* Add space below sections */
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-top: 80px; /* Increase space above the header */
-}
-
-h2 {
-    margin-top: 40px; /* Add space above h2 headers */
-    margin-bottom: 20px; /* Add space below h2 headers */
-}
-
-h3 {
-    margin-top: 30px; /* Add space above h3 headers */
-    margin-bottom: 15px; /* Add space below h3 headers */
-}
-
-
-/* General styles for the navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #868980;
-  padding: 10px 10px 0px 20px;
-  position: sticky;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand {
-  margin-right: 130px; /* Add some space between the brand and the links */
-}
-
-.brand-name {
-  color: #F3F7EC;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-icons {
-  display: flex;
-  gap: 10px; /* Add some space between the icons */
-}
-
-.navbar .nav-link {
-  color: #F3F7EC;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.navbar .nav-link i {
-  color: #F3F7EC; /* Ensure the icons have the same color as the links */
-}
-
-.navbar .nav-link:hover {
-  background-color: #5f615a;
-  border-radius: 5px 5px 0px 0px;
-  color: #F3F7EC; /* Ensure the text color remains visible on hover */
-}
-
-.navbar .nav-link.current {
-  background-color: #F3F7EC;
-  border-radius: 5px 5px 0px 0px;
-  color: #868980;
-  height: 100%; /* Ensure it takes up the full height of the navbar */
-}
-
-.navbar .nav-link.current i {
-  color: #868980;
-}
-
-/* Initially hide the mobile-specific elements */
-.menu-button,
-.side-menu {
-  display: none;
-}
-
-/* Show the desktop navigation by default */
-.nav-left .nav-links,
-.nav-icons {
-  display: flex;
-}
-
-
-/* Separate hover effect for icons */
-.nav-icons .nav-link {
-    padding: 10px; /* Adjust padding for icons */
-}
-
-.nav-icons .nav-link:hover {
-    background-color: #5f615a; /* Different background color on hover */
-    border-radius: 50%; /* Make the hover effect circular */
-    color: #fff; /* Change text color on hover */
-}
-
-.nav-icons .nav-link:hover i {
-    color: #fff; /* Ensure the icon color changes on hover */
-}
-
-/* Buttons */
-
-/* Styles for rectangular buttons */
-.rectangular-button-container {
-  display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  gap: 10px;
-  padding: 10px;
-}
-
-.rectangular-button {
-  display: block;
-  box-sizing: border-box;
-  padding: 15px;
-  text-align: left;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-  background-color: #fff; /* Optional: change the background color */
-}
-
-.rectangular-button:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.rectangular-button .title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #5f615a;
-}
-
-.rectangular-button .description {
-  font-size: 14px;
-  color: #5f615a;
-}
-
-/* Buttons to projects for portfolio */
-.custom-button-container {
+  /* Square buttons */
+  .custom-button-container {
   display: flex;
   justify-content: space-between; /* Distributes space between buttons */
   flex-wrap: wrap; /* Allows buttons to wrap to the next line */
   gap: 10px; /* Adds space between buttons */
   padding: 10px; /* Adds padding around the container */
+  }
+
+  .custom-button {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden; /* Hide overflow to ensure content doesn't spill out */
+    margin-bottom: 20px; /* Space between buttons */
+    background-color: #FFFFFF; /* Ensure background is white */
+  }
+
+  .custom-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-button .content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .custom-button .button-text {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    z-index: 1; /* Ensure text is above the image */
+    font-size: 16px;
+    font-weight: bold;
+    color: #5f615a;
+    box-sizing: border-box;
+  }
+
+  .custom-button img.thumbnail {
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 160px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  }
+
+  .custom-button .description {
+    position: absolute;
+    top: 30px; /* Push below the title */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 40px); /* Adjust height to fit below the title */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+    color: #5f615a;
+    font-size: 14px;
+    padding: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .custom-button:hover img.thumbnail {
+    opacity: 0; /* Hide the image on hover */
+  }
+
+  .custom-button:hover .description {
+    opacity: 1; /* Show the description on hover */
+  }
+
+  /* Styles for rectangular buttons */
+  .rectangular-button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .rectangular-button {
+    display: block;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    background-color: #fff; /* Optional: change the background color */
+  }
+
+  .rectangular-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .rectangular-button .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #5f615a;
+  }
+
+  .rectangular-button .description {
+    font-size: 14px;
+    color: #5f615a;
+  }
+
 }
 
-.custom-button {
-  position: relative;
-  display: block;
-  width: 380px; /* Ensure two buttons per row with space between */
-  height: 300px; /* Fixed height to ensure square shape */
-  box-sizing: border-box;
-  text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-  overflow: hidden; /* Hide overflow to ensure content doesn't spill out */
-  margin-bottom: 20px; /* Space between buttons */
-  background-color: #FFFFFF; /* Ensure background is white */
-}
-
-.custom-button:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.custom-button .content-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.custom-button .button-text {
-  width: 100%;
-  margin-top: 10px;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
-  z-index: 1; /* Ensure text is above the image */
-  font-size: 16px;
-  font-weight: bold;
-  color: #5f615a;
-  box-sizing: border-box;
-}
-
-.custom-button img.thumbnail {
-  height: 200px;
-  margin-top: 30px;
-  margin-left: 160px;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
-}
-
-.custom-button .description {
-  position: absolute;
-  top: 30px; /* Push below the title */
-  left: 0;
-  width: 100%;
-  height: calc(100% - 40px); /* Adjust height to fit below the title */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
-  color: #5f615a;
-  font-size: 14px;
-  padding: 10px;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease;
-  box-sizing: border-box;
-}
-
-.custom-button:hover img.thumbnail {
-  opacity: 0; /* Hide the image on hover */
-}
-
-.custom-button:hover .description {
-  opacity: 1; /* Show the description on hover */
-}
 
 /* Return to Top Button Styles */
 .return-to-top {
@@ -318,21 +822,6 @@ h3 {
   margin-right: 20px; /* Space between image and text */
   border-radius: 50%; /* Make the image round */
   object-fit: cover; /* Ensure the image covers the entire area */
-}
-
-/* Content Wrapper Styling */
-.project-wrapper {
-  background-color: #FFFFFF; /* White background for the content */
-  padding: 50px 0; /* Adjust the padding as needed */
-  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for some depth */
-  margin-top: 50px; /* Adjust this value to control the space at the top */
-}
-
-.project-wrapper p,
-.project-wrapper li,
-.project-wrapper span,
-.project-wrapper blockquote {
-  color: #2f2f2f !important; /* Set text color to black for all non-header elements within content-wrapper */
 }
 
 /* Note box */
@@ -375,140 +864,6 @@ h3 {
 .see-also strong {
   color: #379340; /* Match the color of the border for the "Note:" text */
 }
-
-
-/* Static TOC */
-.table-of-contents {
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.table-of-contents h2 {
-  font-size: 1.5em;
-  margin-top: 10px;
-}
-
-.table-of-contents ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.table-of-contents ul li {
-  margin-bottom: 5px;
-}
-
-.table-of-contents ul li a {
-  text-decoration: none;
-  color: #006989;
-}
-
-.table-of-contents ul li a:hover {
-  text-decoration: underline;
-}
-
-
-/* Scrolling TOC */
-.toc {
-  position: fixed;
-  top: 130px;
-  right: 30px; /* Position the TOC on the right side */
-  width: 220px;
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-height: 90vh; /* Allow scrolling if TOC is too tall */
-  overflow-y: auto; /* Enable scrolling for tall TOC */
-}
-
-.toc h2 {
-  font-size: 1.5em;
-  margin-top: 0;
-}
-
-.toc ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.toc li {
-  margin-bottom: 5px;
-}
-
-.toc li ul {
-  padding-left: 20px; /* Indent for nested lists */
-  list-style-type: disc; /* Change bullet type for nested lists */
-}
-
-.toc a {
-  text-decoration: none;
-  color: #006989;
-}
-
-.toc a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  list-style-type: circle;
-}
-
-.toc a.active {
-  font-weight: bold;
-  color: #00465b; /* You can change this color to your preferred one */
-  text-decoration: underline;
-}
-
-
-/* breadcrumb navigation */
-.breadcrumb {
-  background-color: #FFFFFF;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.breadcrumb ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumb ul li {
-  margin-right: 10px;
-  color: #555;
-}
-
-.breadcrumb ul li a {
-  text-decoration: none;
-  color: #006989;
-}
-
-.breadcrumb ul li a:hover {
-  text-decoration: underline;
-}
-
-.breadcrumb ul li:after {
-  content: '>';
-  margin-left: 10px;
-  color: #ccc;
-}
-
-.breadcrumb ul li:last-child:after {
-  content: ''; /* Remove the arrow after the last item */
-}
-
-.breadcrumb ul li:last-child {
-  color: #555; /* Highlight the current page */
-  font-weight: bold;
-}
-
 
 /* Custom styles for images */
 .img.wrapped {

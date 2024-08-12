@@ -7,8 +7,26 @@
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
 </head>
 <body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+    <a href="index.html" class="brand-name">Andreas Sellstone</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+    </div>
     <nav class="navbar">
         <div class="nav-left">
             <div class="navbar-brand">
@@ -55,15 +73,15 @@
         </ul>
     </nav>
     <main>
-        <div class="project-wrapper" style="margin-left: -30px;">
-            <nav class="breadcrumb" style="margin-left: 330px;">
+        <div class="project-wrapper">
+            <nav class="breadcrumb">
                 <ul>
                     <li><a href="Projects.html">Projects</a></li>
                     <li><a href="GGXLOG-how-to.html">How to write a text with GenoGraphiX-LOG</a></li>
                 </ul>
             </nav>
             <div class="container">
-              <h1 id="title" style="margin-top: -100px;">How to write a text with GenoGraphiX-LOG</h1>
+              <h1 id="title" class="h1-project">How to write a text with GenoGraphiX-LOG</h1>
               <p>In this short guide I will teach you how to write a text in the keystroke logging software GenoGraphiX-LOG. I will also give a short primer on how to prepare for the analysis of your writing session at the end of the guide.</p>
               <p>Before I start with the guide itself, I will begin with a short introduction to what kind of software GenoGraphiX-LOG is and why you might want to use it. Go to the section <a href="#how-to-start-writing">How to start writing</a> if you want to go straight into how to use the program.</p>
               <h2 id="what-is-genographix-log">What is GenoGraphiX-LOG?</h2>
