@@ -128,3 +128,16 @@ window.onload = function() {
 function closePopup() {
     document.getElementById('mobile-popup').style.display = 'none';
 }
+
+
+document.getElementById("openTocBtn").addEventListener("click", function() {
+    document.getElementById("toc").classList.remove("toc-hidden");
+    document.getElementById("openTocBtn").style.display = "none";
+    document.getElementById("closeTocBtn").style.display = "block";
+});
+
+document.getElementById("closeTocBtn").addEventListener("click", function() {
+    document.getElementById("toc").classList.add("toc-hidden");
+    document.getElementById("closeTocBtn").style.display = "none";
+    document.getElementById("openTocBtn").style.display = "block";
+});
