@@ -6,6 +6,9 @@
     <title>Infotainment User-Interface Design</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
 </head>
 <body>
     <div class="topnav">
@@ -122,8 +125,10 @@
 
               <h3 id="functional-analysis">Functional Analysis and Theoretical Research</h3>
               <p>After the interviews we conducted a functional analysis of the different systems and elucidating the system requirements along with its main and sub functions.</p>
-              
-              <img src="images/functional_trees.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+
+              <a href="images/functional_trees.png" data-fancybox="functional-trees" data-caption="Three functional trees for each main function (in Swedish).">
+                <img src="images/functional_trees.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              </a>
 
               <p>We visualized this in a functional tree which is displayed in the above figure (in Swedish).</p>
               
@@ -137,54 +142,110 @@
               <h3 id="low-fidelity-prototype">Low-Fidelity Prototype</h3>
               <p>At this stage we split up, sketched on our own ideas for the different interfaces, and then made three different low-fidelity prototypes that each could be tested by users.</p>
 
-              <div class="image-row">
-                <img src="images/home.jpg">
-                <img src="images/steering_wheel.jpg">
+              <div id="gallery-1" class="thumbnail-gallery">
+                <div class="gallery-content">
+                    <div class="gallery-controls">
+                        <button onclick="prevThumbnail('gallery-1')"><i class="fa-solid fa-angle-left"></i></button>
+                    </div>
+                    <div class="gallery-images">
+                        <a data-fancybox="gallery-1" href="images/home.jpg" data-caption="Home menu of the infotainment UI.">
+                            <img src="images/home.jpg" alt="Image 1" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-1" href="images/steering_wheel.jpg" data-caption="Cardboard steering wheel.">
+                            <img src="images/steering_wheel.jpg" alt="Image 2" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-1" href="images/user-test.jpg" data-caption="Low-Fidelity user test.">
+                          <img src="images/user-test.jpg" alt="Image 3" class="thumbnail-image">
+                        </a>
+                    </div>
+                    <div class="gallery-controls">
+                        <button onclick="nextThumbnail('gallery-1')"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <div class="dots-container"></div>
               </div>
 
-              <p>Above you can see my own low-fidelity prototype based on my sketches along with the steering wheel. This was placed in front of an old car seat, with a computer screen in front playing a driving POV video to simulate driving.</p>
+              <p>Above you can see my own low-fidelity prototype based on my sketches along with the low-fidelity prototype. The prototype consisted of an old car seat, with a computer screen in front playing a driving POV video to simulate driving. The third picture was taken during a user test with one of my teammate’s home menu interface. Based on these user tests conducted on three participants, we started integrating our designs into one single design based on which aspects the users preferred.</p>
 
-              <img src="images/user-test.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
-
-              <p>Above is a picture taken during a user test with one of my teammate’s home menu interface. Based on these user tests conducted on three participants, we started integrating our designs into one single design based on which aspects the users preferred.</p>
-
-              <div class="image-row-two">
-                <img src="images/wireframe_home.png">
-                <img src="images/wireframe_navigation.png">
-                <img src="images/wireframe_destination.png">
+              <div id="gallery-2" class="thumbnail-gallery">
+                <div class="gallery-content">
+                    <div class="gallery-controls">
+                        <button onclick="prevThumbnail('gallery-2')"><i class="fa-solid fa-angle-left"></i></button>
+                    </div>
+                    <div class="gallery-images">
+                        <a data-fancybox="gallery-1" href="images/wireframe_home.png" data-caption="Home menu wireframe.">
+                            <img src="images/wireframe_home.png" alt="Image 1" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-1" href="images/wireframe_navigation.png" data-caption="Navigation screen wireframe.">
+                            <img src="images/wireframe_navigation.png" alt="Image 2" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-1" href="images/wireframe_destination.png" data-caption="Destination selection wireframe.">
+                          <img src="images/wireframe_destination.png" alt="Image 3" class="thumbnail-image">
+                        </a>
+                    </div>
+                    <div class="gallery-controls">
+                        <button onclick="nextThumbnail('gallery-2')"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <div class="dots-container"></div>
               </div>
 
               <p>Above you can see three wire frames of the integrated design created in Figma: first, the home menu; second, the navigation interface; third, the screen where you choose a destination in the navigation interface. The first wire frame was based on my prototype of the home menu with a integrated media widget from a teammates low-fidelity prototype; the latter two wireframes were created by me and entirely based om my low-fidelity prototypes.</p>
 
-              <img src="images/flow-chart.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <a href="images/flow-chart.png" data-fancybox="flow-chart" data-caption="A flowchart of the page structure in Swedish.">
+                <img src="images/flow-chart.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              </a>
 
               <p>When creating the wireframes, we got an idea of how we wanted our design to look like, what page structure it would have and the user flow, which was visualized as a flow chart (in Swedish) that can be seen above. The point of showing it is mostly to show that it is a somewhat shallow system—that is, the user will not get lost in a jungle of menus within menus. We deemed this to be an important aspect of our system, so that the user does not spend too much time navigating the infotainment system.</p>
 
               <h3 id="high-fidelity-prototype">High-Fidelity Prototype</h3>
               <p>After the low-fidelity prototype had been created, we started on the high-fidelity, clickable prototype in Figma. Through iterative testing in real car settings, we fine-tuned the interface for optimal usability, addressing user feedback to enhance button visibility, navigation clarity, and tactile feedback on physical controls.</p>
 
-              <div class="image-row" style="display: flex; justify-content: space-between; margin-bottom: 30px;">
-                <img src="images/hifi-home.png" style="max-width: 48%; height: auto;">
-                <img src="images/hifi-audio.png" style="max-width: 48%; height: auto;">
-              </div>
-              <div class="image-row" style="display: flex; justify-content: space-between; margin-bottom: 30px;">
-                <img src="images/hifi-navigation.png" style="max-width: 48%; height: auto;">
-                <img src="images/hifi-destination.png" style="max-width: 48%; height: auto;">
+              <div id="gallery-3" class="thumbnail-gallery">
+                <div class="gallery-content">
+                    <div class="gallery-controls">
+                        <button onclick="prevThumbnail('gallery-3')"><i class="fa-solid fa-angle-left"></i></button>
+                    </div>
+                    <div class="gallery-images">
+                        <a data-fancybox="gallery-3" href="images/hifi-home.png" data-caption="Home menu interface.">
+                            <img src="images/hifi-home.png" alt="Image 1" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-3" href="images/hifi-audio.png" data-caption="Audio interface.">
+                            <img src="images/hifi-audio.png" alt="Image 2" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-3" href="images/hifi-navigation.png" data-caption="Navigation interface.">
+                          <img src="images/hifi-navigation.png" alt="Image 3" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-3" href="images/hifi-destination.png" data-caption="Destination selection interface.">
+                          <img src="images/hifi-destination.png" alt="Image 4" class="thumbnail-image">
+                        </a>
+                    </div>
+                    <div class="gallery-controls">
+                        <button onclick="nextThumbnail('gallery-3')"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <div class="dots-container"></div>
               </div>
 
               <p>Above you can see some of the screens of the prototype. The homepage in the top left features shortcuts and audio playback at the top left, a radio view adjacent to it, the navigation view at the bottom left, and the destination menu at the bottom right.</p>
               
-              <img src="images/climate_control.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <a href="images/climate_control.png" data-fancybox="Physical-interfaces" data-caption="The physical interfaces including a navigation bar and the climate control, as well as the climate control feedback on the screen.">
+                <img src="images/climate_control.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              </a>
 
               <p>There is also a bar of buttons for each main function at the bottom of the screen along with a source button to connect to other sources and a volume knob and screen light knob. The climate control bar is located beneath the bar of buttons. When controlling this, there appears a popup on the screen with feedback. This can be seen in the picture above. This was designed in Figma, but they are supposed to represent physical buttons.</p>
 
               <p>An idea we had early on, which persisted throughout the project, was to color-code the different pages in the interface for easy identification. The same color scheme was then used for shortcuts related to each page and the physical menu buttons acting as shortcuts to these pages. For instance, the navigation page has green buttons on the screen, and the button in the menu bar allowing the user to navigate to the same page has a green border at the top.</p>
 
-              <img src="images/color.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <a href="images/color.png" data-fancybox="color-palette" data-caption="The color palette for the infotainment system.">
+                <img src="images/color.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              </a>
 
               <p>The colors in the system lean more towards the ‘dark mode’ theme than ‘light mode’ (as seen above), in line with industry conventions. This provides a calmer feel and avoids distracting the driver with strong white colors that can demand a lot of visual attention. However, the palette includes relatively bold colors like green, orange, and blue. These are intended to stand out significantly to guide the driver if they need to use the screen while driving. The hope is that these distinct colors can provide a visual cue in the periphery about where to press to access the radio or click ‘drive home’, etc. The system features plenty of familiar symbols and icons such as a contacts book for contacts, a house for ‘drive home’, and a flag for ‘destinations’. These are chosen to guide the driver with these visual representations to facilitate ease of navigation within the system.</p>
 
-              <img src="images/physical_prototype.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <a href="images/physical_prototype.png" data-fancybox="physical-hifi-prototype" data-caption="The physical high-fidelity prototype for user testing.">
+                <img src="images/physical_prototype.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              </a>
 
               <p>Above is an overview of how the entire system (touchscreen, menu bar, and climate control) is intended to be positioned. The buttons on the menu bar are designed to stand out to enhance tactile guidance. We have positioned the ‘home menu’ button in the center and then grouped the remaining four buttons in pairs. We have retained knobs for functions such as volume and temperature because these can be operated easily (once the knob is located). Additional navigational information is displayed behind the steering wheel. Furthermore, the steering wheel has a number of arrow keys that can be used to navigate the infotainment system, in case the user does not want to use the touch screen (for example, during a cold winter morning).</p>
 
@@ -195,30 +256,66 @@
               <h2 id="the-cognitive-aspects">The Cognitive Aspects of the Design</h2>
               <p>To gauge the perceived size of the icons for users, we calculated the visual angle of the touch buttons. Following design guidelines, we aimed to achieve at least 1.43 degrees (Campbell et al., 2007).</p>
 
-              <img src="images/visual_angle.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <a href="images/visual_angle.png" data-fancybox="visual-angle" data-caption="The visual angle of a menu shortcut button.">
+                <img src="images/visual_angle.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              </a>
 
               <p>Our buttons measured approximately 3 degrees (3.27 degrees for the leftmost icon and 3.03 degrees for the rightmost icon in the above image). Therefore, we were able to reduce the size while still adhering to the guidelines. However, we wanted the buttons to be identifiable in the periphery and determined through self-testing that larger buttons were most suitable.</p>
 
-              <img src="images/visual_angle_2.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+              <a href="images/visual_angle_2.png" data-fancybox="visual-angle-between-buttons" data-caption="The visual angle between two menu shortcut button.">
+                <img src="images/visual_angle_2.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+              </a>
 
               <p>To avoid crowding, the distance between the centers of the buttons should be twice the size of their visual angle. With our angles measuring approximately 3 degrees, this required 6 degrees. Initially, the distance between the buttons was 5.8 degrees, so we needed to adjust it. We did not meet this guideline for the side menu; however, since much smaller elements fit into this window, we chose to maintain the larger clickable area to avoid make it easier to hit in the periphery, while watching the road.</p>
 
               <p>I was tasked with creating saliency maps to visualize the most attention-grabbing elements of the interface. I utilized OpenCV’s machine learning saliency module in Python to create the maps.</p>
 
-              <div class="image-row" style="display: flex; justify-content: space-between; margin-bottom: 30px;">
-                <img src="images/start_salience.png" style="max-width: 48%; height: auto;">
-                <img src="images/navigation_salience.png" style="max-width: 48%; height: auto;">
-              </div>
-              <div class="image-row" style="display: flex; justify-content: space-between; margin-bottom: 30px;">
-                <img src="images/drive_home_salience.png" style="max-width: 48%; height: auto;">
-                <img src="images/audio_radio_salience.png" style="max-width: 48%; height: auto;">
+              <div id="gallery-4" class="thumbnail-gallery">
+                <div class="gallery-content">
+                    <div class="gallery-controls">
+                        <button onclick="prevThumbnail('gallery-4')"><i class="fa-solid fa-angle-left"></i></button>
+                    </div>
+                    <div class="gallery-images">
+                        <a data-fancybox="gallery-4" href="images/start_salience.png" data-caption="The saliency of the home menu interface.">
+                            <img src="images/start_salience.png" alt="Image 1" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-4" href="images/navigation_salience.png" data-caption="The saliency of the navigation interface.">
+                            <img src="images/navigation_salience.png" alt="Image 2" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-4" href="images/drive_home_salience.png" data-caption="The saliency of the navigation interface with a selected destination.">
+                          <img src="images/drive_home_salience.png" alt="Image 3" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-4" href="images/audio_radio_salience.png" data-caption="The saliency of the radio interface.">
+                          <img src="images/audio_radio_salience.png" alt="Image 4" class="thumbnail-image">
+                        </a>
+                    </div>
+                    <div class="gallery-controls">
+                        <button onclick="nextThumbnail('gallery-4')"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <div class="dots-container"></div>
               </div>
 
               <p>The saliency maps can be seen above, and as planned, the shortcuts are the most prominent elements in the main menu and the navigation’s base mode. Once a destination is set, the route and destination become prominent. The radio screen contains many elements that attract attention, but this can be reduced by collapsing the side menu.</p>
-
-              <div class="image-row">
-                <img src="images/clicked.png">
-                <img src="images/clicked_salience.png">
+              
+              <div id="gallery-5" class="thumbnail-gallery">
+                <div class="gallery-content">
+                    <div class="gallery-controls">
+                        <button onclick="prevThumbnail('gallery-5')"><i class="fa-solid fa-angle-left"></i></button>
+                    </div>
+                    <div class="gallery-images">
+                        <a data-fancybox="gallery-5" href="images/clicked.png" data-caption="The audio interface with no saliency map.">
+                            <img src="images/clicked.png" alt="Image 1" class="thumbnail-image">
+                        </a>
+                        <a data-fancybox="gallery-5" href="images/clicked_salience.png" data-caption="The audio interface with saliency map.">
+                            <img src="images/clicked_salience.png" alt="Image 2" class="thumbnail-image">
+                        </a>
+                    </div>
+                    <div class="gallery-controls">
+                        <button onclick="nextThumbnail('gallery-5')"><i class="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>
+                <div class="dots-container"></div>
               </div>
 
               <p>Another design decision that was made based on a cognitive point of view was the physical controls. This decision was made primarily for sensory cue integration. Physical buttons were also advocated by the car dealer, especially considering the target audience who often use the Nissan Juke as a secondary vehicle, where simple and accessible buttons are important. Furthermore, the system becomes easier to use with eyes on the road because users can feel their way to the buttons. The buttons are also grouped to facilitate easy localization, and the icons on the menu bar are designed to stand out to provide additional tactile signals. We have also utilized different sizes, shapes, and groupings of buttons to clarify the types of functions they are associated with: the top row is for menu buttons, while the cluster below belongs to climate control.</p>
@@ -244,5 +341,6 @@
     </footer>
     <button id="return-to-top" class="return-to-top">Return to top</button>
     <script src="scripts/main.js"></script>
+    <script src="scripts/galleries.js"></script>
 </body>
 </html>

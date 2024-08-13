@@ -917,29 +917,75 @@ header {
   color: #379340; /* Match the color of the border for the "Note:" text */
 }
 
-/* Custom styles for images */
-.img.wrapped {
-  float: left;
-  width: auto; /* Ensure the image's width is auto */
-  pointer-events: none; /* Make the image non-clickable */
+
+/* Fancybox gallery */
+.fancybox-content {
+  max-height: 90vh;  /* Ensure the content doesn't exceed the viewport height */
+  overflow-y: auto;  /* Enable vertical scrolling */
 }
 
-.image-row {
+.thumbnail-gallery {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.image-row img {
-  max-width: 48%; /* Adjust the width as needed */
+.thumbnail-image {
+  max-width: 100%;
   height: auto;
 }
 
-.image-row-two {
+.gallery-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-row-two img {
-  max-width: 32%; /* Adjust the width as needed */
-  height: auto;
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-controls button {
+  background-color: #FFFFFF;
+  border: none;
+  color: #868980;
+  padding: 10px;
+  font-size: 250%;
+  cursor: pointer;
+  border-radius: 50%; /* Makes the button circular */
+  width: 60px; /* Ensure the button is square */
+  height: 60px; /* Ensure the button is square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  margin: 0 20px; /* Add horizontal space between buttons and thumbnail */
+}
+
+.gallery-controls button:hover {
+  color: #F3F7EC;
+  background-color: #868980;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #868980;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #41423e;
 }
