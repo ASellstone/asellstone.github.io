@@ -165,3 +165,27 @@ document.getElementById("closeTocBtn").addEventListener("click", function() {
     document.getElementById("closeTocBtn").style.display = "none";
     document.getElementById("openTocBtn").style.display = "block";
 });
+
+
+// Scrolling TOC
+document.addEventListener("DOMContentLoaded", function () {
+    const tocLinks = document.querySelectorAll(".toc a");
+    const sections = document.querySelectorAll("main h1, main h2, main h3");
+    function updateActiveSection() {
+        let currentSection = "";
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight / 2 && sectionTop > 0) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+        tocLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === currentSection) {
+                link.classList.add("active");
+            }
+        });
+    }
+    window.addEventListener("scroll", updateActiveSection);
+    updateActiveSection(); // Initialize the function on page load
+});
