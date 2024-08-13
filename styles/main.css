@@ -71,6 +71,7 @@ header {
 
   /* Hide the links inside the navigation menu (except for logo/home) */
   .topnav #myLinks {
+    margin-top: 3px;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
