@@ -112,15 +112,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Return to top and topnav visibility on scroll
+// Return to top and top nav visibility on scroll
 document.addEventListener("DOMContentLoaded", function() {
     const returnToTopButton = document.getElementById('return-to-top');
     const topnav = document.querySelector('.topnav');
     let lastScrollTop = 0;
     let scrollTimeout;
+    let hideTimeout;
 
     window.addEventListener('scroll', function() {
         clearTimeout(scrollTimeout); // Clear the timeout if scrolling is still happening
+        clearTimeout(hideTimeout);   // Clear the hide timeout on new scroll
 
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -144,6 +146,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 returnToTopButton.style.display = 'none';
             }, 500); // Delay to fade out the button
         }
+
+        // Set a timeout to hide the button after a period of no scrolling
+        hideTimeout = setTimeout(() => {
+            returnToTopButton.style.opacity = '0';
+            setTimeout(() => {
+                returnToTopButton.style.display = 'none';
+            }, 500); // Match the fade-out delay
+        }, 1000); // Adjust the delay as needed (3000ms = 3 seconds)
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Ensure lastScrollTop is not negative
     });
