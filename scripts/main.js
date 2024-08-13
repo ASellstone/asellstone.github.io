@@ -1,8 +1,20 @@
 // Function to toggle the visibility of the mobile TOC
 function toggleMobileToc() {
     var toc = document.getElementById("mobile-toc");
+    var icon = document.querySelector(".mobile-toc-icon i"); // Select the <i> element inside .mobile-toc-icon
+
     toc.classList.toggle("show");
+
+    // Check if the menu is shown and toggle the icon accordingly
+    if (toc.classList.contains("show")) {
+        icon.classList.remove("fa-list");   // Remove the "list" icon class
+        icon.classList.add("fa-xmark");     // Add the "X" icon class
+    } else {
+        icon.classList.remove("fa-xmark");  // Remove the "X" icon class
+        icon.classList.add("fa-list");      // Add the "list" icon class
+    }
 }
+
 
 // Function to update the active link in the TOC based on scroll position
 function updateActiveTocLink() {
@@ -56,10 +68,16 @@ document.addEventListener("DOMContentLoaded", function() {
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function myFunction() {
     var x = document.getElementById("myLinks");
-    if (x.className === "show") {
-        x.className = "";
+    var icon = document.querySelector(".icon i"); // Select the <i> element inside .icon
+
+    if (x.classList.contains("show")) {
+        x.classList.remove("show");
+        icon.classList.remove("fa-xmark"); // Remove the "X" icon class
+        icon.classList.add("fa-bars");     // Add the "bars" icon class back
     } else {
-        x.className = "show";
+        x.classList.add("show");
+        icon.classList.remove("fa-bars");  // Remove the "bars" icon class
+        icon.classList.add("fa-xmark");    // Add the "X" icon class
     }
 }
 
@@ -133,4 +151,17 @@ document.addEventListener("DOMContentLoaded", function() {
     returnToTopButton.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+});
+
+
+document.getElementById("openTocBtn").addEventListener("click", function() {
+    document.getElementById("toc").classList.remove("toc-hidden");
+    document.getElementById("openTocBtn").style.display = "none";
+    document.getElementById("closeTocBtn").style.display = "block";
+});
+
+document.getElementById("closeTocBtn").addEventListener("click", function() {
+    document.getElementById("toc").classList.add("toc-hidden");
+    document.getElementById("closeTocBtn").style.display = "none";
+    document.getElementById("openTocBtn").style.display = "block";
 });

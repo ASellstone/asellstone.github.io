@@ -57,6 +57,10 @@ header {
     transition: top 0.3s;
   }
 
+  .fa-xmark {
+    font-size: 30px;  /* Adjust this value to your preferred size */
+  }
+
   body {
     margin-top: 118px; /* Adjust this value based on the height of your topnav */
   }
@@ -592,8 +596,8 @@ header {
 
   /* Initially hiding Open button */
   .toc-toggle.open-btn {
-  display: none;
-  }
+    display: none;
+    }
 
   .toc-toggle {
     position: fixed;
@@ -609,7 +613,6 @@ header {
     z-index: 1000; /* Ensure buttons are above other content */
     font-size: 1.5em; /* Increase size */
   }
-  
 
   .toc h2 {
     font-size: 1.5em;
