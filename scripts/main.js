@@ -38,6 +38,7 @@ function updateActiveTocLink() {
     });
 }
 
+
 // Event listener for when the DOM content is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     // Add event listeners to TOC links to close the TOC when a link is clicked
