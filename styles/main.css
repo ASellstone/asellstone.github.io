@@ -1,4 +1,5 @@
 /* General styles and imports */
+
 @import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&display=swap');
 
 /* Base styles to hide both menus initially */
@@ -738,7 +739,7 @@ header {
   .project-wrapper {
     background-color: #FFFFFF; /* White background for the content */
     padding: 50px 0; /* Adjust the padding as needed */
-    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for some depth */
+    box-shadow: 0 0px 4px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for some depth */
     margin-top: 50px; /* Adjust this value to control the space at the top */
     margin-left: -30px;
   }
@@ -880,6 +881,7 @@ header {
 
 /* Return to Top Button Styles */
 .return-to-top {
+  font-family: 'Hanuman', serif; /* Explicitly set font-family */
   position: fixed;
   bottom: 20px; /* Distance from the bottom */
   left: 50%; /* Center horizontally */
@@ -889,7 +891,7 @@ header {
   color: #F3F7EC;
   border: none;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 15px 20px 10px;
   cursor: pointer;
   font-size: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
