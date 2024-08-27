@@ -133,6 +133,29 @@ header {
     width: 100%; /* Ensure container doesn't exceed screen width */
   }
 
+  .container-intro {
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Ensure content flows vertically */
+    justify-content: center; /* Center vertically */
+    box-sizing: border-box; /* Ensures padding is included in height calculation */
+    margin-bottom: -50px;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    width: 100%; /* Ensure container doesn't exceed screen width */
+    margin-top: -10vh; /* Use negative margin to move content upwards */
+  }
+
+  @media (max-height: 500px) {
+    .container-intro {
+      min-height: auto; /* Let the height be determined by content */
+      height: auto; /* Default height based on content size */
+      transform: translateY(-5%); /* Reduce or remove upward movement */
+      margin-top: 20px; /* Add some margin-top to avoid overlapping */
+    }
+  }
+
   main p {
       margin-bottom: 20px; /* Add space below paragraphs */
   }
@@ -298,15 +321,15 @@ header {
     color: #2f2f2f !important; /* Set text color to black for all non-header elements within content-wrapper */
   }
 
+  /* Square buttons */
   .custom-button {
     position: relative;
     display: block;
-    width: 90vw; /* Use viewport width to ensure responsiveness */
-    max-width: 400px; /* Set a maximum width to avoid overly large buttons */
-    height: 90vw; /* Match height to width for a square shape */
-    max-height: 400px; /* Ensure the height does not exceed the max-width */
+    width: calc(90vw - 20px); /* Use viewport width minus margin for responsiveness */
+    max-width: calc(400px - 20px); /* Ensure maximum width allows for margin */
+    height: calc(90vw - 20px); /* Match height to width for a square shape */
+    max-height: calc(400px - 20px); /* Ensure the height does not exceed the max-width */
     box-sizing: border-box;
-    margin: 0 auto 20px auto; /* Center the button horizontally and add space below */
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -314,17 +337,16 @@ header {
     transition: box-shadow 0.3s ease;
     text-decoration: none;
     color: inherit;
-    overflow: hidden; /* Hide overflow to ensure content doesn't spill out */
-    background-color: #FFFFFF; /* Ensure background is white */
+    overflow: hidden;
+    background-color: #FFFFFF;
   }
 
-  /* Square buttons */
   .custom-button-container {
     display: flex;
     justify-content: space-between; /* Distributes space between buttons */
     flex-wrap: wrap; /* Allows buttons to wrap to the next line */
     gap: 10px; /* Adds space between buttons */
-    padding: 10px; /* Adds padding around the container */
+    padding: 10px; /* Adds padding around the container */  
   }
 
   .custom-button:hover {
@@ -371,7 +393,6 @@ header {
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
     color: #5f615a;
     font-size: 14px;
-    padding: 10px;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease;
     box-sizing: border-box;
@@ -537,6 +558,19 @@ header {
     margin: auto;
     margin-top: 80px; /* Increase space above the header */
     padding: 50px;
+  }
+
+  .container-intro {
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Ensure content flows vertically */
+    justify-content: center; /* Center vertically */
+    box-sizing: border-box; /* Ensures padding is included in height calculation */
+    margin-bottom: -130px;
+    width: 55%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: -10vh; /* Use negative margin to move content upwards */
   }
 
   main p {
