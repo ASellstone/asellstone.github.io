@@ -84,33 +84,46 @@ function myFunction() {
 
 // Typing animation
 document.addEventListener("DOMContentLoaded", function() {
-    const headerElement = document.getElementById("header-typing");
-    const paragraphElement = document.getElementById("paragraph-typing");
+    const headerTypingElement = document.getElementById("header-typing");
+    const paragraphTypingElement = document.getElementById("paragraph-typing");
+    const headerCursor = document.getElementById("header-cursor");
+    const paragraphCursor = document.getElementById("paragraph-cursor");
 
-    function typeText(element, text, delay, callback) {
+    function typeText(element, cursor, text, delay, callback) {
         let index = 0;
         function type() {
             if (index < text.length) {
                 element.innerHTML += text.charAt(index);
                 index++;
                 setTimeout(type, delay);
-            } else if (callback) {
-                callback();
+            } else {
+                // Do not hide the header cursor here, it should continue blinking
+                if (callback) {
+                    callback();
+                }
             }
         }
         type();
     }
 
-    // Typing effect for header
-    headerElement.innerHTML = "";
-    typeText(headerElement, "Hello, I'm Andreas.", 50, () => {
-        // Pause for 1 second before starting the paragraph text
-        setTimeout(() => {
-            // Start typing the paragraph text without adding a new line
-            paragraphElement.innerHTML = "";
-            typeText(paragraphElement, "Scroll down to see my work...", 50);
-        }, 1000); // 1 second pause
-    });
+    // Initial setup
+    headerTypingElement.innerHTML = "";
+    paragraphTypingElement.innerHTML = "";
+    headerCursor.style.visibility = 'visible'; // Show the header cursor from the start
+    paragraphCursor.style.visibility = 'hidden'; // Hide the paragraph cursor initially
+
+    // Start typing the header text after a 1-second delay
+    setTimeout(() => {
+        typeText(headerTypingElement, headerCursor, "Hello, I'm Andreas.", 50, () => {
+            // Keep the header cursor blinking after the text is done
+            // Wait 1 second before starting paragraph text
+            setTimeout(() => {
+                headerCursor.style.visibility = 'hidden'; // Hide the header cursor
+                paragraphCursor.style.visibility = 'visible'; // Show the paragraph cursor
+                typeText(paragraphTypingElement, paragraphCursor, "Scroll down to see my work", 50);
+            }, 2000); // 1-second pause before paragraph typing starts
+        });
+    }, 2000); // 1-second delay before typing the header
 });
 
 // Return to top and top nav visibility on scroll

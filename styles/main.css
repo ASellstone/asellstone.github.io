@@ -45,6 +45,18 @@ header {
     cursor: pointer;
 }
 
+.cursor {
+  display: inline-block;
+  font-weight: bold;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
+
 /* Mobile Menu: Show only on screens smaller than 768px */
 @media only screen and (max-width: 854px) {
   .topnav {
@@ -610,7 +622,13 @@ header {
   }
 
 
-  /* Scrolling TOC */
+  /* Class to hide the TOC */
+  .toc-hidden {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  /* TOC container styling */
   .toc {
     position: fixed;
     top: 130px;
@@ -625,15 +643,15 @@ header {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
 
-  .toc-hidden {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
   /* Initially hiding Open button */
   .toc-toggle.open-btn {
-    display: none;
-    }
+    display: block; /* Show the open button initially */
+  }
+
+  /* Initially hiding Close button */
+  .toc-toggle.close-btn {
+    display: none; /* Hide the close button initially */
+  }
 
   .toc-toggle {
     position: fixed;
