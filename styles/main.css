@@ -567,7 +567,7 @@ header {
 
   .container {
     width: 55%;
-    max-width: 1200px;
+    max-width: 800px;
     margin: auto;
     margin-top: 80px; /* Increase space above the header */
     padding: 50px;
@@ -581,7 +581,7 @@ header {
     box-sizing: border-box; /* Ensures padding is included in height calculation */
     margin-bottom: -130px;
     width: 55%;
-    max-width: 1200px;
+    max-width: 800px;
     margin: auto;
     margin-top: -10vh; /* Use negative margin to move content upwards */
   }
