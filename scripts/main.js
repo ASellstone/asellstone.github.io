@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => {
                 headerCursor.style.visibility = 'hidden'; // Hide the header cursor
                 paragraphCursor.style.visibility = 'visible'; // Show the paragraph cursor
-                typeText(paragraphTypingElement, paragraphCursor, "Scroll down to see my work", 50);
+                typeText(paragraphTypingElement, paragraphCursor, "Scroll down to see my work...", 50);
             }, 2000); // 1-second pause before paragraph typing starts
         });
     }, 1000); // 1-second delay before typing the header

@@ -656,7 +656,7 @@ header {
     position: fixed;
     top: 135px;
     right: 31px;
-    background-color: #ffffff;
+    background-color: transparent;
     color: #555;
     border: none;
     padding: 10px;
