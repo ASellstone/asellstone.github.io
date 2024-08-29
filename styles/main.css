@@ -634,10 +634,9 @@ header {
     top: 130px;
     right: 30px;
     width: 220px;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-height: 90vh;
     overflow-y: auto;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -657,7 +656,7 @@ header {
     position: fixed;
     top: 135px;
     right: 31px;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     color: #555;
     border: none;
     padding: 10px;

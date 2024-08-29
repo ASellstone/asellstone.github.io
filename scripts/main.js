@@ -67,20 +67,33 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    var icon = document.querySelector(".icon i"); // Select the <i> element inside .icon
+document.addEventListener('DOMContentLoaded', function () {
+    // Get references to the elements
+    const toc = document.getElementById("toc");
+    const openTocBtn = document.getElementById("openTocBtn");
+    const closeTocBtn = document.getElementById("closeTocBtn");
 
-    if (x.classList.contains("show")) {
-        x.classList.remove("show");
-        icon.classList.remove("fa-xmark"); // Remove the "X" icon class
-        icon.classList.add("fa-bars");     // Add the "bars" icon class back
-    } else {
-        x.classList.add("show");
-        icon.classList.remove("fa-bars");  // Remove the "bars" icon class
-        icon.classList.add("fa-xmark");    // Add the "X" icon class
+    // Function to show the TOC
+    function showToc() {
+        toc.classList.remove("toc-hidden"); // Show the TOC
+        openTocBtn.style.display = "none";  // Hide the open button
+        closeTocBtn.style.display = "block"; // Show the close button
     }
-}
+
+    // Function to hide the TOC
+    function hideToc() {
+        toc.classList.add("toc-hidden");   // Hide the TOC
+        openTocBtn.style.display = "block";  // Show the open button
+        closeTocBtn.style.display = "none";  // Hide the close button
+    }
+
+    // Event listeners for the buttons
+    openTocBtn.addEventListener("click", showToc);
+    closeTocBtn.addEventListener("click", hideToc);
+
+    // Initially, only show the open button
+    hideToc();
+});
 
 // Typing animation
 document.addEventListener("DOMContentLoaded", function() {
@@ -123,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 typeText(paragraphTypingElement, paragraphCursor, "Scroll down to see my work", 50);
             }, 2000); // 1-second pause before paragraph typing starts
         });
-    }, 2000); // 1-second delay before typing the header
+    }, 1000); // 1-second delay before typing the header
 });
 
 // Return to top and top nav visibility on scroll
