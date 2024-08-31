@@ -936,6 +936,18 @@ header {
   background-color: #5f615a; /* Darker shade on hover */
 }
 
+/* Center video */
+.video-container {
+  text-align: center; /* Center content horizontally */
+}
+
+video {
+  display: block;
+  margin: 0 auto; /* Horizontal centering */
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
 /* Profile picture styling */
 .profile-picture {
   float: left;
