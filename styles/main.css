@@ -38,18 +38,56 @@ header {
   color: #CA7569;
 }
 
-.topnav .toc-icon {
-    font-size: 24px;
-    margin-left: 10px;
-    color: #F3F7EC;
-    cursor: pointer;
-}
-
 .cursor {
   display: inline-block;
   font-weight: bold;
   animation: blink 1s step-start infinite;
 }
+
+
+/* TOC Styling */
+.toc {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+.toc h2 {
+  color: #6AA273;
+  padding: 10px 15px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2em;
+}
+
+.toc ul {
+  line-height: 2;
+  margin: 0;
+  list-style-type: none;
+  display: none; /* Hidden by default */
+}
+
+.toc.expanded {
+  max-height: 100%; /* Adjust to allow for full content display */
+}
+
+.toc.expanded ul {
+  display: block; /* Show list when expanded */
+}
+
+.fa-chevron-down {
+  transition: transform 0.3s;
+}
+
+.toc.expanded .fa-chevron-down {
+  transform: rotate(180deg); /* Rotate arrow when expanded */
+}
+
 
 @keyframes blink {
   50% {
@@ -197,80 +235,6 @@ header {
   h3 {
       margin-top: 30px; /* Add space above h3 headers */
       margin-bottom: 15px; /* Add space below h3 headers */
-  }
-
-
-  /* Scrolling TOC */
-  .toc {
-    display: none;
-  }
-
-  .toc-toggle {
-    display: none;
-  }
-
-  .toc-toggle {
-    display: none;
-  }
-
-  .mobile-toc {
-    display: block; /* Show mobile menu */
-    overflow: hidden;
-    background-color: #868980;
-    position: relative;
-  }
-
-  #mobile-toc {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-  }
-
-  #mobile-toc.show {
-    max-height: 500px; /* Adjust based on your content */
-    opacity: 1;
-  }
-
-  /* Hide the links inside the navigation menu (except for logo/home) */
-  #mobile-toc {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-  }
-
-  #mobile-toc.show {
-    max-height: 1000px; /* Adjust based on your content */
-    opacity: 1;
-  }
-
-  #mobile-toc a.active {
-    color: #868981; /* Ensure the text color stays the same */
-    background-color: #F3F7EC;
-  }
-
-  .mobile-toc .mobile-toc-content {
-    background-color: #F3F7EC;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-height: 90vh;
-    overflow-y: auto;
-  }
-
-  .topnav a.mobile-toc-icon {
-    background: #868980;
-    margin-top: 5px;
-    font-size: 24px; /* Adjust the font-size to make the icon larger */
-    position: absolute;
-    left: 10px;
-    top: 0;
-    color: #F3F7EC; /* Ensure the icon is visible */
-  }
-  
-  .topnav a.icon i {
-    color: #F3F7EC; /* Set the color of the icon */
   }
   
 
@@ -621,90 +585,9 @@ header {
       margin-bottom: 15px; /* Add space below h3 headers */
   }
 
-
-  /* Class to hide the TOC */
-  .toc-hidden {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  
-  /* TOC container styling */
-  .toc {
-    position: fixed;
-    top: 130px;
-    right: 30px;
-    width: 220px;
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 5px;
-    max-height: 90vh;
-    overflow-y: auto;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  }
-
-  /* Initially hiding Open button */
-  .toc-toggle.open-btn {
-    display: block; /* Show the open button initially */
-  }
-
-  /* Initially hiding Close button */
-  .toc-toggle.close-btn {
-    display: none; /* Hide the close button initially */
-  }
-
-  .toc-toggle {
-    position: fixed;
-    top: 135px;
-    right: 31px;
-    background-color: transparent;
-    color: #555;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1000; /* Ensure buttons are above other content */
-    font-size: 1.5em; /* Increase size */
-  }
-
-  .toc h2 {
-    font-size: 1.5em;
-    margin-top: 0;
-  }
-
-  .toc ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-
-  .toc li {
-    margin-bottom: 5px;
-  }
-
-  .toc li ul {
-    padding-left: 20px; /* Indent for nested lists */
-    list-style-type: disc; /* Change bullet type for nested lists */
-  }
-
-  .toc a {
-    text-decoration: none;
-    color: #006989;
-  }
-
-  .toc a:hover {
-    text-decoration: underline;
-  }
-
   ul {
     list-style-type: circle;
   }
-
-  .toc a.active {
-    font-weight: bold;
-    color: #00465b; /* You can change this color to your preferred one */
-    text-decoration: underline;
-  }
-
 
   /* breadcrumb navigation */
   .breadcrumb {
