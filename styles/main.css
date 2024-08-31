@@ -964,7 +964,7 @@ header {
   color: #6AA273;
   border-left: 4px solid #6AA273; /* Blue color for the left border */
   padding: 10px 15px; /* Space inside the box */
-  margin: 50px 0 70px 0; /* Space outside the box */
+  margin: 20px 0 20px 0; /* Space outside the box */
   border-radius: 5px; /* Rounded corners */
 }
 
