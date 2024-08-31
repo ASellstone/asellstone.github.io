@@ -82,20 +82,3 @@ window.nextThumbnail = function(galleryId) {
     if (galleryId === 'gallery-4') gallery4.nextThumbnail();
     if (galleryId === 'gallery-5') gallery5.nextThumbnail();
 };
-
-// Fancybox configuration (can be shared for all galleries)
-$("[data-fancybox]").fancybox({
-    buttons: [
-        "slideShow",
-        "thumbs",
-        "zoom",
-        "fullScreen",
-        "share",
-        "close"
-    ],
-    loop: true,
-    arrows: true,
-    infobar: true,
-    protect: true,
-    transitionEffect: "fade"
-});

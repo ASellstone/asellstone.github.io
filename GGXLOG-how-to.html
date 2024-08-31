@@ -11,12 +11,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 </head>
+
 <body>
     <!-- Top Navigation Menu -->
     <div class="topnav">
-        <a href="javascript:void(0);" class="mobile-toc-icon" onclick="toggleMobileToc()">
-            <i class="fa-solid fa-list"></i>
-        </a>
         <a href="index.html" class="brand-name">Andreas Sellstone</a>
         <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
@@ -27,31 +25,12 @@
             <a href="https://medium.com/@andreas.sellstone" class="nav-link"><i class="fa-brands fa-medium"></i></a>
             <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <nav id="mobile-toc" class="mobile-toc">
-            <h2 style="margin-left: 15px; color: #F3F7EC">On This Page</h2>
-            <a href="#title">How to write a text with GenoGraphiX-LOG</a>
-                <a href="#what-is-genographix-log">What is GenoGraphiX-LOG?</a>
-                <ul>
-                    <a href="#why-use-a-keystroke-logger">Why use a keystroke logger?</a>
-                    <a href="#who-should-use-a-keystroke-logger">Who should use a keystroke logger?</a>
-                </ul>
-                <a href="#how-to-start-writing">How to start writing</a>
-                <ul>
-                    <a href="#step-1">Step 1: Installing the program</a>
-                    <a href="#step-2">Step 2: Creating a new project</a>
-                    <a href="#step-3">Step 3: Start writing</a>
-                </ul>
-                <a href="#analyzing-a-writing-session">Analyzing a writing session</a>
-                <ul>
-                    <a href="#native-analytical-features">Native analytical features</a>
-                    <a href="#uploading">Uploading logging data into statistical software</a>
-                </ul>
-        </nav>
         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
     </div>
+
     <nav class="navbar">
         <div class="nav-left">
             <div class="navbar-brand">
@@ -69,36 +48,7 @@
             <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </nav>
-    <nav id="toc" class="toc toc-hidden">
-        <h2>On This Page</h2>
-        <ul>
-            <li><a href="#title">How to write a text with GenoGraphiX-LOG</a></li>
-            <li>
-                <a href="#what-is-genographix-log">What is GenoGraphiX-LOG?</a>
-                <ul>
-                    <li><a href="#why-use-a-keystroke-logger">Why use a keystroke logger?</a></li>
-                    <li><a href="#who-should-use-a-keystroke-logger">Who should use a keystroke logger?</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#how-to-start-writing">How to start writing</a>
-                <ul>
-                    <li><a href="#step-1">Step 1: Installing the program</a></li>
-                    <li><a href="#step-2">Step 2: Creating a new project</a></li>
-                    <li><a href="#step-3">Step 3: Start writing</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#analyzing-a-writing-session">Analyzing a writing session</a>
-                <ul>
-                    <li><a href="#native-analytical-features">Native analytical features</a></li>
-                    <li><a href="#uploading">Uploading logging data into statistical software</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <button class="toc-toggle open-btn" id="openTocBtn"><i class="fa-solid fa-list"></i></button>
-    <button class="toc-toggle close-btn" id="closeTocBtn"><i class="fa-solid fa-xmark"></i></button>
+
     <main>
         <div class="project-wrapper">
             <nav class="breadcrumb">

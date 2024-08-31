@@ -9,41 +9,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 </head>
+
 <body>
     <div class="topnav">
-    <a href="javascript:void(0);" class="mobile-toc-icon" onclick="toggleMobileToc()">
-        <i class="fa-solid fa-list"></i>
-    </a>
     <a href="index.html" class="brand-name">Andreas Sellstone</a>
     <div id="myLinks">
         <a href="index.html">Home</a>
         <a href="projects.html" class="active">Projects</a>
         <a href="about.html">About</a>
         <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://medium.com/@andreas.sellstone" class="nav-link"><i class="fa-brands fa-medium"></i></a>
         <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
     </div>
-    <nav id="mobile-toc" class="mobile-toc">
-        <h2 style="margin-left: 15px; color: #F3F7EC">On This Page</h2>
-        <a href="#title">Infotainment User-Interface Design</a>
-        <a href="#the-assignment">The Assignment</a>
-        <a href="#initial-research">Initial Research</a>
-            <ul>
-                <a href="#three-user-tests">Three User Tests</a>
-        </ul>
-        <a href="#functional-analysis">Functional Analysis and Theoretical Research</a>
-        <a href="#the-design-process">The Design Process</a>
-            <ul>
-                <a href="#low-fidelity-prototype">Low-Fidelity Prototype</a>
-                <a href="#high-fidelity-prototype">High-Fidelity Prototype</a>
-            </ul>
-        <a href="#the-cognitive-aspects">The Cognitive Aspects of the Design</a>
-        <a href="#concluding-remarks">Concluding Remarks</a>
-        <a href="#references">References</a>
-    </nav>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
     </a>
     </div>
+
     <nav class="navbar">
         <div class="nav-left">
             <div class="navbar-brand">
@@ -57,37 +39,11 @@
         </div>
         <div class="nav-icons">
             <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://medium.com/@andreas.sellstone" class="nav-link"><i class="fa-brands fa-medium"></i></a>
             <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </nav>
-    <!-- TOC Navigation -->
-    <nav id="toc" class="toc toc-hidden">
-        <h2>On This Page</h2>
-        <ul>
-            <li><a href="#title">Infotainment User-Interface Design</a></li>
-            <li><a href="#the-assignment">The Assignment</a></li>
-            <li><a href="#initial-research">Initial Research</a>
-                <ul>
-                    <li><a href="#three-user-tests">Three User Tests</a></li>
-                </ul>
-            </li>
-            <li><a href="#functional-analysis">Functional Analysis and Theoretical Research</a></li>
-            <li><a href="#the-design-process">The Design Process</a>
-                <ul>
-                    <li><a href="#low-fidelity-prototype">Low-Fidelity Prototype</a></li>
-                    <li><a href="#high-fidelity-prototype">High-Fidelity Prototype</a></li>
-                </ul>
-            </li>
-            <li><a href="#the-cognitive-aspects">The Cognitive Aspects of the Design</a></li>
-            <li><a href="#concluding-remarks">Concluding Remarks</a></li>
-            <li><a href="#references">References</a></li>
-        </ul>
-    </nav>
 
-    <!-- TOC Toggle Buttons -->
-    <button class="toc-toggle open-btn" id="openTocBtn"><i class="fa-solid fa-list"></i></button>
-    <button class="toc-toggle close-btn" id="closeTocBtn"><i class="fa-solid fa-xmark"></i></button>
-    
     <main>
         <div class="project-wrapper">
             <nav class="breadcrumb">
@@ -112,33 +68,78 @@
 
             <p>My team chose to focus on 1, 2, and 4. The different teams were also allocated a different car. My team was supposed to design an interface for the Nissan Juke.</p>
 
-            <h2 id="initial-research" class="projects-color">Initial Research</h3>
-            <p>Our process started with an interview and a user test of the Nissan Juke at a car vendor with a salesperson. This let us get insight into how the car’s current infotainment system worked, what the salesperson sees as the selling points of the car, as well as the car’s market.</p>
-
-            <h3 id="three-user-tests" class="projects-color">Three User Tests</h3>
-            <p>Two main insights were identified in the first user test with the car salesperson. First, the salesperson noted the usability of the car’s interface, still employing physical buttons and a relatively simple touch-based interface. Second, according to the salesperson, people mostly have the Nissan Juke as a secondary vehicle, where simplicity and accessibility is usually considered more important than with main vehicles. It should be easy to go into the car and use the interface, preferably without taking one’s gloves off during winter.</p>
-
-            <p>After the interview and user test with the salesperson at the car vendor, the team conducted two user tests in other cars with other participants to get insights into what works and does not work for other infotainment systems.</p>
-
-            <p>The second user test was conducted in a Peugeot 3008 (2019). During this test, the user remarked upon their preference for physical buttons, which mirrors what the car salesperson said about the Nissan Juke. The user noted the particular usefulness of physical buttons for switching between the navigation interface, the radio/music interface, and the climate control interface. Because of the buttons tactile features, they can be easily located without taking one's eyes of the road—something which touch-based displays lack.</p>
-
-            <p>The third and final initial user test, which was conducted in a Volvo V70 (2017), also revealed a preference of physical buttons.</p>
-
-            <h3 id="functional-analysis" class="projects-color">Functional Analysis and Theoretical Research</h3>
-            <p>After the interviews we conducted a functional analysis of the different systems and elucidating the system requirements along with its main and sub functions.</p>
-
-            <a href="images/functional_trees.png" data-fancybox="functional-trees" data-caption="Three functional trees for each main function (in Swedish).">
-                <img src="images/functional_trees.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+            <h2 id="foundational-research" class="projects-color">Foundational Research: Interviews and User Tests</h3>
+            <a href="images/juke.png" data-fancybox="nissan-juke" data-caption="The Nissan Juke at the car vendor.">
+                <img src="images/juke.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%; border-radius: 20px;">
             </a>
 
-            <p>We visualized this in a functional tree which is displayed in the above figure (in Swedish).</p>
+            <p>Our process started with an interview and a user test of the Nissan Juke with a salesperson at a car vendor. This let us get insight into how the car’s current infotainment system worked, what the salesperson sees as the selling points of the car, as well as the car’s market. After the interview and user test with the salesperson at the car vendor, the team conducted two user tests in other cars with other participants.</p>
 
-            <p>At this stage of the design process, I was tasked with gathering academic research on infotainment system design. The research highlighted that square buttons might offer advantages in reducing interaction times (Jung et al., 2021). It also identified varying interaction times across different tasks: radio/music tasks had the shortest interaction times, followed by telephone tasks, while navigation tasks exhibited the longest interaction times (Strayer et al., 2017). Navigation tasks were also found to impose the highest cognitive demand.</p>
+            <div class="quote">
+                <p style="margin-top: 0; color: #6AA273 !important;"><i>"Physical buttons are great since it makes it easier for the driver to find the buttons while focusing on the road. Everybody recognizes rotary knobs."</i></p>
+                <p style="margin-bottom: 0; color: #6AA273 !important;"><i>"I like that the digital interface is free of frills."</i></p>
+            </div>
 
-            <p>Initially, one might think reducing cognitive demand would enhance the allocation of cognitive resources to attention. However, this is not always the case. Excessively reducing cognitive demand could encourage users to engage in non-driving-related activities (such as texting or phone calls) and may also result in a decrease in allocated attentional resources (Oppenheim & Shinar, 2011). This research, and more, was considered when designing our user-interface.</p>
+            <h3 class="projects-color">Insights from salesperson</h3>
+            <ul style="list-style-type: disc;">
+                <li>A (relatively) simple touch-based interface in combination with <b>physical buttons</b> ensures usability.</li>
+                <li>The Nissan Juke is mostly used as a <b>secondary vehicle</b>, where simplicity and accessibility is highly valued.</li>
+            </ul>
+            </p>
+
+            <div class="conclusion">
+                <strong>Key point:</strong> Make sure that the interface is usable on a cold winter morning without taking off ones gloves, ensuring that the interface is easily navigable and accessible, which is highly important for a secondary car like the Juke.
+            </div>
+
+            <h3 class="projects-color">Insights from other car users</h3>
+            <ul style="list-style-type: disc;">
+                <li>The tactile features of physical buttons makes the buttons easily located without taking one's eyes of the road.</li>
+                <li>Physical buttons were also favoured as ways of navigating between navigation, radio/music, and climate control interfaces.</li>
+                <li>One user finds connecting to bluetooth difficult, so they use the phone speaker when speaking with someone on the phone instead.</li>
+            </ul>
+
+            <div class="conclusion">
+                <strong>Key point:</strong> Physical buttons aids visual search, making navigating the interface easier without having to remove attention from the road. Additionally, make the connection to other sources easier to decrease the usage of potentially dangerous secondary technology.
+            </div>
+
+            <h3 id="secondary-research" class="projects-color">Secondary Research</h3>
+
+            <p>At this stage of the design process, I conducted academic research on infotainment system design.</p>
+
+            <div style="line-height: 1.6;">
+                <ul style="list-style-type: disc;">
+                    <li>Square buttons reduce interaction time (Jung et al., 2021).</li>
+                    
+                    <li>Interaction times vary by task type (Strayer et al., 2017):
+                        <ul style="list-style-type: circle; margin-left: 20px;">
+                            <li>Radio/music tasks has the shortest interaction time.</li>
+                            <li>Telephone tasks has moderate interaction time.</li>
+                            <li>Navigation tasks has the longest interaction time.</li>
+                        </ul>
+                    </li>
+                    
+                    <li>Navigation tasks have the highest cognitive load.</li>
+                    
+                    <li>Reducing cognitive demand doesn't always enhance attention allocation (Oppenheim & Shinar, 2011):
+                        <ul style="list-style-type: circle; margin-left: 20px;">
+                            <li>Too low cognitive demand can lead to distractions (e.g., texting or phone calls).</li>
+                            <li>This may decrease attention to driving.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p>These insights informed our user interface design to enhance usability and safety.</p>
+            </div>
 
             <h2 id="the-design-process" class="projects-color">The Design Process</h2>
-            <p>After synthesizing our research findings and insights, we entered the ideation phase. This stage involved brainstorming sessions where we explored various concepts for each interface component—start screen, navigation, and climate control. Each team member contributed sketches and ideas based on user feedback and ergonomic principles. These initial concepts were then refined into low-fidelity prototypes to be tested for usability and functionality.</p>
+
+            <p>After the foundational research it was time to start working on the infotainment interface. We started by conducting a functional analysis of the different systems, elucidating the system requirements along its functions.</p>
+
+            <a href="images/functional_trees.png" data-fancybox="functional-trees" data-caption="Three functional trees for each main function (in Swedish).">
+                <img src="images/functional_trees.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%; border-radius: 20px;">
+            </a>
+
+            <p>After synthesizing our research findings and insights, we entered the ideation phase where each team member contributed our own sketches. These initial concepts were then refined into low-fidelity prototypes to be tested for usability and functionality.</p>
 
             <h3 id="low-fidelity-prototype" class="projects-color">Low-Fidelity Prototype</h3>
             <p>At this stage we split up, sketched on our own ideas for the different interfaces, and then made three different low-fidelity prototypes that each could be tested by users.</p>
@@ -150,13 +151,13 @@
                     </div>
                     <div class="gallery-images">
                         <a data-fancybox="gallery-1" href="images/home.jpg" data-caption="Home menu of the infotainment UI.">
-                            <img src="images/home.jpg" alt="Image 1" class="thumbnail-image">
+                            <img src="images/home.jpg" alt="Image 1" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-1" href="images/steering_wheel.jpg" data-caption="Cardboard steering wheel.">
-                            <img src="images/steering_wheel.jpg" alt="Image 2" class="thumbnail-image">
+                            <img src="images/steering_wheel.jpg" alt="Image 2" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-1" href="images/user-test.jpg" data-caption="Low-Fidelity user test.">
-                            <img src="images/user-test.jpg" alt="Image 3" class="thumbnail-image">
+                            <img src="images/user-test.jpg" alt="Image 3" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                     </div>
                     <div class="gallery-controls">
@@ -166,7 +167,9 @@
                 <div class="dots-container"></div>
             </div>
 
-            <p>Above you can see my own low-fidelity prototype based on my sketches along with the low-fidelity prototype. The prototype consisted of an old car seat, with a computer screen in front playing a driving POV video to simulate driving. The third picture was taken during a user test with one of my teammate’s home menu interface. Based on these user tests conducted on three participants, we started integrating our designs into one single design based on which aspects the users preferred.</p>
+            <p>Above you can see my own low-fidelity prototype based on my sketches along with the low-fidelity prototype. The prototype consisted of an old car seat, with a computer screen in front playing a driving POV video to simulate driving. The third picture was taken during a user test with one of my teammate’s home menu interface.</p>
+                
+            <p>Based on these user tests conducted on three participants, we started integrating our designs into one single design based on which aspects the users preferred.</p>
 
             <div id="gallery-2" class="thumbnail-gallery">
                 <div class="gallery-content">
@@ -175,13 +178,13 @@
                     </div>
                     <div class="gallery-images">
                         <a data-fancybox="gallery-2" href="images/wireframe_home.png" data-caption="Home menu wireframe.">
-                            <img src="images/wireframe_home.png" alt="Image 1" class="thumbnail-image">
+                            <img src="images/wireframe_home.png" alt="Image 1" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-2" href="images/wireframe_navigation.png" data-caption="Navigation screen wireframe.">
-                            <img src="images/wireframe_navigation.png" alt="Image 2" class="thumbnail-image">
+                            <img src="images/wireframe_navigation.png" alt="Image 2" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-2" href="images/wireframe_destination.png" data-caption="Destination selection wireframe.">
-                            <img src="images/wireframe_destination.png" alt="Image 3" class="thumbnail-image">
+                            <img src="images/wireframe_destination.png" alt="Image 3" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                     </div>
                     <div class="gallery-controls">
@@ -191,13 +194,13 @@
                 <div class="dots-container"></div>
             </div>
 
-            <p>Above you can see three wire frames of the integrated design created in Figma: first, the home menu; second, the navigation interface; third, the screen where the user can choose a destination in the navigation interface. The first wire frame was based on my prototype of the home menu with a integrated media widget from a teammates low-fidelity prototype; the latter two wireframes were created by me and entirely based om my low-fidelity prototypes.</p>
+            <p>Above you can see three wire frames of the integrated design created in Figma. The first wire frame was based on my prototype of the home menu with a integrated media widget from a teammates low-fidelity prototype; the latter two wireframes were created by me and entirely based om my low-fidelity prototypes.</p>
 
             <a href="images/flow-chart.png" data-fancybox="flow-chart" data-caption="A flowchart of the page structure in Swedish.">
-                <img src="images/flow-chart.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+                <img src="images/flow-chart.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%; border-radius: 20px;">
             </a>
 
-            <p>When creating the wireframes, we got an idea of how we wanted our design to look like, what page structure it would have and the user flow, which was visualized as a flow chart (in Swedish) that can be seen above. The point of showing it is mostly to show that it is a somewhat shallow system—that is, the user will not get lost in a jungle of menus within menus. We deemed this to be an important aspect of our system, so that the user does not spend too much time navigating the infotainment system.</p>
+            <p>When creating the wireframes, we got an idea of how we wanted our design to look like, what page structure it would have and the user flow, which was visualized as a flow chart (in Swedish) that can be seen above. It is a somewhat shallow system—that is, the user will not get lost in a jungle of menus within menus. We deemed this to be an important aspect of our system, so that the user does not spend too much time navigating the infotainment system.</p>
 
             <h3 id="high-fidelity-prototype" class="projects-color">High-Fidelity Prototype</h3>
             <p>After the low-fidelity prototype had been created, we started on the high-fidelity, clickable prototype in Figma. Through iterative testing in real car settings, we fine-tuned the interface for optimal usability, addressing user feedback to enhance button visibility, navigation clarity, and tactile feedback on physical controls.</p>
@@ -209,16 +212,16 @@
                     </div>
                     <div class="gallery-images">
                         <a data-fancybox="gallery-3" href="images/hifi-home.png" data-caption="Home menu interface.">
-                            <img src="images/hifi-home.png" alt="Image 1" class="thumbnail-image">
+                            <img src="images/hifi-home.png" alt="Image 1" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-3" href="images/hifi-audio.png" data-caption="Audio interface.">
-                            <img src="images/hifi-audio.png" alt="Image 2" class="thumbnail-image">
+                            <img src="images/hifi-audio.png" alt="Image 2" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-3" href="images/hifi-navigation.png" data-caption="Navigation interface.">
-                            <img src="images/hifi-navigation.png" alt="Image 3" class="thumbnail-image">
+                            <img src="images/hifi-navigation.png" alt="Image 3" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-3" href="images/hifi-destination.png" data-caption="Destination selection interface.">
-                            <img src="images/hifi-destination.png" alt="Image 4" class="thumbnail-image">
+                            <img src="images/hifi-destination.png" alt="Image 4" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                     </div>
                     <div class="gallery-controls">
@@ -228,47 +231,68 @@
                 <div class="dots-container"></div>
             </div>
 
-            <p>Above you can see some of the screens of the prototype. The homepage in the top left features shortcuts and audio playback at the top left, a radio view adjacent to it, the navigation view at the bottom left, and the destination menu at the bottom right.</p>
-
             <a href="images/climate_control.png" data-fancybox="Physical-interfaces" data-caption="The physical interfaces including a navigation bar and the climate control, as well as the climate control feedback on the screen.">
-                <img src="images/climate_control.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+                <img src="images/climate_control.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%; border-radius: 20px;">
             </a>
 
-            <p>There is also a bar of buttons for each main function at the bottom of the screen along with a source button to connect to other sources and a volume knob and screen light knob. The climate control bar is located beneath the bar of buttons. When controlling this, there appears a popup on the screen with feedback. This can be seen in the picture above. This was designed in Figma, but they are supposed to represent physical buttons.</p>
+            <p>Above you can see some of the screens of the prototype. There is a bar of buttons for each main function at the bottom of the screen, along with a source button, volume rotary knob, and screen light rotary knob. The climate control bar below triggers a feedback popup on the screen. These elements were designed in Figma along with the touch interface but represent physical buttons.</p>
 
-            <p>An idea we had early on, which persisted throughout the project, was to color-code the different pages in the interface for easy identification. The same color scheme was then used for shortcuts related to each page and the physical menu buttons acting as shortcuts to these pages. For instance, the navigation page has green buttons on the screen, and the button in the menu bar allowing the user to navigate to the same page has a green border at the top.</p>
+            <p>An idea we had early on, which persisted throughout the project, was to color-code the different pages in the interface for easy identification. The sub-interfaces (navigation, audio, home, etc) are color coded so that the same color scheme was used for shortcuts related to each page along with the physical menu buttons.</p>
 
             <a href="images/color.png" data-fancybox="color-palette" data-caption="The color palette for the infotainment system.">
-                <img src="images/color.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+                <img src="images/color.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
             </a>
 
-            <p>The colors in the system lean more towards ‘dark mode’ than ‘light mode’ (as seen above), in line with industry conventions. This provides a calmer feel and avoids distracting the driver with strong white colors that can demand a lot of visual attention. However, the palette includes relatively bold colors like green, orange, and blue. These are intended to stand out significantly to guide the driver if they need to use the screen while driving. The hope is that these distinct colors can provide a visual cue in the periphery indicating where to press to access the radio or click ‘drive home.’</p>
+            <p>The system primarily uses a dark mode color scheme, aligning with industry standards to create a calm environment and minimize driver distraction. Bold colors like green, orange, and blue are incorporated to provide clear visual cues, helping drivers quickly locate key functions such as accessing the radio or selecting ‘drive home.’</p>
 
             <a href="images/physical_prototype.png" data-fancybox="physical-hifi-prototype" data-caption="The physical high-fidelity prototype for user testing.">
-                <img src="images/physical_prototype.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+                <img src="images/physical_prototype.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%; border-radius: 20px;">
             </a>
 
-            <p>Above is an overview of how the entire system (touchscreen, menu bar, and climate control) is intended to be positioned. The buttons on the menu bar are designed to stand out to enhance tactile guidance. We have positioned the ‘home menu’ button in the center and then grouped the remaining four buttons in pairs. We have retained knobs for functions such as volume and temperature because these can be operated easily (once the knob is located). Additional navigational information is displayed behind the steering wheel. Furthermore, the steering wheel has a number of arrow keys that can be used to navigate the infotainment system, in case the user does not want to use the touch screen (for example, during a cold winter morning).</p>
+            <p>The overview shows the system layout, including the touchscreen, menu bar, and climate control. The 'home menu' button is centered, with other buttons grouped in pairs for tactile guidance. Knobs are kept for easy volume and temperature adjustments. Navigation info is displayed behind the steering wheel, which also has arrow keys for an alternative way to navigate the infotainment system, useful in situations like cold winter mornings as emphasized by the foundational research.</p>
 
-            <p>We conducted the last round of user tests with a clickable prototype in a real car. In the two user tests that we conducted, participants first viewed the startup screen for approximately 7 seconds and then recalled what stood out to them. Following this, they explored the startup screen further and provided feedback. Finally, participants performed tasks such as ‘go to the radio page and change the radio channel’ or ‘go to the navigation page and enter a destination’. They were encouraged to ‘think aloud’ during these tasks. After completing the tasks, participants gave input on the system and discussed potential improvements.</p>
+            <h3 class="projects-color">User Tests With the High-Fidelity Prototype</h3>
+            <p>We conducted the final round of user tests using a clickable prototype on an iPad inside a real car. During the two tests, participants viewed the startup screen for around 7 seconds and recalled what stood out. They then explored the screen further and provided feedback. Participants were asked to perform specific tasks, such as changing the radio channel or entering a navigation destination, while thinking aloud.</p>
 
-            <p>Insights from test one revealed that the title ‘POI’ (points of interest, such as gas stations and restaurants nearby) was not clear enough. Additionally, it was noted that the search box on destination pages needed clarification. These aspects were adjusted accordingly. Test two primarily focused on whether a ‘selected button’, such as when on the radio source page, should be clearly marked or not. The participant felt that the current concept of dimming the current/selected source gave the impression that it was inactive rather than selected. This led to discussions within the group, and alternative solutions were considered and tested, but ultimately, the original version was retained.</p>
+            <div class="gallery">
+                <a data-fancybox="gallery" href="images/user-test-1.png">
+                    <img src="images/user-test-1.png" alt="The iPad with the Figma prototype in the first car." style="border-radius: 20px;"/>
+                </a>
+                <a data-fancybox="gallery" href="images/user-test-2.png">
+                    <img src="images/user-test-2.png" alt="The iPad with the Figma prototype in the second car." style="border-radius: 20px;"/>
+                </a>
+            </div>
+
+            <p>After completing these tasks, they shared their feedback and discussed potential improvements:</p>
+
+            <ul style="list-style-type: disc;">
+                <li>The name for the 'POI' feature was changed to 'Intressemål' which means 'interest areas' in Swedish. This more understandable to users than the unfamiliar acronym 'POI'.</li>
+                <li>The search box was redesigned with a standard search icon and placeholder text to improve familiarity.</li>
+            </ul>
+            
+            <p>One participant felt that the current concept of dimming the current/selected button gave the impression that it was inactive rather than selected. This led to discussions within the group, and alternative solutions were considered and tested, but ultimately, the original version was retained.</p>
 
             <h2 id="the-cognitive-aspects" class="projects-color">The Cognitive Aspects of the Design</h2>
-            <p>To gauge the perceived size of the icons for users, we calculated the visual angle of the touch buttons. Following design guidelines, we aimed to achieve at least 1.43 degrees (Campbell et al., 2007).</p>
+
+            <p>The cognitive aspects of the design focused on ensuring that the infotainment system is intuitive and minimizes driver distraction. By analyzing visual attention patterns and optimizing button sizes and placement, the design aims to enhance usability and safety, keeping the driver’s focus on the road.</p>
+
+            <h3 class="projects-color">Analyzing Visual Angles</h3>
+
+            <p>To gauge the perceived size of the icons and optimize it's size to be easily identifiable in the periphery, we calculated the visual angle of the touch buttons. Following design guidelines, we aimed to achieve at least 1.43 degrees (Campbell et al., 2007).</p>
 
             <a href="images/visual_angle.png" data-fancybox="visual-angle" data-caption="The visual angle of a menu shortcut button.">
-                <img src="images/visual_angle.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+                <img src="images/visual_angle.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%; border-radius: 20px;">
             </a>
 
             <p>Our buttons measured approximately 3 degrees (3.27 degrees for the leftmost icon and 3.03 degrees for the rightmost icon in the above image). Therefore, we were able to reduce the size while still adhering to the guidelines. However, we wanted the buttons to be identifiable in the periphery and determined through self-testing that larger buttons were most suitable.</p>
 
             <a href="images/visual_angle_2.png" data-fancybox="visual-angle-between-buttons" data-caption="The visual angle between two menu shortcut buttons.">
-                <img src="images/visual_angle_2.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+                <img src="images/visual_angle_2.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%; border-radius: 20px;">
             </a>
 
-            <p>The distance between the centers of the buttons should be twice the size of their visual angle to avoid crowding. Since the buttons on our interface were about 3 degrees, this guideline required 6 degrees between the buttons. Initially, the distance between the buttons was 5.8 degrees, so we needed to adjust it. We did not meet this guideline for the side menu; however, because much smaller elements fit into this window, we chose to maintain the larger clickable area to make it easier to both spot and hit the buttons in the periphery while watching the road.</p>
+            <p>The distance between button centers should be twice their visual angle to avoid crowding, which means 6 degrees for our 3-degree buttons. Initially, the buttons were 5.8 degrees apart, so adjustments were needed. We didn't follow this guideline for the side menu but kept a larger clickable area to make buttons easier to spot and hit in the periphery while watching the road.</p>
 
+            <h3 class="projects-color">Creating Saliency Maps with AI</h3>
             <p>Next, I was tasked with creating saliency maps to visualize the most attention-grabbing elements of the interface. I utilized OpenCV’s machine learning saliency module in Python to create the maps.</p>
 
             <div id="gallery-4" class="thumbnail-gallery">
@@ -278,16 +302,16 @@
                     </div>
                     <div class="gallery-images">
                         <a data-fancybox="gallery-4" href="images/start_salience.png" data-caption="The saliency of the home menu interface.">
-                            <img src="images/start_salience.png" alt="Image 1" class="thumbnail-image">
+                            <img src="images/start_salience.png" alt="Image 1" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-4" href="images/navigation_salience.png" data-caption="The saliency of the navigation interface.">
-                            <img src="images/navigation_salience.png" alt="Image 2" class="thumbnail-image">
+                            <img src="images/navigation_salience.png" alt="Image 2" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-4" href="images/drive_home_salience.png" data-caption="The saliency of the navigation interface with a selected destination.">
-                            <img src="images/drive_home_salience.png" alt="Image 3" class="thumbnail-image">
+                            <img src="images/drive_home_salience.png" alt="Image 3" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-4" href="images/audio_radio_salience.png" data-caption="The saliency of the radio interface.">
-                            <img src="images/audio_radio_salience.png" alt="Image 4" class="thumbnail-image">
+                            <img src="images/audio_radio_salience.png" alt="Image 4" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                     </div>
                     <div class="gallery-controls">
@@ -306,10 +330,10 @@
                     </div>
                     <div class="gallery-images">
                         <a data-fancybox="gallery-5" href="images/clicked.png" data-caption="The audio interface with no saliency map.">
-                            <img src="images/clicked.png" alt="Image 1" class="thumbnail-image">
+                            <img src="images/clicked.png" alt="Image 1" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                         <a data-fancybox="gallery-5" href="images/clicked_salience.png" data-caption="The audio interface with saliency map.">
-                            <img src="images/clicked_salience.png" alt="Image 2" class="thumbnail-image">
+                            <img src="images/clicked_salience.png" alt="Image 2" class="thumbnail-image" style="border-radius: 20px;">
                         </a>
                     </div>
                     <div class="gallery-controls">
@@ -319,10 +343,21 @@
                 <div class="dots-container"></div>
             </div>
 
-            <p>Another design decision that was made based on a cognitive point of view was the decision to have physical controls. This decision was made primarily for sensory cue integration. Physical buttons were also advocated by the car dealer, especially considering the target audience who often use the Nissan Juke as a secondary vehicle, where simple and accessible buttons are important. Furthermore, the system becomes easier to use with eyes on the road because users can feel their way to the buttons. The buttons are also grouped to facilitate easy localization, and the icons on the menu bar are designed to stand out to provide additional tactile signals. We also utilized different sizes, shapes, and groupings of buttons to clarify the types of functions the they are associated with: the top row is for menu buttons, while the cluster below belongs to climate control.</p>
+            <p>A cognitive-based design decision was to include physical controls for better sensory cue integration. Physical buttons were recommended by the car dealer, particularly for the target audience who use the Nissan Juke as a secondary vehicle, where simple, accessible buttons are crucial. This design allows users to feel their way to buttons, keeping their eyes on the road. Buttons are grouped for easy localization, and prominent icons on the menu bar provide additional tactile cues. Different sizes, shapes, and groupings were used to clarify functions: the top row for menu buttons, and the cluster below for climate control.</p>
 
             <h2 id="concluding-remarks" class="projects-color">Concluding Remarks</h2>
-            <p>In conclusion, the design of our infotainment system aimed to integrate cognitive ergonomic principles and user-centered research to create a safer and more intuitive interface for the Nissan Juke. From initial interviews and user tests to iterative prototyping and final user evaluations, our process was driven by insights that shaped our decisions—from the layout of physical controls to the prominence of clickable functions. Challenges such as balancing visual attention and cognitive load were met with thoughtful design choices, ensuring that our system enhances rather than detracts from the driving experience.</p>
+            <p>The development of the infotainment user interface for the Nissan Juke focused on safety and usability by integrating cognitive ergonomic principles and user feedback. Our design approach was informed by both user research and professional recommendations.</p>
+
+            <p>Key highlights of the project include:</p>
+
+            <ul style="list-style-type: disc;">
+                <li><strong>Physical Controls:</strong> Integration of tactile buttons for easy operation without diverting attention from the road.</li>
+                <li><strong>Simplicity and Accessibility:</strong> A user-friendly interface with clear visual cues and intuitive navigation, ideal for secondary vehicle users.</li>
+                <li><strong>Iterative Testing:</strong> Continuous refinement through low-fidelity and high-fidelity prototypes, ensuring the design met user needs.</li>
+                <li><strong>Cognitive Design:</strong> Utilized saliency maps to analyze elements that capture user attention and optimized button sizes and spacing through visual angle measurement to enhance visibility and accessibility, reducing cognitive load while driving.</li>
+            </ul>
+            
+            <p>The final design effectively combines digital and physical elements, offering a safe, intuitive infotainment experience tailored to the needs of Nissan Juke drivers.</p>
 
             <h2 id="references" class="projects-color">References</h2>
             <p>Campbell, J. L., Richard, C. M., Brown, J. L., & McCallum, M. (2007). Crash warning system interfaces: Human factors insights and lessons learned. NHTSA.</p>
