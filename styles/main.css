@@ -88,6 +88,24 @@ header {
   transform: rotate(180deg); /* Rotate arrow when expanded */
 }
 
+/* Add these styles to your main.css */
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.project-wrapper {
+  animation: slideUp 1s ease-out forwards; /* Adjust duration and easing as needed */
+  opacity: 0; /* Initial state */
+  transform: translateY(100%); /* Start position */
+}
 
 @keyframes blink {
   50% {
@@ -152,6 +170,7 @@ header {
     display: block;
     font-weight: bold;
     text-align: center;
+    margin-left: -50px;
   }
 
   /* Style the hamburger menu */
@@ -595,7 +614,7 @@ header {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 14px;
-    margin-left: 330px;
+    margin-left: 355px;
   }
 
   .breadcrumb ul {
