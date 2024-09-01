@@ -45,14 +45,13 @@ header {
 }
 
 
-/* TOC Styling */
+/* TOC Container */
 .toc {
   background-color: #f8f8f8;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  cursor: pointer; /* Indicate it's clickable */
+  cursor: pointer;
 }
 
 .toc h2 {
@@ -65,30 +64,33 @@ header {
   font-size: 1.2em;
 }
 
+/* Initial State for TOC content */
 .toc ul {
-  line-height: 2;
+  max-height: 0; /* Start collapsed */
+  overflow: hidden; /* Hide overflowing content */
+  transition: max-height 0.5s ease, padding 0.5s ease; /* Smooth transition */
   margin: 0;
-  list-style-type: none;
-  display: none; /* Hidden by default */
+  padding-left: 20px; /* Adjust for design */
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.toc.expanded {
-  max-height: 100%; /* Adjust to allow for full content display */
-}
-
+/* Expanded State for TOC */
 .toc.expanded ul {
-  display: block; /* Show list when expanded */
+  max-height: 500px; /* Adjust to fit content */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
+/* Chevron rotation with smooth transition */
 .fa-chevron-down {
-  transition: transform 0.3s;
+  transition: transform 0.5s ease; /* Smooth transition for rotation */
 }
 
 .toc.expanded .fa-chevron-down {
-  transform: rotate(180deg); /* Rotate arrow when expanded */
+  transform: rotate(180deg); /* Rotate the chevron icon */
 }
 
-/* Add these styles to your main.css */
 
 @keyframes slideUp {
   0% {
@@ -863,6 +865,7 @@ video {
 /* Conclusion */
 .conclusion {
   color: #2f2f2f;
+  background-color: #f2f2f2;
   border-left: 4px solid #6AA273; /* Blue color for the left border */
   padding: 10px 15px; /* Space inside the box */
   margin: 20px 0; /* Space outside the box */
@@ -875,8 +878,7 @@ video {
 
 /* Quote */
 .quote {
-  color: #6AA273;
-  border-left: 4px solid #6AA273; /* Blue color for the left border */
+  font-size: 20px;
   padding: 10px 15px; /* Space inside the box */
   margin: 20px 0 20px 0; /* Space outside the box */
   border-radius: 5px; /* Rounded corners */
