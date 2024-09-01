@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => {
                 returnToTopButton.style.display = 'none';
             }, 500); // Match the fade-out delay
-        }, 1000); // Adjust the delay as needed (3000ms = 3 seconds)
+        }, 2000); // Adjust the delay as needed
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Ensure lastScrollTop is not negative
     });
