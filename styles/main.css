@@ -66,6 +66,7 @@ header {
 
 /* Initial State for TOC content */
 .toc ul {
+  list-style-type: none;
   max-height: 0; /* Start collapsed */
   overflow: hidden; /* Hide overflowing content */
   transition: max-height 0.5s ease, padding 0.5s ease; /* Smooth transition */
@@ -80,6 +81,11 @@ header {
   max-height: 500px; /* Adjust to fit content */
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.toc ul li a {
+  text-decoration: none;
+  color: #006989;
 }
 
 /* Chevron rotation with smooth transition */
