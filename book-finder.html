@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder: A Reading Suggestion App</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/book-finder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="index.html" class="brand-name">Andreas Sellstone</a>
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="about.html">About</a>
+            <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://medium.com/@andreas.sellstone" class="nav-link"><i class="fa-brands fa-medium"></i></a>
+            <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="navbar-brand">
+                <a href="index.html" class="brand-name">Andreas Sellstone</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link current">Projects</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+        </div>
+        <div class="nav-icons">
+            <a href="https://www.linkedin.com/in/andreas-sellstone-9465462b3" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://medium.com/@andreas.sellstone" class="nav-link"><i class="fa-brands fa-medium"></i></a>
+            <a href="mailto:andreas.sellstone@gmail.com" class="nav-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="project-wrapper">
+            <nav class="breadcrumb">
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="infotainment_user-interface_design.html">Book Finder: A Reading Suggestion App</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <h1 id="book-finder" class="h1-project projects-color">Book Finder: A Reading Suggestion App</h1>
+                <p>This project was part of a human-computer interaction course at Uppsala University, where I decided to design an app centered on providing personalized reading recommendations that helps users discover books tailored to their reading skill, interests, and personal goals.</p>
+
+                <video id="my-video" class="video-js" controls preload="auto" width="300" data-setup="{}">
+                    <source src="videos/book-finder-prototype.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <nav id="toc-content" class="toc" style="margin-top: 20px;" onclick="toggleTOC()">
+                    <h2 style="margin-top: 5px">
+                        <i class="fa-solid fa-chevron-down" style="margin-top: -5px;"></i>Table of Contents
+                    </h2>
+                    <ul>
+                        <li><a href="#book-finder">Book Finder: A Reading Suggestion App</a></li>
+                        <li><a href="#project-goal">Project Goal</a></li>
+                        <li><a href="#user-research">User Research</a></li>
+                            <ul>
+                                <li><a href="#objective">Objective</a></li>
+                                <li><a href="#methodology">Methodology</a></li>
+                                <li><a href="#participants">Participants</a></li>
+                                <li><a href="#key-findings">Key Findings</a></li>
+                                <li><a href="#personas">Personas</a></li>
+                            </ul>
+                        <li><a href="#design-process">Design Process</a></li>
+                            <ul>
+                                <li><a href="#design-goals">Design Goals</a></li>
+                                <li><a href="#sketches">Sketches and Scenario</a></li>
+                                <li><a href="#expert-evaluations">Expert Evaluations</a></li>
+                                <li><a href="#figma-prototype">Figma Prototype</a></li>
+                                <li><a href="#user-testing">User Testing</a></li>
+                                <li><a href="#final-design">Final Design</a></li>
+                            </ul>
+                        <li><a href="#conclusion">Concluding Remarks</a></li>
+                            <ul>
+                                <li><a href="lessons-learned">Lessons Learned</a></li>
+                                <li><a href="final-thoughts">Final Thoughts</a></li>
+                            </ul>
+                    </ul>
+                </nav>
+
+                <h2 id="project-goal" class="projects-color">Project Goal</h2>
+
+                <p>Finding the right book isn’t always easy. Different readers face different obstacles when looking for an appropriate book. Some may desire material that challenges them, helping them build vocabulary and engage with new ideas, while others want to be entertained without being overwhelmed. However, the book discovery process rarely considers individual reading skill, resulting in readers choosing books that may be too complex, overly simplistic, or mismatched in tone and content. This can leave readers unmotivated or unable to fully enjoy their reading journey. Therefore, I wanted to explore how this concern could be alleviated.</p>
+
+                <div class="note">
+                    <strong>Project Goal:</strong> I want to design a service that supports readers of all skill levels in finding books that align with their reading abilities, interests, and development goals.
+                </div>
+
+                <h2 id="user-research" class="projects-color">User Research</h2>
+
+                <h3 id="objective" class="projects-color">Objective</h3>
+
+                <p>The main objective was to understand how readers with varying skill levels and reading goals discover books, the obstacles they encounter, and the factors that motivate or discourage them from reading. By uncovering the challenges and user needs, this research could lay the foundation for designing an app that provides skill-appropriate book recommendations tailored to reading goals.</p>
+
+                <h3 id="methodology" class="projects-color">Methodology</h3>
+
+                <p>To capture the comprehensive views of user needs, I conducted semi-structured interviews and a digital ethnography:</p>
+
+                <ul style="list-style-type: disc; line-height: 1.6;">
+                    <li><strong>Semi-Structured Interviews: </strong>I conducted five semi-structured interviews as my main research method. This method provided in-depth qualitative data and allowed me to understand the nuances of each reader's experience, such as their preferences in book genres and desired complexity levels.</li>
+                    <li><strong>Digital Ethnography: </strong>To supplement the interviews, I conducted a digital ethnographic study, observing discussions on forums such as Reddit’s r/books and r/literature. This approach provided insights into common reading challenges and discovery methods from a broader group of readers.</li>
+                </ul>
+
+                <p>Given the time and resource constraints, combining interviews with digital ethnography allowed for rich qualitative insights despite the limited sample size of the interviews.</p>
+
+                <h3 id="#participants" class="projects-color">Participants</h3>
+
+                <p>The research participants included three distinct groups, each representing unique reading needs and challenges:</p>
+
+                <ul style="list-style-type: disc; line-height: 1.6;">
+                    <li><strong>Students (ages 20-30): </strong>This group included two students balancing academic and recreational reading. They often sought books that aligned with their personal interests, while helping them improve vocabulary and comprehension. They also had goals to explore more challenging topics.</li>
+                    <li><strong>Mid-Career Professionals (ages 30-50): </strong>The group of two Mid-career professionals had limited time for reading, juggling work and family commitments. This group prioritized accessible books that provided relaxation and escapism. Many were motivated by their current mood, often seeking books that were engaging but not overly complex, which would allow them to enjoy reading without feeling overwhelmed</li>
+                    <li><strong>Retirees (age 60+): </strong>The group of one retiree had more time for leisure reading, but faced age-related challenges, such as difficulty concentrating. They preferred accessible content that was intellectually stimulating without requiring intense focus.</li>
+                </ul>
+
+                <h3 id="key-findings" class="projects-color">Key Findings</h3>
+
+                <p>Through the interviews and ethnographic observations, several common challenges and motivations emerged:</p>
+
+                <ul style="list-style-type: disc; line-height: 1.6;">
+                    <li><strong>Challenges: </strong>Many participants mentioned difficulty finding books that matched their reading skill level, often resulting in frustration with overly simplistic or complex language.</li>
+                    <li><strong>Reading Goals and Preferences: </strong>Readers across groups shared a desire for books that aligned with their individual goals. Students often sought intellectually stimulating reads, mid-career professionals preferred books that helped them relax, and retirees leaned toward accessible but engaging content</li>
+                    <li><strong>Design Implications: </strong>These insights highlighted the need for a recommendation system that could filter books by skill level and accommodate genre and thematic preferences. Participants expressed interest in an intuitive interface that allowed them to view book samples and availability.</li>
+                </ul>
+
+                <h3 id="#personas" class="projects-color">Personas</h3>
+
+                <div class="personas-section">
+                    <div class="persona">
+                        <div class="persona-image" style="background-image: url('images/book-finder/persona2.png');"></div>
+                        <h3>Erik Magnusson</h3>
+                        <p>Erik is a 25-year-old student with a strong interest in fantasy and sci-fi. He seeks intellectually stimulating books while improving his reading skills.</p>
+                    </div>
+
+                    <div class="persona">
+                        <div class="persona-image" style="background-image: url('images/book-finder/persona1.png');"></div>
+                        <h3>Sara Nilsson</h3>
+                        <p>Sara is a 35-year-old professional who reads for relaxation. She enjoys accessible fiction and occasionally challenges herself with classic literature.</p>
+                    </div>
+
+                    <div class="persona">
+                        <div class="persona-image" style="background-image: url('images/book-finder/persona3.png');"></div>
+                        <h3>Ingrid Aberg</h3>
+                        <p>Ingrid is a 74-year-old retiree who prefers intellectually engaging yet accessible books, overcoming age-related challenges with concentration.</p>
+                    </div>
+                </div>
+
+                <h2 id="design-process" class="projects-color">Design Process</h2>
+
+                <h3 id="design-goals" class="projects-color">Design Goals</h3>
+
+                <p>The goal of the Book Finder app was to design a tool that enables readers to discover books tailored to their reading skill, interests, and goals. The design aimed to:</p>
+
+                <ul style="list-style-type: disc; line-height: 1.6;">
+                    <li>Simplify the process of book discovery while maintaining user engagement.</li>
+                    <li>Provide a clear, intuitive interface with minimal cognitive load.</li>
+                    <li>Incorporate user-centric features, such as skill-based book recommendations and the ability to explore book difficulty levels using examples.</li>
+                </ul>
+
+                <h3 id="sketches" class="projects-color">Sketches and Scenario</h3>
+
+                <p>The design process began with sketches that focused on a specific user scenario based on the primary persona: Sara Nilsson.</p>
+
+                <div class="note">
+                    <strong>Premise:</strong> After a long day, Sara comes home tired, with just 1-2 hours of free time after dinner to relax. She wants to read something light yet sharp, with humor and intrigue. Though she’s been meaning to read Emma by Jane Austen, its archaic language often makes her lose focus. She opens her book recommendation app to find something humorous, clever, and socially insightful, yet easy to enjoy.                                     
+                </div>
+
+                <a href="images/book-finder/sketches.png" data-fancybox="sketches" data-caption="Sketches of each step in the scenario (1-9).">
+                    <img src="images/book-finder/sketches.png" alt="" style="display: block; margin-left: auto; margin-right: auto; width: 100%; border-radius: 20px;">
+                </a>
+
+                <p>The following are the steps displayed in the sketches above (1-9):</p>
+
+                <ul style="list-style-type: decimal; line-height: 1.6;">
+                    <li>Sara opens the app, sees the start screen, and clicks "Set Preferences" to begin.</li>
+                    <li>She selects her reading goal: to relax and be entertained.</li>
+                    <li>She checks examples for difficulty levels, searches <i>Emma</i> to gauge its level, and chooses one slightly easier.</li>
+                    <li>She picks the type, genre, and themes she wants—classic romantic fiction and satire—then saves her preferences.</li>
+                    <li>Back at the start screen, the match button is now available, and she presses it.</li>
+                    <li>She views a list of matched books with ratings and selects the top-rated one.</li>
+                    <li>On the book's page, she reads the synopsis, compares its attributes to her preferences, and reviews sample pages. She adds it to her TBR list and moves to the next match.</li>
+                    <li>After adding a few books, she goes to her TBR list, reorders it, and picks the top book.</li>
+                    <li>On the book's details page, she scrolls down and sees it’s available for free on Project Gutenberg.</li>
+                </ul>  
+
+                <h3 id="expert-evaluations" class="projects-color">Expert Evaluations</h3>
+
+                <p>As part of the human-computer interaction course, expert evaluations were conducted to analyze the initial sketches and prototypes of the Book Finder app. These evaluations, including heuristic analyses, hierarchical task analyses, and cognitive walkthroughs, were performed by peers and provided valuable insights into usability challenges and areas for improvement:</p>
+
+                <ul style="list-style-type: disc; line-height: 1.6;">
+                    <li><strong>Unclear Button Functionality:</strong> The "Reject" button's purpose was ambiguous, leading to confusion about whether it dismissed a match or simply navigated to the next option.</li>
+                    <li><strong>Unfamiliar Terminology for "TBR List":</strong> The term "TBR List" (To Be Read) was identified as potentially unfamiliar to users outside niche reading communities.</li>
+                    <li><strong>Unfamiliar Icon for Add to List Button:</strong> The icon for adding books to the TBR list was flagged as potentially unclear or unfamiliar to users.</li>
+                    <li><strong>Lack of Exit Prompt:</strong> No warning or confirmation was provided when users attempted to exit the survey, increasing the likelihood of accidental errors.</li>
+                    <li><strong>Unnecessary Steps:</strong> After completing the preference setup, users are required to return to the start screen to match books, adding unnecessary steps to the process.</li>
+                </ul>
+
+                <p>These findings formed the basis for refining the app, ensuring it better addressed user needs while aligning with HCI principles.</p>
+
+                <h3 id="figma-prototype" class="projects-color">Figma Prototype</h3>
+
+                <p>After receiving the feedback, I started working on a prototype in Figma that addressed the possible usability problems that were uncovered.</p>
+
+                <div class="gallery-images">
+                    <a data-fancybox="gallery" href="images/book-finder/1.png" data-caption="The first step in the scenario.">
+                        <img src="images/book-finder/1.png" alt="Image 1" class="thumbnail-image">
+                    </a>
+                    <a data-fancybox="gallery" href="images/book-finder/2.png" data-caption="The second step in the scenario.">
+                        <img src="images/book-finder/2.png" alt="Image 2" class="thumbnail-image">
+                    </a>
+                    <a data-fancybox="gallery" href="images/book-finder/3.png" data-caption="The third step in the scenario.">
+                        <img src="images/book-finder/3.png" alt="Image 3" class="thumbnail-image">
+                    </a>
+                    <a data-fancybox="gallery" href="images/book-finder/4.png" data-caption="The fourth step in the scenario.">
+                        <img src="images/book-finder/4.png" alt="Image 4" class="thumbnail-image">
+                    </a>
+                    <a data-fancybox="gallery" href="images/book-finder/5.png" data-caption="The fifth step in the scenario.">
+                        <img src="images/book-finder/5.png" alt="Image 5" class="thumbnail-image">
+                    </a>
+                    <a data-fancybox="gallery" href="images/book-finder/6.png" data-caption="The sixth step in the scenario.">
+                        <img src="images/book-finder/6.png" alt="Image 6" class="thumbnail-image">
+                    </a>
+                    <a data-fancybox="gallery" href="images/book-finder/7.png" data-caption="The seventh step in the scenario.">
+                        <img src="images/book-finder/7.png" alt="Image 7" class="thumbnail-image">
+                    </a>
+                    <a data-fancybox="gallery" href="images/book-finder/8.png" data-caption="The eighth step in the scenario.">
+                        <img src="images/book-finder/8.png" alt="Image 8" class="thumbnail-image">
+                    </a>
+                    <a data-fancybox="gallery" href="images/book-finder/9.png" data-caption="The ninth step in the scenario.">
+                        <img src="images/book-finder/9.png" alt="Image 9" class="thumbnail-image">
+                    </a>
+                </div>
+
+                <p>The following are the steps displayed in the prototype images above (1-9):</p>
+
+                <ul style="list-style-type: decimal">
+                    <li>To find a book Sara has two options, the “advanced match” or “quick match”. She wants something specific based on her current mood so she clicks “advanced match”.</li>
+                    <li>She reads about the advanced match feature and clicks “start” to continue.</li>
+                    <li>She selects her reading goal (to unwind and be entertained) and clicks the arrow button.</li>
+                    <li>She chooses the type (fiction), genres (romance and satire), and themes (emotional and funny), then clicks the arrow button again.</li>
+                    <li>She picks difficulty level 3 after checking examples and comparing it to <i>Emma</i> (level 4), then clicks “show results.”</li>
+                    <li>A match list appears, and she clicks on the top result for more details.</li>
+                    <li>She reads the synopsis, checks match stats, and adds the book to her library. She repeats for another book and views her library.</li>
+                    <li>Sara selects the list “Advanced Match 1” and decides on the first book to read.</li>
+                    <li>She clicks “available at” and finds the book is free on Project Gutenberg as an e-book.</li>
+                </ul>
+
+                <p>In the prototype, I addressed key usability challenges to improve clarity and efficiency. I replaced the ambiguous "Reject" button with a clear "Add to List" button that toggles to "Remove from List," alongside navigation arrows for easier browsing. The term "TBR List" was changed to "Library" for broader user understanding, and match list items were redesigned to look like clickable buttons, improving affordance. To prevent accidental survey exits, I added a warning prompt, and I streamlined the process by allowing users to match books directly after setting preferences, removing the need to return to the start screen. These changes simplify interactions, enhance usability, and reduce user confusion.</p>
+
+                <h3 id="user-testing" class="projects-color">User Testing</h3>
+
+                <p>The usability test was conducted with three participants aged 27–44, all avid readers. Two primarily read fiction, while one prefers non-fiction. One participant actively discusses books online, while the others share their thoughts within personal circles. On average, participants read two books per month. The tests were conducted in two formats: two participants performed the test remotely via Discord with screen sharing, while the third test was conducted in person. During all tests, participants received instructions before proceeding, and notes were taken to capture strengths and weaknesses for analysis.</p>
+
+                <p>Possible usability issues:</p>
+
+                <ul style="list-style-type: disc; line-height: 1.6;">
+                    <li><strong>Obscuring Dropdown Buttons:</strong> The dropdown buttons in the questionnaire (step 4 and 5) obscured other elements on the screen, including the "next" button, as some participants left them open.</li>
+                    <li><strong>Cluttered Book Suggestion Screen:</strong> The book suggestion screen felt cluttered due to the sudden appearance of large action buttons (as seen in step 7), which gave participants a sense of losing control.</li>
+                    <li><strong>Navigational Confusion:</strong> The presence of two "go back" buttons during the questionnaire (step 2-5) caused navigation confusion, particularly when the upper back button prompted an exit confirmation instead of returning to the previous page.</li>
+                </ul>
+
+                <h3 id="final-design" class="projects-color">Final Design</h3>
+
+                <p>The final design attempted to address the possible usability issues identified from the user tests. The full final design can be viewed in the video at <a href="#book-finder">the beginning</a> of this case study.</p>
+
+                <div class="gallery-images" style="margin-bottom: 20px;">
+                    <a data-fancybox="gallery-2" href="images/book-finder/genres-themes-before.png" data-caption="The original drop down lists before the change.">
+                        <img src="images/book-finder/genres-themes-before.png" alt="Image 1" class="thumbnail-image" style="max-height: 300px;">
+                    </a>
+                    <a data-fancybox="gallery-2" href="images/book-finder/genres-themes-after.png" data-caption="The final drop down lists.">
+                        <img src="images/book-finder/genres-themes-after.png" alt="Image 2" class="thumbnail-image" style="max-height: 300px;">
+                    </a>
+                </div>
+                <div class="gallery-images">
+                    <a data-fancybox="gallery-2" href="images/book-finder/levels-before.png" data-caption="The original drop down button with the difficulty example.">
+                        <img src="images/book-finder/levels-before.png" alt="Image 1" class="thumbnail-image" style="max-height: 300px;">
+                    </a>
+                    <a data-fancybox="gallery-2" href="images/book-finder/levels-after.png" data-caption="The final drop down button with the difficulty example.">
+                        <img src="images/book-finder/levels-after.png" alt="Image 1" class="thumbnail-image" style="max-height: 300px;">
+                    </a>
+                </div>
+
+                <p>The images above illustrate the "before" and "after" states of two steps in the advanced match survey. On the left, the dropdown buttons in their original design are shown.</p>
+
+                <p>To address the previously mentioned issue of drop down lists obscuring information and controls on the page (as seen in the pictures above on the left), the design was updated so the dropdowns expand without covering any content (as seen in the images on the right).</p>
+
+                <p>The other issue of the difficult navigation was also addressed. To exit the survey, a common cross button in the right hand corner was added. The back button on the upper left hand corner now works in the same manner as the back button on the survey in the bottom left hand corner with one exception: the back button on the survey can only be until the last page of the survey, while the other back button can be used until the home menu.</p>
+
+                <div class="gallery-images">
+                    <a data-fancybox="gallery-3" href="images/book-finder/add-before.png" data-caption="The original book suggestion page.">
+                        <img src="images/book-finder/add-before.png" alt="Image 1" class="thumbnail-image" style="max-height: 300px; margin-right: 20px;">
+                    </a>
+                    <a data-fancybox="gallery-3" href="images/book-finder/add-after.png" data-caption="The final book suggestion page.">
+                        <img src="images/book-finder/add-after.png" alt="Image 2" class="thumbnail-image" style="max-height: 300px;">
+                    </a>
+                </div>
+
+                <p>The cluttered book suggestion screen can be seen in left image above, while the final design can bee seen on the right. Here, the list navigation buttons and the "Add to Library" button where integrated into the suggestion page instead of hovering above the page in a fixed position. In this way, it does not cover any information while scrolling the book's page.</p>
+
+                <h2 id="conclusion" class="projects-color">Concluding Remarks</h2>
+
+                <p>The Book Finder project provided a valuable opportunity to explore user-centered design principles and address a real-world challenge: helping readers find books that align with their skills, interests, and goals. Through a combination of user research, iterative prototyping, and expert evaluations, the final design achieved its goal of creating a personalized, accessible, and intuitive book recommendation tool.</p>
+
+                <h3 id="lessons-learned" class="projects-color">Future Improvements</h3>
+
+                <p>A multitude of future improvements are possible. For one, not all of the features of the app has been designed. The current design clearly implies the use of an account, as well as the second search option "Quick match". The idea was that the user could save book they have read, maybe import from other sites such as Goodreads, and that Quick match would give a fast recommendation based on the user's reading history. This would be an avenue in for AI-powered recommendations. Future iterrations could also focus on more diverse accessibility features (e.g., text-to-speech or high-contrast modes), and larger-scale user testing to validate the app's effectiveness across different demographics.</p>
+
+                <h3 id="final-thoughts" class="projects-color">Final Thoughts</h3>
+
+                <p>This project not only strengthened my understanding of HCI principles but also reinforced the importance of empathetic, user-focused design. By addressing real user challenges and iteratively improving the design, Book Finder demonstrates the potential for technology to create meaningful, impactful experiences for its users.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Andreas Sellstone. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="return-to-top" class="return-to-top"><i class="fa-solid fa-arrow-up" style="margin-right: 10px;"></i>Return to top</button>
+    <script src="scripts/galleries.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/toc.js"></script>
+    <script src="scripts/wrapper.js"></script>
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+</html>
